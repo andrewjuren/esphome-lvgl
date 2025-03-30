@@ -61,10 +61,10 @@ binary_sensor:
           state:
             checked: !lambda return x;
 
-  # Turn On Main Floor SCript
+  # Turn On Main Floor Srript
   - platform: homeassistant
-    id: script_turn_on_button
-    entity_id: binary_sensor.script_turn_on_button
+    id: script_turn_on
+    entity_id: binary_sensor.script_turn_on
     publish_initial_state: true
     on_state:
       then:
