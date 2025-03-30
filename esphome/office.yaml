@@ -24,3 +24,4 @@ packages:
             office/sensors.yaml,
             office/lvgl.yaml]
     refresh: 1sec
+# comment
