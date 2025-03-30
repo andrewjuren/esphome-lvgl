@@ -40,7 +40,7 @@ lvgl:
       
         # Main Floor On
         - button: 
-            height: $button_height_double
+            height: $button_height_single
             checkable: false
             id: script_turn_on_button
             styles: control
