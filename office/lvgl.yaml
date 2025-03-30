@@ -56,7 +56,7 @@ lvgl:
                   text: "Features"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: script.turn_on_main_floor_sound
                   data:
                     entity_id: scene.office_features
 
