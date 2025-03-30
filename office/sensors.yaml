@@ -61,15 +61,15 @@ binary_sensor:
           state:
             checked: !lambda return x;
 
-  # Office Features Scene
+  # Turn On Main Floor SCript
   - platform: homeassistant
-    id: office_scene_features
-    entity_id: binary_sensor.office_scene_features
+    id: script_turn_on_button
+    entity_id: binary_sensor.script_turn_on_button
     publish_initial_state: true
     on_state:
       then:
         lvgl.widget.update:
-          id: office_scene_features_button
+          id: script_turn_on_button
           state:
             checked: !lambda return x;
 
