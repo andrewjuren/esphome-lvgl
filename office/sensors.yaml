@@ -1,25 +1,25 @@
-sensor:
-
-  # Header Outdoor Temperate
-  - platform: homeassistant
-    entity_id: sensor.office_temperature
-    id: office_temperature
-    on_value:
-      - lvgl.label.update:
-          id: temperatures
-          text:
-            format: "%d° / %d°"
-            args: [ '(int)round(id(sensor.nanaimo_temperature).state)', '(int)round(x)' ]
-
-  - platform: homeassistant
-    entity_id: sensor.outdoor_temperature
-    id: outdoor_temperature
-    on_value:
-      - lvgl.label.update:
-          id: temperatures
-          text:
-            format: "%d° / %d°"
-            args: [ '(int)round(x)', '(int)round(id(office_temperature).state)' ]
+#sensor:
+#
+#  # Header Outdoor Temperate
+#  - platform: homeassistant
+#    entity_id: sensor.office_temperature
+#    id: office_temperature
+#    on_value:
+#      - lvgl.label.update:
+#          id: temperatures
+#          text:
+#            format: "%d° / %d°"
+#            args: [ '(int)round(id(sensor.nanaimo_temperature).state)', '(int)round(x)' ]
+#
+#  - platform: homeassistant
+#    entity_id: sensor.outdoor_temperature
+#    id: outdoor_temperature
+#    on_value:
+#      - lvgl.label.update:
+#          id: temperatures
+#          text:
+#            format: "%d° / %d°"
+#            args: [ '(int)round(x)', '(int)round(id(office_temperature).state)' ]
 
 
 
