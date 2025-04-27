@@ -20,7 +20,8 @@ esp32:
       CONFIG_SPIRAM_RODATA: y
       CONFIG_ESP32S3_DATA_CACHE_LINE_64B: y
       CONFIG_COMPILER_OPTIMIZATION_PERF: y
-    enable_idf_experimental_features: true
+    advanced:
+      enable_idf_experimental_features: true
 
 # Esphome
 esphome:
