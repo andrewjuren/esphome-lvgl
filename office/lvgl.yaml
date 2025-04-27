@@ -75,7 +75,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: office_scene_calls_label
-                  text: "Calls"
+                  text: "Main Floor"
             on_press:
               - homeassistant.service:
                   service: scene.turn_on
@@ -97,7 +97,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: office_scene_evening_label
-                  text: "Evening"
+                  text: "Main Vol +"
             on_press:
               - homeassistant.service:
                   service: scene.turn_on
@@ -120,7 +120,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: office_scene_dimmed_label
-                  text: "Dimmed"
+                  text: "Main Vol -"
             on_press:
               - homeassistant.service:
                   service: scene.turn_on
@@ -142,7 +142,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: printer_power_label
-                  text: "Printer"
+                  text: "System On/Off"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
@@ -162,7 +162,7 @@ lvgl:
                   text: $aircon
               - label:
                   align: bottom_left
-                  text: "Aircon"
+                  text: "Living Room"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
@@ -182,7 +182,7 @@ lvgl:
                   text: $blinds_open
               - label:
                   align: bottom_left
-                  text: "Open"
+                  text: "LR Vol +"
             on_click:
               - homeassistant.service:
                   service: cover.set_cover_position
@@ -203,7 +203,7 @@ lvgl:
                   text: $blinds_closed
               - label:
                   align: bottom_left
-                  text: "Close"
+                  text: "LR Vol -"
             on_click:
               - homeassistant.service:
                   service: cover.set_cover_position
@@ -224,7 +224,7 @@ lvgl:
                   text: $gmail
               - label:
                   align: bottom_left
-                  text: "Mail"
+                  text: "Now Playing"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -244,7 +244,7 @@ lvgl:
                   text: $slack
               - label:
                   align: bottom_left
-                  text: "Slack"
+                  text: "Dining Room On/Off"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -263,7 +263,7 @@ lvgl:
                   antialias: true
               - label:
                   align: bottom_left
-                  text: "Meet"
+                  text: "DR Vol +"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -282,7 +282,7 @@ lvgl:
                   antialias: true
               - label:
                   align: bottom_left
-                  text: "Figma"
+                  text: "DR Vol -"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -302,7 +302,7 @@ lvgl:
                   text: $forklift
               - label:
                   align: bottom_left
-                  text: "Forklift"
+                  text: "Source?"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -322,7 +322,7 @@ lvgl:
                   text: $command
               - label:
                   align: bottom_left
-                  text: "Ia Writer"
+                  text: "Kitchen On/Off"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -341,7 +341,7 @@ lvgl:
                   antialias: true
               - label:
                   align: bottom_left
-                  text: "Mainsail"
+                  text: "K Vol +"
             on_click:
               - homeassistant.service:
                   service: button.press
