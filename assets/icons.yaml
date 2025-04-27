@@ -23,7 +23,8 @@ font:
       "\U000F02AB",  # mdi-gmail
       "\U000F04B1",  # mdi-slack
       "\U000F0633",  # mdi-command
-      
+      "\U000F075D",
+      "\U000F075E"
       ]
 
 # Map icons to names
