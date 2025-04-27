@@ -93,7 +93,7 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: office_scene_evening_icon                
-                  text: $nightlight
+                  text: $volumeplus
               - label:
                   align: bottom_left
                   id: office_scene_evening_label
@@ -116,7 +116,7 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: office_scene_dimmed_icon                
-                  text: $nightlight
+                  text: $volumeminus
               - label:
                   align: bottom_left
                   id: office_scene_dimmed_label

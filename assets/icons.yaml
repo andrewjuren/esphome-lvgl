@@ -44,3 +44,5 @@ substitutions:
   gmail:          "\U000F02AB"
   slack:          "\U000F04B1"
   command:        "\U000F0633"
+  volumeplus:     "\U000F075D"
+  volumeminus:    "\U000F075E"
