@@ -43,7 +43,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: backlight_toggle_button
-            styles: control
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -65,7 +65,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: office_scene_calls_button
-            styles: control
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -87,7 +87,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: office_scene_evening_button
-            styles: control
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -110,7 +110,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: office_scene_dimmed_button
-            styles: control
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -132,7 +132,7 @@ lvgl:
             height: $button_height_single
             checkable: true
             id: printer_power_button
-            styles: control
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -154,7 +154,7 @@ lvgl:
             height: $button_height_single
             checkable: true
             id: office_aircon_button
-            styles: control
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -174,7 +174,7 @@ lvgl:
             height: $button_height_single
             checkable: true
             id: office_blind_open_button
-            styles: control
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -195,7 +195,7 @@ lvgl:
             height: $button_height_single
             checkable: true
             id: office_blind_close_button
-            styles: control
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -216,7 +216,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_mail_button
-            styles: webhook
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -236,7 +236,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_slack_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -256,7 +256,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_meet_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -276,7 +276,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_figma_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -296,7 +296,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_forklift_button
-            styles: webhook
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -316,7 +316,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_iawriter_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -336,7 +336,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: webhook_mainsail_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -356,7 +356,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: kitchen_volume_minus_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -376,7 +376,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: play_pause_button
-            styles: webhook
+            styles: light
             widgets:
               - label:
                   text_font: $icon_font
@@ -396,7 +396,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: deck_power_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -416,7 +416,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: deck_volume_plus_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -436,7 +436,7 @@ lvgl:
             height: $button_height_single
             checkable: false
             id: deck_volume_minus_button
-            styles: webhook
+            styles: dark
             widgets:
               - label:
                   text_font: $icon_font
@@ -450,4 +450,3 @@ lvgl:
                   service: button.press
                   data:
                     entity_id: button.webhook_mainsail
-                    
