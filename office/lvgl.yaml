@@ -179,7 +179,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $blinds_open
+                  text: $volumeplus
               - label:
                   align: bottom_left
                   text: "LR Vol +"
@@ -200,7 +200,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $blinds_closed
+                  text: $volumeminus
               - label:
                   align: bottom_left
                   text: "LR Vol -"
