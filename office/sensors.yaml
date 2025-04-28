@@ -63,8 +63,8 @@ binary_sensor:
 
   # Toggle Back Light Scene
   - platform: homeassistant
-    id: backlight_toggle_button
-    entity_id: binary_sensor.backlight_toggle_button
+    id: backlight_toggle
+    entity_id: binary_sensor.backlight_toggle
     publish_initial_state: true
     on_state:
       then:
