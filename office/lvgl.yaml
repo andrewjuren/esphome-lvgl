@@ -42,7 +42,7 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: false
-            id: script_turn_on_button
+            id: backlight_toggle_button
             styles: control
             widgets:
               - label:
