@@ -258,9 +258,10 @@ lvgl:
             id: webhook_meet_button
             styles: webhook
             widgets:
-              - image:
-                  src: meet_logo
-                  antialias: true
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $volumeplus
               - label:
                   align: bottom_left
                   text: "DR Vol +"
