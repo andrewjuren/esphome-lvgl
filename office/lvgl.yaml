@@ -138,7 +138,7 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: printer_power_icon
-                  text: $printer
+                  text: $power_plug
               - label:
                   align: bottom_left
                   id: printer_power_label
@@ -221,7 +221,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $gmail
+                  text: $play_box
               - label:
                   align: bottom_left
                   text: "Now Playing"
@@ -301,7 +301,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $forklift
+                  text: $source_branch
               - label:
                   align: bottom_left
                   text: "Source?"

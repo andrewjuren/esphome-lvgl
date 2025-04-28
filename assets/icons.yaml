@@ -29,7 +29,10 @@ font:
       "\U000F1356",  # mdi-television-ambient-light
       "\U000F156D",  # mdi-sofa-outline
       "\U000F05BC",  # mdi-table-furniture
-      "\U000F0821"  # mdi-floor-plan
+      "\U000F0821",  # mdi-floor-plan
+      "\U000F1425",  # mdi-power-plug-outline
+      "\U000F040B",  # mdi-play-box-outline
+      "\U000F062C"  # mdi-source-branch
       ]
 
 # Map icons to names
@@ -57,3 +60,6 @@ substitutions:
   sofa_outline:   "\U000F156D"
   table_furniture: "\U000F05BC"
   floor_plan:     "\U000F0821"
+  power_plug:     "\U000F1425"
+  play_box:       "\U000F040B"
+  source_branch:  "\U000F062C"
