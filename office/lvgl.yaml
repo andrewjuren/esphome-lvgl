@@ -71,7 +71,7 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: office_scene_calls_icon                
-                  text: $videocall
+                  text: $floor_plan
               - label:
                   align: bottom_left
                   id: office_scene_calls_label
@@ -159,7 +159,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $aircon
+                  text: $sofa_outline
               - label:
                   align: bottom_left
                   text: "Living Room"
@@ -241,7 +241,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $slack
+                  text: $table_furniture
               - label:
                   align: bottom_left
                   text: "Dining Room On/Off"

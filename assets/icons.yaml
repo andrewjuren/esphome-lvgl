@@ -26,7 +26,10 @@ font:
       "\U000F075D",  # mdi-volumeplus
       "\U000F075E",  # mdi-volumeminus
       "\U000F1B2A",  # mdi-faucet-variant
-      "\U000F1356"   # mdi-television-ambient-light
+      "\U000F1356",  # mdi-television-ambient-light
+      "\U000F156D",  # mdi-sofa-outline
+      "\U000F05BC",  # mdi-table-furniture
+      "\U000F0821"  # mdi-floor-plan
       ]
 
 # Map icons to names
@@ -51,3 +54,6 @@ substitutions:
   volumeminus:    "\U000F075E"
   faucet_variant: "\U000F1B2A"
   ambient_light:  "\U000F1356"
+  sofa_outline:   "\U000F156D"
+  table_furniture: "\U000F05BC"
+  floor_plan:     "\U000F0821"
