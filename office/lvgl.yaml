@@ -381,7 +381,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $volumeminus
+                  text: $play_pause
               - label:
                   align: bottom_left
                   text: "Play / Pause"
@@ -401,7 +401,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $faucet_variant
+                  text: $flower
               - label:
                   align: bottom_left
                   text: "Deck On/Off"
