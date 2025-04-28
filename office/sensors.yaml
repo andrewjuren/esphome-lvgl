@@ -25,6 +25,18 @@
 
 binary_sensor:
 
+  # Toggle Back Light Scene
+  - platform: homeassistant
+    id: backlight_toggle
+    entity_id: binary_sensor.backlight_toggle
+    publish_initial_state: true
+    on_state:
+      then:
+        lvgl.widget.update:
+          id: backlight_toggle_button
+          state:
+            checked: !lambda return x;
+
   # Office Evening Scene
   - platform: homeassistant
     id: office_scene_evening
@@ -58,18 +70,6 @@ binary_sensor:
       then:
         lvgl.widget.update:
           id: office_scene_calls_button
-          state:
-            checked: !lambda return x;
-
-  # Toggle Back Light Scene
-  - platform: homeassistant
-    id: backlight_toggle
-    entity_id: binary_sensor.backlight_toggle
-    publish_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: backlight_toggle_button
           state:
             checked: !lambda return x;
 
