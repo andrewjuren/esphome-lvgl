@@ -48,4 +48,4 @@ substitutions:
   command:        "\U000F0633"
   volumeplus:     "\U000F075D"
   volumeminus:    "\U000F075E"
-  faucet-variant: "\U000F1B2A"
+  faucet_variant: "\U000F1B2A"
