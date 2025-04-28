@@ -61,15 +61,15 @@ binary_sensor:
           state:
             checked: !lambda return x;
 
-  # Turn On Main Floor Srript
+  # Toggle Back Light Scene
   - platform: homeassistant
-    id: script_turn_on
-    entity_id: binary_sensor.script_turn_on
+    id: backlight_toggle_button
+    entity_id: binary_sensor.backlight_toggle_button
     publish_initial_state: true
     on_state:
       then:
         lvgl.widget.update:
-          id: script_turn_on_button
+          id: backlight_toggle_button
           state:
             checked: !lambda return x;
 
