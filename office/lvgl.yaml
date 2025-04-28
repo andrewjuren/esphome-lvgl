@@ -350,25 +350,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_mainsail
 
-        # KITCHEN VOL -
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: kitchen_vol_minus_button
-            styles: webhook
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeminus
-              - label:
-                  align: bottom_left
-                  text: "K Vol -"
-            on_click:
-              - homeassistant.service:
-                  service: button.press
-                  data:
-                    entity_id: button.webhook_mainsail
+
 
 
 
