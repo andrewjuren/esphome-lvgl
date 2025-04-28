@@ -53,7 +53,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: backlight_toggle_label
-                  text: "Backlight On/Off"
+                  text: "Backlight"
             on_press:
               - homeassistant.service:
                   service: script.turn_on_main_floor_sound
@@ -97,7 +97,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: office_scene_evening_label
-                  text: "Main Vol +"
+                  text: "Volume Up"
             on_press:
               - homeassistant.service:
                   service: scene.turn_on
@@ -120,7 +120,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: office_scene_dimmed_label
-                  text: "Main Vol -"
+                  text: "Volume Down"
             on_press:
               - homeassistant.service:
                   service: scene.turn_on
@@ -244,7 +244,7 @@ lvgl:
                   text: $table_furniture
               - label:
                   align: bottom_left
-                  text: "Dining Room On/Off"
+                  text: "Dining Room"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -304,7 +304,7 @@ lvgl:
                   text: $source_branch
               - label:
                   align: bottom_left
-                  text: "Source?"
+                  text: "Source"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -324,7 +324,7 @@ lvgl:
                   text: $faucet_variant
               - label:
                   align: bottom_left
-                  text: "Kitchen On/Off"
+                  text: "Kitchen"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -404,7 +404,7 @@ lvgl:
                   text: $flower
               - label:
                   align: bottom_left
-                  text: "Deck On/Off"
+                  text: "Deck"
             on_click:
               - homeassistant.service:
                   service: button.press
@@ -450,3 +450,4 @@ lvgl:
                   service: button.press
                   data:
                     entity_id: button.webhook_mainsail
+                    
