@@ -38,7 +38,7 @@ lvgl:
       
       widgets:
       
-        # Main Floor On
+        # Main Floor On (WILL BE BACKLIGHT ON/OFF)
         - button: 
             height: $button_height_single
             checkable: false
@@ -53,14 +53,14 @@ lvgl:
               - label:
                   align: bottom_left
                   id: script_turn_on_label
-                  text: "Main Floor On"
+                  text: "Backlight On/Off"
             on_press:
               - homeassistant.service:
                   service: script.turn_on_main_floor_sound
                   data:
                     entity_id: script.turn_on_main_floor_sound
 
-        # Office Calls Scene
+        # MAIN FLOOR (SYNC) ON/OFF
         - button: 
             height: $button_height_single
             checkable: false
@@ -71,7 +71,7 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: office_scene_calls_icon                
-                  text: mdi:faucet-variant
+                  text: $videocall
               - label:
                   align: bottom_left
                   id: office_scene_calls_label
@@ -82,7 +82,7 @@ lvgl:
                   data:
                     entity_id: scene.office_desk_call
 
-        # Office Evening Scene
+        # MAIN FLOOR (SYNC) VOL +
         - button: 
             height: $button_height_single
             checkable: false
@@ -105,7 +105,7 @@ lvgl:
                     entity_id: scene.office_evening
 
 
-        # Office Dimmed Scene
+        # MAIN FLOOR (SYNC) VOL -
         - button: 
             height: $button_height_single
             checkable: false
@@ -127,7 +127,7 @@ lvgl:
                   data:
                     entity_id: scene.office_dimmed
 
-        # 3d Printer
+        # SYSTEM ON/OFF
         - button: 
             height: $button_height_single
             checkable: true
@@ -149,7 +149,7 @@ lvgl:
                   data:
                     entity_id: switch.office_3d_printer_power
 
-        # Office Aircon
+        # LIVING ROOM ON/OFF
         - button: 
             height: $button_height_single
             checkable: true
@@ -169,7 +169,7 @@ lvgl:
                   data:
                     entity_id: switch.office_air_conditioner
 
-        # Office Blind Open
+        # LIVING ROOM VOL +
         - button: 
             height: $button_height_single
             checkable: true
@@ -190,7 +190,7 @@ lvgl:
                     entity_id: cover.office_blind
                     position: "100"
 
-        # Office Blind Close
+        # LIVING ROOM VOL -
         - button: 
             height: $button_height_single
             checkable: true
@@ -211,7 +211,7 @@ lvgl:
                     entity_id: cover.office_blind
                     position: "0"
 
-        # Webhook Mail
+        # NOW PLAYING
         - button: 
             height: $button_height_single
             checkable: false
@@ -231,7 +231,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_mail
 
-        # Webhook Slack
+        # DINING ROOM ON/OFF
         - button: 
             height: $button_height_single
             checkable: false
@@ -251,7 +251,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_slack
 
-        # Webhook Meet
+        # DINING ROOM VOL +
         - button: 
             height: $button_height_single
             checkable: false
@@ -270,7 +270,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_meet
 
-        # Webhook Figma
+        # DINING ROOM VOL -
         - button: 
             height: $button_height_single
             checkable: false
@@ -289,7 +289,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_figma
 
-        # Webhook Forklift
+        # SOURCE
         - button: 
             height: $button_height_single
             checkable: false
@@ -309,7 +309,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_forklift
 
-        # Webhook Ia Writer
+        # KITCHEN ON/OFF
         - button: 
             height: $button_height_single
             checkable: false
@@ -319,7 +319,7 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $command
+                  text: $faucet-variant
               - label:
                   align: bottom_left
                   text: "Kitchen On/Off"
@@ -329,7 +329,7 @@ lvgl:
                   data:
                     entity_id: button.webhook_iawriter
 
-        # Webhook Mainsail
+        # KITCHEN VOL +
         - button: 
             height: $button_height_single
             checkable: false

@@ -23,8 +23,9 @@ font:
       "\U000F02AB",  # mdi-gmail
       "\U000F04B1",  # mdi-slack
       "\U000F0633",  # mdi-command
-      "\U000F075D",
-      "\U000F075E"
+      "\U000F075D",  # mdi-volumeplus
+      "\U000F075E",  # mdi-volumeminus
+      "\U000F1B2A"   # mdi-faucet-variant
       ]
 
 # Map icons to names
@@ -47,3 +48,4 @@ substitutions:
   command:        "\U000F0633"
   volumeplus:     "\U000F075D"
   volumeminus:    "\U000F075E"
+  faucet-variant: "\U000F1B2A"
