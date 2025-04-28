@@ -278,6 +278,7 @@ lvgl:
             id: webhook_figma_button
             styles: webhook
             widgets:
+              - label:
                   text_font: $icon_font
                   align: top_left
                   text: $volumeminus
