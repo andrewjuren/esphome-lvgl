@@ -48,11 +48,11 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: script_turn_on_icon                
-                  text: $ledstrip
+                  id: backlight_toggle_icon                
+                  text: $ambient_light
               - label:
                   align: bottom_left
-                  id: script_turn_on_label
+                  id: backlight_toggle_label
                   text: "Backlight On/Off"
             on_press:
               - homeassistant.service:
