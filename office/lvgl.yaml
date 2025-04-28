@@ -371,5 +371,82 @@ lvgl:
                   data:
                     entity_id: button.webhook_mainsail
 
+        # PLAY PAUSE
+        - button: 
+            height: $button_height_single
+            checkable: false
+            id: play_pause_button
+            styles: webhook
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $volumeminus
+              - label:
+                  align: bottom_left
+                  text: "Play / Pause"
+            on_click:
+              - homeassistant.service:
+                  service: button.press
+                  data:
+                    entity_id: button.webhook_mainsail
 
+        # DECK ON/OFF
+        - button: 
+            height: $button_height_single
+            checkable: false
+            id: deck_power_button
+            styles: webhook
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $faucet_variant
+              - label:
+                  align: bottom_left
+                  text: "Deck On/Off"
+            on_click:
+              - homeassistant.service:
+                  service: button.press
+                  data:
+                    entity_id: button.webhook_iawriter
 
+        # DECK VOL +
+        - button: 
+            height: $button_height_single
+            checkable: false
+            id: deck_volume_plus_button
+            styles: webhook
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $volumeplus
+              - label:
+                  align: bottom_left
+                  text: "Deck Vol +"
+            on_click:
+              - homeassistant.service:
+                  service: button.press
+                  data:
+                    entity_id: button.webhook_mainsail
+
+        # DECK VOL -
+        - button: 
+            height: $button_height_single
+            checkable: false
+            id: deck_volume_minus_button
+            styles: webhook
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  text: $volumeminus
+              - label:
+                  align: bottom_left
+                  text: "Deck Vol -"
+            on_click:
+              - homeassistant.service:
+                  service: button.press
+                  data:
+                    entity_id: button.webhook_mainsail
