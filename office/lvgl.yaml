@@ -57,6 +57,7 @@ lvgl:
             on_press:
               - switch.toggle:
                   id: backlight
+                  transition_length: 2s
 
         # MAIN FLOOR (SYNC) ON/OFF
         - button: 
