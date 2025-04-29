@@ -22,7 +22,6 @@
 #            args: [ '(int)round(x)', '(int)round(id(office_temperature).state)' ]
 
 
-
 binary_sensor:
 
   # Toggle Back Light Scene
