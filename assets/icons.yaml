@@ -34,7 +34,7 @@ font:
       "\U000F040B",  # mdi-play-box-outline
       "\U000F062C",  # mdi-source-branch
       "\U000F040E",  # mdi-play-pause      
-      "\U000F024A"  # mdi-flower
+      "\uF024A"  # mdi-flower
       ]
 
 # Map icons to names
@@ -66,4 +66,4 @@ substitutions:
   play_box:       "\U000F040B"
   source_branch:  "\U000F062C"
   play_pause:     "\U000F040E"
-  flower:         "\U000F024A"
+  flower:         "\uF024A"
