@@ -165,7 +165,7 @@ lvgl:
                   text: "Living Room"
             on_click:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: media_player.toggle
                   data:
                     entity_id: media_player.living_room
 
