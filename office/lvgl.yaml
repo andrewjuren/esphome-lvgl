@@ -55,7 +55,7 @@ lvgl:
                   id: backlight_toggle_label
                   text: "Backlight"
             on_press:
-              - light.turn_off:
+              - switch.turn_off:
                   id: backlight
 
         # MAIN FLOOR (SYNC) ON/OFF
