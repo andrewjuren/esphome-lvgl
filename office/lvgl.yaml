@@ -38,7 +38,7 @@ lvgl:
       
       widgets:
       
-        # Main Floor On (WILL BE BACKLIGHT ON/OFF)
+        # BACKLIGHT ON/OFF
         - button: 
             height: $button_height_single
             checkable: true
@@ -64,17 +64,17 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: false
-            id: office_scene_calls_button
+            id: main_floor_power_button
             styles: light
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: office_scene_calls_icon                
+                  id: main_floor_power_icon                
                   text: $floor_plan
               - label:
                   align: bottom_left
-                  id: office_scene_calls_label
+                  id: main_floor_power_label
                   text: "Main Floor"
             on_press:
               - homeassistant.service:
@@ -86,17 +86,17 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: false
-            id: office_scene_evening_button
+            id: main_floor_volume_up_button
             styles: light
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: office_scene_evening_icon                
+                  id: main_floor_volume_up_icon                
                   text: $volumeplus
               - label:
                   align: bottom_left
-                  id: office_scene_evening_label
+                  id: main_floor_volume_up_label
                   text: "Volume Up"
             on_press:
               - homeassistant.service:
@@ -109,17 +109,17 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: false
-            id: office_scene_dimmed_button
+            id: main_floor_volume_down_button
             styles: light
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: office_scene_dimmed_icon                
+                  id: main_floor_volume_down_icon                
                   text: $volumeminus
               - label:
                   align: bottom_left
-                  id: office_scene_dimmed_label
+                  id: main_floor_volume_down_label
                   text: "Volume Down"
             on_press:
               - homeassistant.service:
@@ -131,17 +131,17 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: true
-            id: printer_power_button
+            id: system_power_button
             styles: light
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: printer_power_icon
+                  id: system_power_icon
                   text: $power_plug
               - label:
                   align: bottom_left
-                  id: printer_power_label
+                  id: system_power_label
                   text: "System On/Off"
             on_click:
               - homeassistant.service:
@@ -153,7 +153,7 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: true
-            id: office_aircon_button
+            id: living_room_power_button
             styles: dark
             widgets:
               - label:
@@ -173,7 +173,7 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: true
-            id: office_blind_open_button
+            id: living_room_volume_up_button
             styles: dark
             widgets:
               - label:
@@ -182,13 +182,12 @@ lvgl:
                   text: $volumeplus
               - label:
                   align: bottom_left
-                  text: "LR Vol +"
+                  text: "Volume Up"
             on_click:
               - homeassistant.service:
-                  service: cover.set_cover_position
+                  service: media_player.volume_up
                   data:
-                    entity_id: cover.office_blind
-                    position: "100"
+                    entity_id: media_player.living_room
 
         # LIVING ROOM VOL -
         - button: 
@@ -203,19 +202,18 @@ lvgl:
                   text: $volumeminus
               - label:
                   align: bottom_left
-                  text: "LR Vol -"
+                  text: "Volume Down"
             on_click:
               - homeassistant.service:
-                  service: cover.set_cover_position
+                  service: media_player.volume_down
                   data:
-                    entity_id: cover.office_blind
-                    position: "0"
+                    entity_id: media_player.living_room
 
         # NOW PLAYING
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_mail_button
+            id: now_playing_button
             styles: light
             widgets:
               - label:
@@ -235,7 +233,7 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_slack_button
+            id: dining_room_power_button
             styles: dark
             widgets:
               - label:
@@ -247,15 +245,15 @@ lvgl:
                   text: "Dining Room"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.toggle
                   data:
-                    entity_id: button.webhook_slack
+                    entity_id: media_player.zone_12_2
 
         # DINING ROOM VOL +
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_meet_button
+            id: dining_room_volume_up_button
             styles: dark
             widgets:
               - label:
@@ -264,18 +262,18 @@ lvgl:
                   text: $volumeplus
               - label:
                   align: bottom_left
-                  text: "DR Vol +"
+                  text: "Volume Up"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.volume_up
                   data:
-                    entity_id: button.webhook_meet
+                    entity_id: media_player.zone_12_2
 
         # DINING ROOM VOL -
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_figma_button
+            id: dining_room_volume_down_button
             styles: dark
             widgets:
               - label:
@@ -284,18 +282,18 @@ lvgl:
                   text: $volumeminus
               - label:
                   align: bottom_left
-                  text: "DR Vol -"
+                  text: "Volume Down"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.volume_down
                   data:
-                    entity_id: button.webhook_figma
+                    entity_id: media_player.zone_12_2
 
         # SOURCE
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_forklift_button
+            id: source_button
             styles: light
             widgets:
               - label:
@@ -315,7 +313,7 @@ lvgl:
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_iawriter_button
+            id: kitchen_power_button
             styles: dark
             widgets:
               - label:
@@ -327,15 +325,15 @@ lvgl:
                   text: "Kitchen"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.toggle
                   data:
-                    entity_id: button.webhook_iawriter
+                    entity_id: media_player.zone_11_2
 
         # KITCHEN VOL +
         - button: 
             height: $button_height_single
             checkable: false
-            id: webhook_mainsail_button
+            id: kitchen_volume_up_button
             styles: dark
             widgets:
               - label:
@@ -344,18 +342,18 @@ lvgl:
                   text: $volumeplus
               - label:
                   align: bottom_left
-                  text: "K Vol +"
+                  text: "Volume Up"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.volume_up
                   data:
-                    entity_id: button.webhook_mainsail
+                    entity_id: media_player.zone_11_2
 
         # KITCHEN VOL -
         - button: 
             height: $button_height_single
             checkable: false
-            id: kitchen_volume_minus_button
+            id: kitchen_volume_down_button
             styles: dark
             widgets:
               - label:
@@ -364,12 +362,12 @@ lvgl:
                   text: $volumeminus
               - label:
                   align: bottom_left
-                  text: "K Vol -"
+                  text: "Volume Down"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.volume_down
                   data:
-                    entity_id: button.webhook_mainsail
+                    entity_id: media_player.zone_11_2
 
         # PLAY PAUSE
         - button: 
@@ -407,9 +405,9 @@ lvgl:
                   text: "Deck"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.toggle
                   data:
-                    entity_id: button.webhook_iawriter
+                    entity_id: media_player.zone_13_2
 
         # DECK VOL +
         - button: 
@@ -424,12 +422,12 @@ lvgl:
                   text: $volumeplus
               - label:
                   align: bottom_left
-                  text: "Deck Vol +"
+                  text: "Volume Up"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.volume_up
                   data:
-                    entity_id: button.webhook_mainsail
+                    entity_id: media_player.zone_13_2
 
         # DECK VOL -
         - button: 
@@ -444,9 +442,9 @@ lvgl:
                   text: $volumeminus
               - label:
                   align: bottom_left
-                  text: "Deck Vol -"
+                  text: "Volume Down"
             on_click:
               - homeassistant.service:
-                  service: button.press
+                  service: media_player.volume_down
                   data:
-                    entity_id: button.webhook_mainsail
+                    entity_id: media_player.zone_13_2
