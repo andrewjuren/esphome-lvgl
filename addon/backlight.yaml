@@ -7,7 +7,6 @@ switch:
       number: 2
     restore_mode: ALWAYS_ON
     internal: true
-    transition_length: 2s
 
 # Screensaver Presence Trigger
 binary_sensor:
