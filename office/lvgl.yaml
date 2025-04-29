@@ -147,7 +147,7 @@ lvgl:
               - homeassistant.service:
                   service: switch.toggle
                   data:
-                    entity_id: switch.office_3d_printer_power
+                    entity_id: switch.y_window_socket_1
 
         # LIVING ROOM ON/OFF
         - button: 
