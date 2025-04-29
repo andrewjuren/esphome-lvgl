@@ -63,7 +63,7 @@ lvgl:
         # MAIN FLOOR (SYNC) ON/OFF
         - button: 
             height: $button_height_single
-            checkable: false
+            checkable: true
             id: main_floor_power_button
             styles: light
             widgets:
@@ -172,7 +172,7 @@ lvgl:
         # LIVING ROOM VOL +
         - button: 
             height: $button_height_single
-            checkable: true
+            checkable: false
             id: living_room_volume_up_button
             styles: dark
             widgets:
@@ -192,7 +192,7 @@ lvgl:
         # LIVING ROOM VOL -
         - button: 
             height: $button_height_single
-            checkable: true
+            checkable: false
             id: office_blind_close_button
             styles: dark
             widgets:
@@ -232,7 +232,7 @@ lvgl:
         # DINING ROOM ON/OFF
         - button: 
             height: $button_height_single
-            checkable: false
+            checkable: true
             id: dining_room_power_button
             styles: dark
             widgets:
@@ -312,7 +312,7 @@ lvgl:
         # KITCHEN ON/OFF
         - button: 
             height: $button_height_single
-            checkable: false
+            checkable: true
             id: kitchen_power_button
             styles: dark
             widgets:
@@ -372,7 +372,7 @@ lvgl:
         # PLAY PAUSE
         - button: 
             height: $button_height_single
-            checkable: false
+            checkable: true
             id: play_pause_button
             styles: light
             widgets:
@@ -392,7 +392,7 @@ lvgl:
         # DECK ON/OFF
         - button: 
             height: $button_height_single
-            checkable: false
+            checkable: true
             id: deck_power_button
             styles: dark
             widgets:
