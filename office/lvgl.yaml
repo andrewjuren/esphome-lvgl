@@ -55,10 +55,8 @@ lvgl:
                   id: backlight_toggle_label
                   text: "Backlight"
             on_press:
-              - homeassistant.service:
-                  service: button.backlight_toggle
-                  data:
-                    entity_id: button.backlight_toggle
+              - light.turn_off:
+                  id: backlight
 
         # MAIN FLOOR (SYNC) ON/OFF
         - button: 
