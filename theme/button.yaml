@@ -3,13 +3,11 @@ substitutions:
   text_font: roboto17_font
   button_on_color: "0xFF8C00"
   button_text_color: "0xFFFFFF"
-  button_control_color: "0x313131"
-  button_webhook_color: "0x212121"
   button_light_color: "0x363636"
   button_dark_color: "0x262626"
-  button_height_single: 105px
+  button_height_single: 104px
   button_height_double: 220px
-  button_width: 155px
+  button_width: 152px
   button_half_width: 75px
   padding: 8px
   radius: 12px
@@ -19,12 +17,6 @@ substitutions:
 
 lvgl:
   style_definitions:
-    - id: webhook
-      bg_color: $button_webhook_color
-
-    - id: control
-      bg_color: $button_control_color
-    
     - id: light
       bg_color: $button_light_color
 
