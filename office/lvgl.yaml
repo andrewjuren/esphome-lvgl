@@ -111,6 +111,7 @@ lvgl:
             checkable: false
             id: main_floor_volume_down_button
             styles: light
+            width: $button_half_width
             widgets:
               - label:
                   text_font: $icon_font
