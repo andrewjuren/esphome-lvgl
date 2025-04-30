@@ -80,20 +80,7 @@ lvgl:
                   service: script.turn_on_main_floor_sound
                   data:
                     entity_id: script.turn_on_main_floor_sound
-
-
-        # MAIN FLOOR VOL BUTTON MATRIX
-        - buttonmatrix:
-          width: $button_width
-          items:
-          id: main_vol_button_matrix
-          rows:
-            - buttons:
-              - id: vol_up
-                text: $volumeplus
-              - id: vol_down
-                text: $volumeminus
-              
+         
 
         # MAIN FLOOR (SYNC) VOL +
         - button: 
