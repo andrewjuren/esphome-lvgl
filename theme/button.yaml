@@ -9,7 +9,7 @@ substitutions:
   button_dark_color: "0x262626"
   button_height_single: 102px
   button_height_double: 216px
-  button_width: 149px
+  button_width: 150px
   button_half_width: 50px
   padding: 8px
   radius: 12px
