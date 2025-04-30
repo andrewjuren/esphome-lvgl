@@ -1,5 +1,5 @@
 # Backlight
-switch:
+slider:
   - platform: gpio
     id: backlight
     pin: 
