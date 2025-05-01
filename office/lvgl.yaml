@@ -31,11 +31,11 @@ lvgl:
             width: 800
             height: 470
             pad_all: 5
-            pad_row: 5
-            pad_column: 5
+            #pad_row: 5
+            #pad_column: 5
             pad_top: 30
             bg_opa: TRANSP
-            border_opa: TRANS
+            border_opa: TRANSP
             layout:
               type: GRID
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
