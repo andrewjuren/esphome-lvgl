@@ -56,7 +56,12 @@ lvgl:
       
         # BACKLIGHT ON/OFF
         - button: 
-            height: $button_height_single
+            grid_cell_row_pos: 0
+            grid_cell_column_pos: 0
+            grid_cell_column_span: 2
+            grid_cell_x_align: STRETCH
+            grid_cell_y_align: STRETCH
+            #height: $button_height_single
             checkable: true
             id: backlight_toggle_button
             styles: light
@@ -75,392 +80,392 @@ lvgl:
                   id: backlight
                   
 
-        # MAIN FLOOR (SYNC) ON/OFF
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: main_floor_power_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: main_floor_power_icon                
-                  text: $floor_plan
-              - label:
-                  align: bottom_left
-                  id: main_floor_power_label
-                  text: "Main Floor"
-            on_press:
-              - homeassistant.service:
-                  service: script.turn_on_main_floor_sound
-                  data:
-                    entity_id: script.turn_on_main_floor_sound
+        # # MAIN FLOOR (SYNC) ON/OFF
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: main_floor_power_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           id: main_floor_power_icon                
+        #           text: $floor_plan
+        #       - label:
+        #           align: bottom_left
+        #           id: main_floor_power_label
+        #           text: "Main Floor"
+        #     on_press:
+        #       - homeassistant.service:
+        #           service: script.turn_on_main_floor_sound
+        #           data:
+        #             entity_id: script.turn_on_main_floor_sound
          
 
-        # MAIN FLOOR (SYNC) VOL +
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: main_floor_volume_up_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: main_floor_volume_up_icon                
-                  text: $volumeplus
-              - label:
-                  align: bottom_left
-                  id: main_floor_volume_up_label
-                  text: "Volume Up"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_evening
+        # # MAIN FLOOR (SYNC) VOL +
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: main_floor_volume_up_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           id: main_floor_volume_up_icon                
+        #           text: $volumeplus
+        #       - label:
+        #           align: bottom_left
+        #           id: main_floor_volume_up_label
+        #           text: "Volume Up"
+        #     on_press:
+        #       - homeassistant.service:
+        #           service: scene.turn_on
+        #           data:
+        #             entity_id: scene.office_evening
 
 
-        # MAIN FLOOR (SYNC) VOL -
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: main_floor_volume_down_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: main_floor_volume_down_icon                
-                  text: $volumeminus
-              - label:
-                  align: bottom_left
-                  id: main_floor_volume_down_label
-                  text: "Volume Down"
-            on_press:
-              - homeassistant.service:
-                  service: scene.turn_on
-                  data:
-                    entity_id: scene.office_dimmed
+        # # MAIN FLOOR (SYNC) VOL -
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: main_floor_volume_down_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           id: main_floor_volume_down_icon                
+        #           text: $volumeminus
+        #       - label:
+        #           align: bottom_left
+        #           id: main_floor_volume_down_label
+        #           text: "Volume Down"
+        #     on_press:
+        #       - homeassistant.service:
+        #           service: scene.turn_on
+        #           data:
+        #             entity_id: scene.office_dimmed
 
-        # SYSTEM ON/OFF
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: system_power_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: system_power_icon
-                  text: $power_plug
-              - label:
-                  align: bottom_left
-                  id: system_power_label
-                  text: "System On/Off"
-            on_click:
-              - homeassistant.service:
-                  service: switch.toggle
-                  data:
-                    entity_id: switch.y_window_socket_1
+        # # SYSTEM ON/OFF
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: system_power_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           id: system_power_icon
+        #           text: $power_plug
+        #       - label:
+        #           align: bottom_left
+        #           id: system_power_label
+        #           text: "System On/Off"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: switch.toggle
+        #           data:
+        #             entity_id: switch.y_window_socket_1
 
-        # LIVING ROOM ON/OFF
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: living_room_power_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $sofa_outline
-              - label:
-                  align: bottom_left
-                  text: "Living Room"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.toggle
-                  data:
-                    entity_id: media_player.living_room
+        # # LIVING ROOM ON/OFF
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: living_room_power_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $sofa_outline
+        #       - label:
+        #           align: bottom_left
+        #           text: "Living Room"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.toggle
+        #           data:
+        #             entity_id: media_player.living_room
 
-        # LIVING ROOM VOL +
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: living_room_volume_up_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeplus
-              - label:
-                  align: bottom_left
-                  text: "Volume Up"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_up
-                  data:
-                    entity_id: media_player.living_room
+        # # LIVING ROOM VOL +
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: living_room_volume_up_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeplus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Up"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_up
+        #           data:
+        #             entity_id: media_player.living_room
 
-        # LIVING ROOM VOL -
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: office_blind_close_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeminus
-              - label:
-                  align: bottom_left
-                  text: "Volume Down"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_down
-                  data:
-                    entity_id: media_player.living_room
+        # # LIVING ROOM VOL -
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: office_blind_close_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeminus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Down"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_down
+        #           data:
+        #             entity_id: media_player.living_room
 
-        # NOW PLAYING
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: now_playing_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $play_box
-              - label:
-                  align: bottom_left
-                  text: "Now Playing"
-            on_click:
-              - homeassistant.service:
-                  service: button.press
-                  data:
-                    entity_id: button.webhook_mail
+        # # NOW PLAYING
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: now_playing_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $play_box
+        #       - label:
+        #           align: bottom_left
+        #           text: "Now Playing"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: button.press
+        #           data:
+        #             entity_id: button.webhook_mail
 
-        # DINING ROOM ON/OFF
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: dining_room_power_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $table_furniture
-              - label:
-                  align: bottom_left
-                  text: "Dining Room"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.toggle
-                  data:
-                    entity_id: media_player.zone_12_2
+        # # DINING ROOM ON/OFF
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: dining_room_power_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $table_furniture
+        #       - label:
+        #           align: bottom_left
+        #           text: "Dining Room"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.toggle
+        #           data:
+        #             entity_id: media_player.zone_12_2
 
-        # DINING ROOM VOL +
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: dining_room_volume_up_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeplus
-              - label:
-                  align: bottom_left
-                  text: "Volume Up"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_up
-                  data:
-                    entity_id: media_player.zone_12_2
+        # # DINING ROOM VOL +
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: dining_room_volume_up_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeplus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Up"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_up
+        #           data:
+        #             entity_id: media_player.zone_12_2
 
-        # DINING ROOM VOL -
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: dining_room_volume_down_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeminus
-              - label:
-                  align: bottom_left
-                  text: "Volume Down"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_down
-                  data:
-                    entity_id: media_player.zone_12_2
+        # # DINING ROOM VOL -
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: dining_room_volume_down_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeminus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Down"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_down
+        #           data:
+        #             entity_id: media_player.zone_12_2
 
-        # SOURCE
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: source_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $source_branch
-              - label:
-                  align: bottom_left
-                  text: "Source"
-            on_click:
-              - homeassistant.service:
-                  service: button.press
-                  data:
-                    entity_id: button.webhook_forklift
+        # # SOURCE
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: source_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $source_branch
+        #       - label:
+        #           align: bottom_left
+        #           text: "Source"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: button.press
+        #           data:
+        #             entity_id: button.webhook_forklift
 
-        # KITCHEN ON/OFF
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: kitchen_power_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $faucet_variant
-              - label:
-                  align: bottom_left
-                  text: "Kitchen"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.toggle
-                  data:
-                    entity_id: media_player.zone_11_2
+        # # KITCHEN ON/OFF
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: kitchen_power_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $faucet_variant
+        #       - label:
+        #           align: bottom_left
+        #           text: "Kitchen"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.toggle
+        #           data:
+        #             entity_id: media_player.zone_11_2
 
-        # KITCHEN VOL +
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: kitchen_volume_up_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeplus
-              - label:
-                  align: bottom_left
-                  text: "Volume Up"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_up
-                  data:
-                    entity_id: media_player.zone_11_2
+        # # KITCHEN VOL +
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: kitchen_volume_up_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeplus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Up"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_up
+        #           data:
+        #             entity_id: media_player.zone_11_2
 
-        # KITCHEN VOL -
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: kitchen_volume_down_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeminus
-              - label:
-                  align: bottom_left
-                  text: "Volume Down"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_down
-                  data:
-                    entity_id: media_player.zone_11_2
+        # # KITCHEN VOL -
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: kitchen_volume_down_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeminus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Down"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_down
+        #           data:
+        #             entity_id: media_player.zone_11_2
 
-        # PLAY PAUSE
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: play_pause_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $play_pause
-              - label:
-                  align: bottom_left
-                  text: "Play / Pause"
-            on_click:
-              - homeassistant.service:
-                  service: button.press
-                  data:
-                    entity_id: button.webhook_mainsail
+        # # PLAY PAUSE
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: play_pause_button
+        #     styles: light
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $play_pause
+        #       - label:
+        #           align: bottom_left
+        #           text: "Play / Pause"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: button.press
+        #           data:
+        #             entity_id: button.webhook_mainsail
 
-        # DECK ON/OFF
-        - button: 
-            height: $button_height_single
-            checkable: true
-            id: deck_power_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $flower
-              - label:
-                  align: bottom_left
-                  text: "Deck"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.toggle
-                  data:
-                    entity_id: media_player.zone_13_2
+        # # DECK ON/OFF
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: true
+        #     id: deck_power_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $flower
+        #       - label:
+        #           align: bottom_left
+        #           text: "Deck"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.toggle
+        #           data:
+        #             entity_id: media_player.zone_13_2
 
-        # DECK VOL +
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: deck_volume_plus_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeplus
-              - label:
-                  align: bottom_left
-                  text: "Volume Up"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_up
-                  data:
-                    entity_id: media_player.zone_13_2
+        # # DECK VOL +
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: deck_volume_plus_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeplus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Up"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_up
+        #           data:
+        #             entity_id: media_player.zone_13_2
 
-        # DECK VOL -
-        - button: 
-            height: $button_height_single
-            checkable: false
-            id: deck_volume_minus_button
-            styles: dark
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $volumeminus
-              - label:
-                  align: bottom_left
-                  text: "Volume Down"
-            on_click:
-              - homeassistant.service:
-                  service: media_player.volume_down
-                  data:
-                    entity_id: media_player.zone_13_2
+        # # DECK VOL -
+        # - button: 
+        #     height: $button_height_single
+        #     checkable: false
+        #     id: deck_volume_minus_button
+        #     styles: dark
+        #     widgets:
+        #       - label:
+        #           text_font: $icon_font
+        #           align: top_left
+        #           text: $volumeminus
+        #       - label:
+        #           align: bottom_left
+        #           text: "Volume Down"
+        #     on_click:
+        #       - homeassistant.service:
+        #           service: media_player.volume_down
+        #           data:
+        #             entity_id: media_player.zone_13_2
