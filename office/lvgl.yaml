@@ -27,57 +27,57 @@ lvgl:
     - id: main_page
       widgets:
         - obj: 
-          align: CENTER
-          width: 800
-          height: 470
-          pad_all: 5
-          pad_row: 5
-          pad_column: 5
-          pad_top: 30
-          bg_opa: TRANSP
-          border_opa: TRANS
-          layout:
-            type: GRID
-            grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
-            grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
-          widgets:  
-#      layout: 
-#        type: flex
-#        flex_flow: column_wrap
-#      width: 100%
-#      bg_color: Black
-#      bg_opa: cover
-#      pad_top: 30
-#      pad_bottom: 5
-#      pad_left: 5
-#      pad_right: 5
+            align: CENTER
+            width: 800
+            height: 470
+            pad_all: 5
+            pad_row: 5
+            pad_column: 5
+            pad_top: 30
+            bg_opa: TRANSP
+            border_opa: TRANS
+            layout:
+              type: GRID
+              grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
+              grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
+            widgets:  
+              #      layout: 
+              #        type: flex
+              #        flex_flow: column_wrap
+              #      width: 100%
+              #      bg_color: Black
+              #      bg_opa: cover
+              #      pad_top: 30
+              #      pad_bottom: 5
+              #      pad_left: 5
+              #      pad_right: 5
+                    
+              #     widgets:
       
- #     widgets:
-      
-            # BACKLIGHT ON/OFF
-            - button: 
-                grid_cell_row_pos: 0
-                grid_cell_column_pos: 0
-                grid_cell_column_span: 2
-                grid_cell_x_align: STRETCH
-                grid_cell_y_align: STRETCH
-                #height: $button_height_single
-                checkable: true
-                id: backlight_toggle_button
-                styles: light
-                widgets:
-                  - label:
-                      text_font: $icon_font
-                      align: top_left
-                      id: backlight_toggle_icon                
-                      text: $ambient_light
-                  - label:
-                      align: bottom_left
-                      id: backlight_toggle_label
-                      text: "Backlight"
-                on_press:
-                  - switch.toggle:
-                      id: backlight
+              # BACKLIGHT ON/OFF
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  #height: $button_height_single
+                  checkable: true
+                  id: backlight_toggle_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: backlight_toggle_icon                
+                        text: $ambient_light
+                    - label:
+                        align: bottom_left
+                        id: backlight_toggle_label
+                        text: "Backlight"
+                  on_press:
+                    - switch.toggle:
+                        id: backlight
                   
 
         # # MAIN FLOOR (SYNC) ON/OFF
