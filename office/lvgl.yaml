@@ -25,18 +25,34 @@ lvgl:
           
   pages:
     - id: main_page
-      layout: 
-        type: flex
-        flex_flow: column_wrap
-      width: 100%
-      bg_color: Black
-      bg_opa: cover
-      pad_top: 30
-      pad_bottom: 5
-      pad_left: 5
-      pad_right: 5
-      
       widgets:
+        - obj: 
+          align: CENTER
+          width: 800
+          height: 470
+          pad_all: 5
+          pad_row: 5
+          pad_column: 5
+          pad_top: 30
+          bg_opa: TRANSP
+          border_opa: TRANS
+          layout:
+            type: GRID
+            grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
+            grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
+          widgets:  
+#      layout: 
+#        type: flex
+#        flex_flow: column_wrap
+#      width: 100%
+#      bg_color: Black
+#      bg_opa: cover
+#      pad_top: 30
+#      pad_bottom: 5
+#      pad_left: 5
+#      pad_right: 5
+      
+ #     widgets:
       
         # BACKLIGHT ON/OFF
         - button: 
