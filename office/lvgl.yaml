@@ -54,30 +54,30 @@ lvgl:
       
  #     widgets:
       
-        # BACKLIGHT ON/OFF
-        - button: 
-            grid_cell_row_pos: 0
-            grid_cell_column_pos: 0
-            grid_cell_column_span: 2
-            grid_cell_x_align: STRETCH
-            grid_cell_y_align: STRETCH
-            #height: $button_height_single
-            checkable: true
-            id: backlight_toggle_button
-            styles: light
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: backlight_toggle_icon                
-                  text: $ambient_light
-              - label:
-                  align: bottom_left
-                  id: backlight_toggle_label
-                  text: "Backlight"
-            on_press:
-              - switch.toggle:
-                  id: backlight
+            # BACKLIGHT ON/OFF
+            - button: 
+                grid_cell_row_pos: 0
+                grid_cell_column_pos: 0
+                grid_cell_column_span: 2
+                grid_cell_x_align: STRETCH
+                grid_cell_y_align: STRETCH
+                #height: $button_height_single
+                checkable: true
+                id: backlight_toggle_button
+                styles: light
+                widgets:
+                  - label:
+                      text_font: $icon_font
+                      align: top_left
+                      id: backlight_toggle_icon                
+                      text: $ambient_light
+                  - label:
+                      align: bottom_left
+                      id: backlight_toggle_label
+                      text: "Backlight"
+                on_press:
+                  - switch.toggle:
+                      id: backlight
                   
 
         # # MAIN FLOOR (SYNC) ON/OFF
