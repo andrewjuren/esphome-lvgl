@@ -10,7 +10,7 @@ sensor:
 
   - platform: homeassistant
     id: dining_room_volume
-    entity_id: media_player.media_player.zone_12_2
+    entity_id: media_player.zone_12_2
     attribute: volume_level
     on_value:
       - lvgl.slider.update:
