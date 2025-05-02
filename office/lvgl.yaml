@@ -244,7 +244,14 @@ lvgl:
                         action: media_player.volume_up
                         data:
                           entity_id: media_player.living_room                          
-
+                    - homeassistant.action:
+                        action: media_player.volume_up
+                        data:
+                          entity_id: media_player.living_room
+                    - homeassistant.action:
+                        action: media_player.volume_up
+                        data:
+                          entity_id: media_player.living_room 
               # LIVING ROOM VOL -
               - button: 
                   grid_cell_row_pos: 3
@@ -268,7 +275,18 @@ lvgl:
                         action: media_player.volume_down
                         data:
                           entity_id: media_player.living_room
-
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.living_room
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.living_room
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.living_room
               # NOW PLAYING
               - button: 
                   grid_cell_row_pos: 0
