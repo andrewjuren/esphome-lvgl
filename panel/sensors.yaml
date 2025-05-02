@@ -42,13 +42,13 @@ binary_sensor:
     entity_id: media_player.living_room
     publish_initial_state: true
     on_state:
-      -if:
-        condition:
-          lambda: return true;
-        then:
-          - logger.log: "True!"
-        else:
-          - logger.log: "False!"  
+      - if:
+          condition:
+            lambda: return true;
+          then:
+            - logger.log: "True!"
+          else:
+           - logger.log: "False!"  
 
       # - lvgl.button.update:
       #     id: living_room_power_button
