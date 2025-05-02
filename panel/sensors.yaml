@@ -44,11 +44,11 @@ binary_sensor:
     on_state:
       - if:
           condition:
-            lambda: return true;
+            lambda: return STATE==ON;
           then:
-            - logger.log: "True!"
+            - logger.log: True!
           else:
-           - logger.log: "False!"  
+           - logger.log: False!  
 
       # - lvgl.button.update:
       #     id: living_room_power_button
