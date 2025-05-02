@@ -48,11 +48,13 @@ binary_sensor:
           then:
             - lvgl.button.update:
                 id: living_room_power_button
-                checked: true
+                state:
+                  checked: true
           else:
             - lvgl.button.update:
                 id: living_room_power_button
-                checked: false
+                state:
+                  checked: false
 
 #sensor:
 #
