@@ -44,11 +44,11 @@ binary_sensor:
     on_state:
       - if:
           condition:
-            lambda: return true;
+            lambda: return id(living_room_media_player).state
           then:
-            - logger.log: id(living_room_media_player).state
+            - logger.log: Power On?
           else:
-           - logger.log: False!  
+           - logger.log: Power Off?  
 
       # - lvgl.button.update:
       #     id: living_room_power_button
