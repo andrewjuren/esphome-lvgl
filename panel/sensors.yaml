@@ -117,7 +117,26 @@ binary_sensor:
                 id: deck_power_button
                 state:
                   checked: false
-                  
+
+  - platform: homeassistant
+    id: system_power
+    entity_id: switch.y_window_socket_1
+    publish_initial_state: true
+    on_state:
+      - if:
+          condition:
+            lambda: return id(system_power).state;
+          then:
+            - lvgl.button.update:
+                id: system_power_button
+                state:
+                  checked: true
+          else:
+            - lvgl.button.update:
+                id: system_power_button
+                state:
+                  checked: false    
+                                
 #sensor:
 #
 #  # Header Outdoor Temperate
