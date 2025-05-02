@@ -97,7 +97,7 @@ lvgl:
               # MAIN FLOOR (SYNC) VOL +
               - button: 
                   grid_cell_row_pos: 2
-                  grid_cell_column_pos: 0
+                  grid_cell_column_pos: 1
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -110,10 +110,10 @@ lvgl:
                         align: top_left
                         id: main_floor_volume_up_icon                
                         text: $volumeplus
-                    - label:
-                        align: bottom_left
-                        id: main_floor_volume_up_label
-                        text: "Volume Up"
+                    # - label:
+                    #     align: bottom_left
+                    #     id: main_floor_volume_up_label
+                    #     text: "Volume Up"
                   on_press:
                     - homeassistant.service:
                         service: scene.turn_on
@@ -122,8 +122,8 @@ lvgl:
 
               # MAIN FLOOR (SYNC) VOL -
               - button: 
-                  grid_cell_row_pos: 4
-                  grid_cell_column_pos: 0
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 1
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -136,10 +136,10 @@ lvgl:
                         align: top_left
                         id: main_floor_volume_down_icon                
                         text: $volumeminus
-                    - label:
-                        align: bottom_left
-                        id: main_floor_volume_down_label
-                        text: "Volume Down"
+                    # - label:
+                    #     align: bottom_left
+                    #     id: main_floor_volume_down_label
+                    #     text: "Volume Down"
                   on_press:
                     - homeassistant.service:
                         service: scene.turn_on
@@ -199,8 +199,8 @@ lvgl:
 
               # LIVING ROOM VOL +
               - button: 
-                  grid_cell_row_pos: 3
-                  grid_cell_column_pos: 2
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 3
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -212,9 +212,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Up"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_up
@@ -224,7 +224,7 @@ lvgl:
               # LIVING ROOM VOL -
               - button: 
                   grid_cell_row_pos: 3
-                  grid_cell_column_pos: 2
+                  grid_cell_column_pos: 3
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -236,9 +236,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Down"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Down"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_down
@@ -309,9 +309,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Up"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_up
@@ -334,9 +334,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Down"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Down"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_down
@@ -406,9 +406,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Up"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_up
@@ -431,9 +431,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Down"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Down"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_down
@@ -504,9 +504,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Up"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_up
@@ -528,9 +528,9 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    - label:
-                        align: bottom_left
-                        text: "Volume Down"
+                    # - label:
+                    #     align: bottom_left
+                    #     text: "Volume Down"
                   on_click:
                     - homeassistant.service:
                         service: media_player.volume_down
