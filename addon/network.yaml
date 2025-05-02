@@ -24,7 +24,9 @@ sensor:
     on_value:
       - lvgl.label.update:
           id: display_wifi_strength
-          text: "WiFi: $wifi_signal_db dBm"
+          text: 
+            format: "WiFi: %02d% dBm"
+            args: ['id(wifi_signal_db).get_state()']
 
 # Wifi Signal Strength
   - platform: copy
