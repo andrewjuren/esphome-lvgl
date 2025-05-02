@@ -32,6 +32,16 @@ sensor:
     entity_id: media_player.zone_13_2
     attribute: volume_level
     on_value:
+      - lvgl.slider.update:
+          id: deck_volume_slider
+          value: !lambda return (x * 100);  
+
+binary_sensor:
+  - platform: homeassistant
+    id: living_room_media_player
+    entity_id: media_player.living_room
+    publish_initial_state: true
+    on_state:
       -if:
         condition:
           lambda: return true;
@@ -40,19 +50,9 @@ sensor:
         else:
           - logger.log: "False!"  
 
-      # - lvgl.slider.update:
-      #     id: deck_volume_slider
-      #     value: !lambda return (x * 100);  
-
-binary_sensor:
-  - platform: homeassistant
-    id: living_room_media_player
-    entity_id: media_player.living_room
-    publish_initial_state: true
-    on_state:
-      - lvgl.button.update:
-          id: living_room_power_button
-          value: !lambda return x; 
+      # - lvgl.button.update:
+      #     id: living_room_power_button
+      #     value: !lambda return x; 
 
 #sensor:
 #
