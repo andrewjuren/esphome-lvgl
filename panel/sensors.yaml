@@ -1,4 +1,5 @@
 sensor:
+  # LIVING ROOM
   - platform: homeassistant
     id: living_room_volume
     entity_id: media_player.living_room
@@ -7,6 +8,14 @@ sensor:
       - lvgl.slider.update:
           id: living_room_volume_slider
           value: !lambda return (x * 100);
+  - platform: homeassistant
+    id: living_room_state
+    entity_id: media_player.living_room
+    attribute: state
+    on_value:
+    - lambda: |-
+        ESP_LOGI("Media Player State", "The state is %s", living_room_state);
+
 
   - platform: homeassistant
     id: dining_room_volume
