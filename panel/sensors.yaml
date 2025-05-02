@@ -44,7 +44,7 @@ binary_sensor:
     on_state:
       - if:
           condition:
-            lambda: return id(living_room_media_player).state
+            lambda: return id(living_room_media_player).state;
           then:
             - logger.log: Power On?
           else:
