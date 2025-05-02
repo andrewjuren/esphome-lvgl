@@ -42,7 +42,7 @@ binary_sensor:
     id: living_room_media_player
     entity_id: media_player.living_room
     publish_initial_state: true
-    on_value:
+    on_state:
     - logger.log: "Media Player state changed!"
 
 #sensor:
