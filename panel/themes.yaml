@@ -34,3 +34,6 @@ lvgl:
       checked:
         bg_color: $button_on_color
         text_color: $button_text_color
+    slider:
+      bg_color: $button_light_color
+

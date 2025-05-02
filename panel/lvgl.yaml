@@ -565,7 +565,6 @@ lvgl:
                   grid_cell_y_align: STRETCH
                   checkable: false
                   id: deck_volume_minus_button
-                  styles: dark
                   widgets:
                     - label:
                         text_font: $icon_font
