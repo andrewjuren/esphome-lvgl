@@ -25,7 +25,7 @@ lvgl:
 
       # Wifi signal strength
       - label:
-          text: "WiFi: -- dB"  
+          text: "WiFi: -- dBm"  
           id: display_wifi_strength
           styles: roboto15_style
           align: top_right
@@ -33,7 +33,7 @@ lvgl:
           y: 4 
           text_align: right
           text_color: 0xFFFFFF
-           
+
   pages:
     - id: main_page
       widgets:
