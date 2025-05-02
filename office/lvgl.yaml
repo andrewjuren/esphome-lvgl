@@ -29,11 +29,12 @@ lvgl:
         - obj: 
             align: CENTER
             width: 800
-            height: 470
+            height: 480
             pad_all: 5
             #pad_row: 5
             #pad_column: 5
             pad_top: 30
+            radius: 0
             bg_color: Black
             border_opa: TRANSP
             layout:
