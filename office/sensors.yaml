@@ -5,7 +5,7 @@ sensor:
     attribute: volume_level
     on_value:
       - lvgl.slider.update:
-          id: living_room_volume_slide
+          id: living_room_volume_slider
           value: !lambda return (x * 100);
 
 

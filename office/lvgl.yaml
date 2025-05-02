@@ -196,15 +196,15 @@ lvgl:
                         service: media_player.toggle
                         data:
                           entity_id: media_player.living_room
-                          
+
               # LIVING ROOM VOL SLIDER
               - slider:
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 0
-                  grid_cell_row_span: 2
+                  grid_cell_row_span: 3
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  id: living_room_voluem_slider
+                  id: living_room_volume_slider
                   min_value: 0
                   max_value: 100
                   adv_hittest: true
