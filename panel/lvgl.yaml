@@ -336,6 +336,20 @@ lvgl:
                         data:
                           entity_id: media_player.zone_12_2
 
+              # DINING ROOM VOL SLIDER
+              - slider:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 4
+                  grid_cell_row_span: 3
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: CENTER
+                  id: dining_room_volume_slider
+                  width: 20px
+                  height: 200px
+                  min_value: 0
+                  max_value: 100
+                  adv_hittest: true
+
               # DINING ROOM VOL +
               - button: 
                   grid_cell_row_pos: 2
@@ -434,6 +448,20 @@ lvgl:
                         data:
                           entity_id: media_player.zone_11_2
 
+              # KITCHEN VOL SLIDER
+              - slider:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 6
+                  grid_cell_row_span: 3
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: CENTER
+                  id: kitchen_volume_slider
+                  width: 20px
+                  height: 200px
+                  min_value: 0
+                  max_value: 100
+                  adv_hittest: true
+
               # KITCHEN VOL +
               - button: 
                   grid_cell_row_pos: 2
@@ -531,6 +559,20 @@ lvgl:
                         action: media_player.toggle
                         data:
                           entity_id: media_player.zone_13_2
+
+              # DECK VOL SLIDER
+              - slider:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 8
+                  grid_cell_row_span: 3
+                  grid_cell_x_align: CENTER
+                  grid_cell_y_align: CENTER
+                  id: deck_volume_slider
+                  width: 20px
+                  height: 200px
+                  min_value: 0
+                  max_value: 100
+                  adv_hittest: true
 
               # DECK VOL +
               - button: 

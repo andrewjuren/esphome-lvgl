@@ -8,6 +8,32 @@ sensor:
           id: living_room_volume_slider
           value: !lambda return (x * 100);
 
+  - platform: homeassistant
+    id: dining_room_volume
+    entity_id: media_player.media_player.zone_12_2
+    attribute: volume_level
+    on_value:
+      - lvgl.slider.update:
+          id: dining_room_volume_slider
+          value: !lambda return (x * 100);
+
+  - platform: homeassistant
+    id: kitchen_volume
+    entity_id: media_player.zone_11_2
+    attribute: volume_level
+    on_value:
+      - lvgl.slider.update:
+          id: kitchen_volume_slider
+          value: !lambda return (x * 100);          
+
+  - platform: homeassistant
+    id: deck_volume
+    entity_id: media_player.zone_13_2
+    attribute: volume_level
+    on_value:
+      - lvgl.slider.update:
+          id: deck_volume_slider
+          value: !lambda return (x * 100);  
 
 #sensor:
 #
