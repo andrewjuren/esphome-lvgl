@@ -211,7 +211,10 @@ lvgl:
                   max_value: 100
                   adv_hittest: true
                   styles: light
-                  arc_color: "0x777777"
+                  arc_color: 0x777777
+                  indicator:
+                    bg_color: 0x777777
+                    bg_opa: COVER
                   # on_value:
                   #   - homeassistant.action:
                   #       action: media_player.volume_set
