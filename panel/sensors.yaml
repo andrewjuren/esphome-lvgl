@@ -13,7 +13,7 @@ sensor:
     id: living_room_state
     entity_id: media_player.living_room
     attribute: state
-    on_state:
+    on_value:
     - logger.log: "Media Player state changed!"
 
   - platform: homeassistant
