@@ -211,6 +211,7 @@ lvgl:
                   max_value: 100
                   adv_hittest: true
                   styles: light
+                  color: "0x777777"
                   # on_value:
                   #   - homeassistant.action:
                   #       action: media_player.volume_set
@@ -565,6 +566,7 @@ lvgl:
                   grid_cell_y_align: STRETCH
                   checkable: false
                   id: deck_volume_minus_button
+                  styles: dark
                   widgets:
                     - label:
                         text_font: $icon_font
