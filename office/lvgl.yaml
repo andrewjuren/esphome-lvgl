@@ -200,7 +200,7 @@ lvgl:
               # LIVING ROOM VOL SLIDER
               - slider:
                   grid_cell_row_pos: 2
-                  grid_cell_column_pos: 0
+                  grid_cell_column_pos: 2
                   grid_cell_row_span: 3
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
