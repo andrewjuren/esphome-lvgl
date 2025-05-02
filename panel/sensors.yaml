@@ -7,8 +7,7 @@ sensor:
     on_value:
       - lvgl.slider.update:
           id: living_room_volume_slider
-          value: !lambda return (x * 100);
-      - logger.log: "Volume changed!"    
+          value: !lambda return (x * 100);  
 
   - platform: homeassistant
     id: dining_room_volume
@@ -33,9 +32,17 @@ sensor:
     entity_id: media_player.zone_13_2
     attribute: volume_level
     on_value:
-      - lvgl.slider.update:
-          id: deck_volume_slider
-          value: !lambda return (x * 100);  
+      -if:
+        condition:
+          lambda: return true;
+        then:
+          - logger.log: "True!"
+        else:
+          - logger.log: "False!"  
+
+      # - lvgl.slider.update:
+      #     id: deck_volume_slider
+      #     value: !lambda return (x * 100);  
 
 binary_sensor:
   - platform: homeassistant
@@ -43,7 +50,9 @@ binary_sensor:
     entity_id: media_player.living_room
     publish_initial_state: true
     on_state:
-    - logger.log: "Media Player state changed!"
+      - lvgl.button.update:
+          id: living_room_power_button
+          value: !lambda return x; 
 
 #sensor:
 #
