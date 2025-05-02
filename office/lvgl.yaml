@@ -240,6 +240,10 @@ lvgl:
                         action: media_player.volume_up
                         data:
                           entity_id: media_player.living_room
+                    - homeassistant.action:
+                        action: media_player.volume_up
+                        data:
+                          entity_id: media_player.living_room                          
 
               # LIVING ROOM VOL -
               - button: 
