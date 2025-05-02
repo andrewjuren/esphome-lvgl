@@ -205,15 +205,17 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   id: living_room_volume_slider
+                  width: 50%
+                  height: 80%
                   min_value: 0
                   max_value: 100
                   adv_hittest: true
-                  # on_value:
-                  #   - homeassistant.action:
-                  #       action: media_player.volume_set
-                  #       data:
-                  #         entity_id: media_player.living_room
-                  #         volume_level: !lambda return (x / 100);
+                  on_value:
+                    - homeassistant.action:
+                        action: media_player.volume_set
+                        data:
+                          entity_id: media_player.living_room
+                          volume_level: !lambda return (x / 100);
 
               # LIVING ROOM VOL +
               - button: 
