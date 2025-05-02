@@ -205,8 +205,8 @@ lvgl:
                   grid_cell_x_align: CENTER
                   grid_cell_y_align: CENTER
                   id: living_room_volume_slider
-                  width: 50%
-                  height: 80%
+                  width: 20px
+                  height: 200px
                   min_value: 0
                   max_value: 100
                   adv_hittest: true
