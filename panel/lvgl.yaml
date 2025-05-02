@@ -210,7 +210,7 @@ lvgl:
                   min_value: 0
                   max_value: 100
                   adv_hittest: true
-                  styles: $light
+                  styles: light
                   # on_value:
                   #   - homeassistant.action:
                   #       action: media_player.volume_set
