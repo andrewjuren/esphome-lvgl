@@ -132,7 +132,11 @@ lvgl:
                     - homeassistant.action:
                         action: media_player.volume_up
                         data:
-                          entity_id: media_player.zone_12_2
+                          entity_id: media_player.zone_12_2 # dining_room
+                    - homeassistant.action:
+                        action: media_player.volume_up
+                        data:
+                          entity_id: media_player.zone_11_2 # kitchen                      
 
               # MAIN FLOOR (SYNC) VOL -
               - button: 
@@ -155,10 +159,17 @@ lvgl:
                         count: 4
                         then:                    
                         - homeassistant.action:
-                            action: media_player.volume_up
+                            action: media_player.volume_down
                             data:
                               entity_id: media_player.living_room
-
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.zone_12_2 # dining_room
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.zone_11_2 # kitchen
 
               # SYSTEM ON/OFF
               - button: 
@@ -244,7 +255,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-
                   on_click:
                     - repeat:
                         count: 4
@@ -269,7 +279,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-
                   on_click:
                     - repeat:
                         count: 4
