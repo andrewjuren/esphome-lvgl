@@ -320,6 +320,29 @@ lvgl:
                             data:
                               entity_id: media_player.living_room
 
+              # LIVING ROOM MUTE
+              - button: 
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 3
+                  grid_cell_column_span: 1
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: living_room_mute_button
+                  styles: dark
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: living_room_mute_icon                
+                        text: $volume_mute
+                  on_press:                
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.living_room
+                          #is_volume_muted: true
+
               # NOW PLAYING
               - button: 
                   grid_cell_row_pos: 0
@@ -421,6 +444,29 @@ lvgl:
                         action: media_player.volume_down
                         data:
                           entity_id: media_player.zone_12_2
+
+              # DINING ROOM MUTE
+              - button: 
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 5
+                  grid_cell_column_span: 1
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: dining_room_mute_button
+                  styles: dark
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: dining_room_mute_icon                
+                        text: $volume_mute
+                  on_press:                
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.zone_12_2
+                          #is_volume_muted: true
 
               # SOURCE
               - button: 
@@ -525,6 +571,29 @@ lvgl:
                         data:
                           entity_id: media_player.zone_11_2
 
+              # KITCHEN MUTE
+              - button: 
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 5
+                  grid_cell_column_span: 1
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: kitchen_mute_button
+                  styles: dark
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: kitchen_mute_icon                
+                        text: $volume_mute
+                  on_press:                
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.zone_11_2
+                          #is_volume_muted: true
+
               # PLAY PAUSE
               - button: 
                   grid_cell_row_pos: 0
@@ -626,3 +695,26 @@ lvgl:
                         action: media_player.volume_down
                         data:
                           entity_id: media_player.zone_13_2
+
+              # DECK MUTE
+              - button: 
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 5
+                  grid_cell_column_span: 1
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: deck_mute_button
+                  styles: dark
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: deck_mute_icon                
+                        text: $volume_mute
+                  on_press:                
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.zone_13_2
+                          #is_volume_muted: true
