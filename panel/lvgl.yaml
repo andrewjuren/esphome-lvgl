@@ -577,7 +577,7 @@ lvgl:
               # KITCHEN MUTE
               - button: 
                   grid_cell_row_pos: 4
-                  grid_cell_column_pos: 5
+                  grid_cell_column_pos: 7
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -702,7 +702,7 @@ lvgl:
               # DECK MUTE
               - button: 
                   grid_cell_row_pos: 4
-                  grid_cell_column_pos: 5
+                  grid_cell_column_pos: 9
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
