@@ -121,15 +121,18 @@ lvgl:
                         align: top_left
                         id: main_floor_volume_up_icon                
                         text: $volumeplus
-                    # - label:
-                    #     align: bottom_left
-                    #     id: main_floor_volume_up_label
-                    #     text: "Volume Up"
                   on_press:
+                    - repeat:
+                        count: 4
+                        then:                    
+                        - homeassistant.action:
+                            action: media_player.volume_up
+                            data:
+                              entity_id: media_player.living_room
                     - homeassistant.action:
-                        action: scene.turn_on
+                        action: media_player.volume_up
                         data:
-                          entity_id: scene.office_evening
+                          entity_id: media_player.zone_12_2
 
               # MAIN FLOOR (SYNC) VOL -
               - button: 
@@ -147,15 +150,15 @@ lvgl:
                         align: top_left
                         id: main_floor_volume_down_icon                
                         text: $volumeminus
-                    # - label:
-                    #     align: bottom_left
-                    #     id: main_floor_volume_down_label
-                    #     text: "Volume Down"
                   on_press:
-                    - homeassistant.action:
-                        action: scene.turn_on
-                        data:
-                          entity_id: scene.office_dimmed
+                    - repeat:
+                        count: 4
+                        then:                    
+                        - homeassistant.action:
+                            action: media_player.volume_up
+                            data:
+                              entity_id: media_player.living_room
+
 
               # SYSTEM ON/OFF
               - button: 
@@ -164,7 +167,6 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  #height: $button_height_single
                   checkable: true
                   id: system_power_button
                   styles: light
@@ -242,9 +244,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Up"
+
                   on_click:
                     - repeat:
                         count: 4
@@ -269,26 +269,16 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Down"
+
                   on_click:
-                    - homeassistant.action:
-                        action: media_player.volume_down
-                        data:
-                          entity_id: media_player.living_room
-                    - homeassistant.action:
-                        action: media_player.volume_down
-                        data:
-                          entity_id: media_player.living_room
-                    - homeassistant.action:
-                        action: media_player.volume_down
-                        data:
-                          entity_id: media_player.living_room
-                    - homeassistant.action:
-                        action: media_player.volume_down
-                        data:
-                          entity_id: media_player.living_room
+                    - repeat:
+                        count: 4
+                        then:                  
+                        - homeassistant.action:
+                            action: media_player.volume_down
+                            data:
+                              entity_id: media_player.living_room
+
               # NOW PLAYING
               - button: 
                   grid_cell_row_pos: 0
@@ -356,7 +346,6 @@ lvgl:
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  #height: $button_height_single
                   checkable: false
                   id: dining_room_volume_up_button
                   styles: dark
@@ -365,9 +354,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.action:
                         action: media_player.volume_up
@@ -381,7 +367,6 @@ lvgl:
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  #height: $button_height_single
                   checkable: false
                   id: dining_room_volume_down_button
                   styles: dark
@@ -390,9 +375,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Down"
                   on_click:
                     - homeassistant.action:
                         action: media_player.volume_down
@@ -474,9 +456,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.action:
                         action: media_player.volume_up
@@ -490,7 +469,6 @@ lvgl:
                   grid_cell_column_span: 1
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  #height: $button_height_single
                   checkable: false
                   id: kitchen_volume_down_button
                   styles: dark
@@ -499,9 +477,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Down"
+
                   on_click:
                     - homeassistant.action:
                         action: media_player.volume_down
@@ -515,7 +491,6 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  #height: $button_height_single
                   checkable: true
                   id: play_pause_button
                   styles: light
@@ -584,9 +559,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeplus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Up"
                   on_click:
                     - homeassistant.action:
                         action: media_player.volume_up
@@ -608,9 +580,6 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         text: $volumeminus
-                    # - label:
-                    #     align: bottom_left
-                    #     text: "Volume Down"
                   on_click:
                     - homeassistant.action:
                         action: media_player.volume_down
