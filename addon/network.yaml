@@ -25,7 +25,7 @@ sensor:
       - lvgl.label.update:
           id: display_wifi_strength
           text: 
-             format: "Wifi %.02f% dBm"
+             format: "Wifi %02d% dBm"
              args: ['(int)round(id(wifi_signal_db).state)']
 
 
