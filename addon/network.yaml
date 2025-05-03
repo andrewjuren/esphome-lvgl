@@ -21,12 +21,12 @@ sensor:
     update_interval: 60s
     entity_category: "diagnostic"
     internal: true
-    on_value:
-      - lvgl.label.update:
-          id: display_wifi_strength
-          text: 
-              format: "Wifi %02d% dBm"
-              args: ['(int)round(id(wifi_signal_db).state)']
+    # on_value:
+    #   - lvgl.label.update:
+    #       id: display_wifi_strength
+    #       text: 
+    #           format: "Wifi %02d% dBm"
+    #           args: ['(int)round(id(wifi_signal_db).state)']
 
 
 # Wifi Signal Strength
