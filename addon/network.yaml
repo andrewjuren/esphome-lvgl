@@ -26,7 +26,7 @@ sensor:
           id: display_wifi_strength
           text: 
              format: "Wifi %.02f% dBm"
-             args: ['(int)round(id(sensor.wifi_signal_db).state)']
+             args: ['(int)round(id(wifi_signal_db).state)']
 
 
 # Wifi Signal Strength
