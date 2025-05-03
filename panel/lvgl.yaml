@@ -170,6 +170,38 @@ lvgl:
                         action: media_player.volume_down
                         data:
                           entity_id: media_player.zone_11_2 # kitchen
+      
+              # MAIN FLOOR (SYNC) MUTE
+              - button: 
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 1
+                  grid_cell_column_span: 1
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: main_floor_mute_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: main_floor_mute_icon                
+                        text: $volume_mute
+                  on_press:                
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.living_room
+                          #is_volume_muted: true
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.zone_12_2 # dining_room
+                          #is_volume_muted: true
+                    - homeassistant.action:
+                        action: media_player.volume_mute
+                        data:
+                          entity_id: media_player.zone_11_2 # kitchen
 
               # SYSTEM ON/OFF
               - button: 
