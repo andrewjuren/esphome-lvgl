@@ -487,10 +487,13 @@ lvgl:
                         align: bottom_left
                         text: "Source"
                   on_click:
-                    - homeassistant.action:
-                        action: button.press
-                        data:
-                          entity_id: button.webhook_forklift
+                    - logger.log: "on_click"
+                  on_press:
+                    - logger.log: "on_press"
+                  on_long_press:
+                    - logger.log: "on_long_press" 
+                  on_long_press_repeat:
+                    - logger.log: "repeat" 
 
               # KITCHEN ON/OFF
               - button: 
