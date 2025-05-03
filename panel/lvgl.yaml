@@ -137,6 +137,22 @@ lvgl:
                         action: media_player.volume_up
                         data:
                           entity_id: media_player.zone_11_2 # kitchen                      
+                  on_long_press_repeat:
+                    - repeat:
+                        count: 4
+                        then:                    
+                        - homeassistant.action:
+                            action: media_player.volume_up
+                            data:
+                              entity_id: media_player.living_room
+                    - homeassistant.action:
+                        action: media_player.volume_up
+                        data:
+                          entity_id: media_player.zone_12_2 # dining_room
+                    - homeassistant.action:
+                        action: media_player.volume_up
+                        data:
+                          entity_id: media_player.zone_11_2 # kitchen                      
 
               # MAIN FLOOR (SYNC) VOL -
               - button: 
@@ -155,6 +171,22 @@ lvgl:
                         id: main_floor_volume_down_icon                
                         text: $volumeminus
                   on_press:
+                    - repeat:
+                        count: 4
+                        then:                    
+                        - homeassistant.action:
+                            action: media_player.volume_down
+                            data:
+                              entity_id: media_player.living_room
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.zone_12_2 # dining_room
+                    - homeassistant.action:
+                        action: media_player.volume_down
+                        data:
+                          entity_id: media_player.zone_11_2 # kitchen
+                  on_long_press_repeat:
                     - repeat:
                         count: 4
                         then:                    
