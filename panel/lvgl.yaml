@@ -297,12 +297,12 @@ lvgl:
                   max_value: 100
                   animated: false
                   adv_hittest: true
-                  # on_value:
-                  #   - homeassistant.action:
-                  #       action: media_player.volume_set
-                  #       data:
-                  #         entity_id: media_player.living_room
-                  #         volume_level: !lambda return (x / 100);
+                  on_value:
+                    - homeassistant.action:
+                        action: media_player.volume_set
+                        data:
+                          entity_id: media_player.living_room
+                          volume_level: !lambda return (x / 100);
 
               # LIVING ROOM VOL +
               - button: 
