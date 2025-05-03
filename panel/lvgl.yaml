@@ -295,10 +295,8 @@ lvgl:
                   id: living_room_volume_slider
                   min_value: 0
                   max_value: 100
+                  animated: false
                   adv_hittest: true
-                  on_press:
-                    # do nothing
-                    
                   # on_value:
                   #   - homeassistant.action:
                   #       action: media_player.volume_set
