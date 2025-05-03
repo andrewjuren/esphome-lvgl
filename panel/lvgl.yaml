@@ -23,16 +23,16 @@ lvgl:
           text_align: center
           text_color: 0xFFFFFF
 
-      # Wifi signal strength
-      - label:
-          text: "WiFi: -- dBm"  
-          id: display_wifi_strength
-          styles: roboto15_style
-          align: top_right
-          x: -4
-          y: 4 
-          text_align: right
-          text_color: 0xFFFFFF
+      # # Wifi signal strength
+      # - label:
+      #     text: "WiFi: -- dBm"  
+      #     id: display_wifi_strength
+      #     styles: roboto15_style
+      #     align: top_right
+      #     x: -4
+      #     y: 4 
+      #     text_align: right
+      #     text_color: 0xFFFFFF
 
   pages:
     - id: main_page
@@ -246,22 +246,14 @@ lvgl:
                     #     align: bottom_left
                     #     text: "Volume Up"
                   on_click:
-                    - homeassistant.action:
-                        action: media_player.volume_up
-                        data:
-                          entity_id: media_player.living_room
-                    - homeassistant.action:
-                        action: media_player.volume_up
-                        data:
-                          entity_id: media_player.living_room                          
-                    - homeassistant.action:
-                        action: media_player.volume_up
-                        data:
-                          entity_id: media_player.living_room
-                    - homeassistant.action:
-                        action: media_player.volume_up
-                        data:
-                          entity_id: media_player.living_room 
+                    - repeat:
+                      count: 4
+                      then:                    
+                      - homeassistant.action:
+                          action: media_player.volume_up
+                          data:
+                            entity_id: media_player.living_room
+ 
               # LIVING ROOM VOL -
               - button: 
                   grid_cell_row_pos: 3
