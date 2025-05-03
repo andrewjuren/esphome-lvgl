@@ -21,10 +21,10 @@ sensor:
     update_interval: 60s
     entity_category: "diagnostic"
     internal: true
-    on_value:
-      - lvgl.label.update:
-          id: display_wifi_strength
-          text: !lambda return "Wifi %.02f% dBm", x;
+    # on_value:
+    #   - lvgl.label.update:
+    #       id: display_wifi_strength
+    #       text: !lambda return "Wifi %.02f% dBm", x;
 
 
 # Wifi Signal Strength
