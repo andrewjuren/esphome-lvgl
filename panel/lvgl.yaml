@@ -247,12 +247,12 @@ lvgl:
                     #     text: "Volume Up"
                   on_click:
                     - repeat:
-                      count: 4
-                      then:                    
-                      - homeassistant.action:
-                          action: media_player.volume_up
-                          data:
-                            entity_id: media_player.living_room
+                        count: 4
+                        then:                    
+                        - homeassistant.action:
+                            action: media_player.volume_up
+                            data:
+                              entity_id: media_player.living_room
  
               # LIVING ROOM VOL -
               - button: 
