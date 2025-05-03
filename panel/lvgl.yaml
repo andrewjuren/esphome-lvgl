@@ -297,7 +297,7 @@ lvgl:
                   max_value: 100
                   animated: false
                   adv_hittest: true
-                  on_value:
+                  on_release:
                     - homeassistant.action:
                         action: media_player.volume_set
                         data:
