@@ -812,9 +812,7 @@ lvgl:
                   on_press:
                     - lvgl.label.update:
                         id: info_button_top
-                        text: 
-                          format: "hello"
-                          args: !lambda return id(media_player.spotify_larissajay);
+                        text: !lambda return id(media_player.spotify_larissajay);
 
               - button: 
                   grid_cell_row_pos: 1
