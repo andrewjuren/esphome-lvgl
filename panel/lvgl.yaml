@@ -828,7 +828,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: play_button_icon                
-                        text: $exit_to_app
+                        text: $play
                     - label:
                         align: bottom_left
                         id: play_button_label
@@ -853,7 +853,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: pause_button_icon                
-                        text: $exit_to_app
+                        text: $pause
                     - label:
                         align: bottom_left
                         id: pause_button_label
