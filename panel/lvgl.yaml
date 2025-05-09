@@ -769,7 +769,7 @@ lvgl:
             widgets: 
               - button: 
                   grid_cell_row_pos: 0
-                  grid_cell_column_pos: 0
+                  grid_cell_column_pos: 8
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -800,10 +800,10 @@ lvgl:
                   styles: dark
                   widgets:
                     - label:
-                        text_font: $text_font
+                        text_font: $large_text_font
                         align: top_left
                         id: info_button_top                
-                        text: "Title"
+                        text: !lambda return id(media_player.spotify_larissajay).title
                     - label:
                         text_font: $small_text_font
                         align: bottom_left
