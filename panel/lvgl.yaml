@@ -394,10 +394,7 @@ lvgl:
                         align: bottom_left
                         text: "Now Playing"
                   on_click:
-                    - homeassistant.action:
-                        action: button.press
-                        data:
-                          entity_id: button.webhook_mail
+                    - lvgl.page.show: now_playing_page
 
               # DINING ROOM ON/OFF
               - button: 
@@ -648,10 +645,7 @@ lvgl:
                         align: bottom_left
                         text: "Play / Pause"
                   on_click:
-                    - homeassistant.action:
-                        action: button.press
-                        data:
-                          entity_id: button.webhook_mainsail
+                    - lvgl.page.show: settings_page 
 
               # DECK ON/OFF
               - button: 
@@ -753,3 +747,85 @@ lvgl:
                         data:
                           entity_id: media_player.zone_13_2
                           #is_volume_muted: true
+
+    - id: settings_page
+      widgets:
+        - obj: 
+            align: CENTER
+            width: 800
+            height: 480
+            pad_all: 5
+            #pad_row: 5
+            #pad_column: 5
+            pad_top: 30
+            radius: 0
+            bg_color: Black
+            border_opa: TRANSP
+            layout:
+              type: GRID
+              grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
+              grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
+            widgets: 
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: backlight_toggle_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: backlight_toggle_icon                
+                        text: $ambient_light
+                    - label:
+                        align: bottom_left
+                        id: backlight_toggle_label
+                        text: "SETTINGS PAGE"
+                  on_press:
+                    - lvgl.page.show: main_page           
+
+    - id: now_playing_page
+      widgets:
+        - obj: 
+            align: CENTER
+            width: 800
+            height: 480
+            pad_all: 5
+            #pad_row: 5
+            #pad_column: 5
+            pad_top: 30
+            radius: 0
+            bg_color: Black
+            border_opa: TRANSP
+            layout:
+              type: GRID
+              grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
+              grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
+            widgets: 
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: true
+                  id: backlight_toggle_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: backlight_toggle_icon                
+                        text: $ambient_light
+                    - label:
+                        align: bottom_left
+                        id: backlight_toggle_label
+                        text: "NOW PLAYING"
+                  on_press:
+                    - lvgl.page.show: main_page      
+
+    
