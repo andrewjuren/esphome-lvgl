@@ -35,7 +35,9 @@ font:
       "\U000F062C",  # mdi-source-branch
       "\U000F040E",  # mdi-play-pause      
       "\U000F024A",  # mdi-flower
-      "\U000F075F"  #mid-volume-mute
+      "\U000F075F",  #mid-volume-mute
+      "\U000F0206",  #mdi-exit-to-app
+      "\U000F08BB"  #mdi-cog-outline
       ]
 
 # Map icons to names
@@ -69,3 +71,5 @@ substitutions:
   play_pause:     "\U000F040E"
   flower:         "\U000F024A"
   volume_mute:    "\U000F075F"
+  cog_outline:    "\U000F08BB"
+  exit_to_app:    "\U000F0206"

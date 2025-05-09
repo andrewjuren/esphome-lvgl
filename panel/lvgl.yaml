@@ -626,7 +626,7 @@ lvgl:
                           entity_id: media_player.zone_11_2
                           #is_volume_muted: true
 
-              # PLAY PAUSE
+              # SETTINGS
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 8
@@ -640,10 +640,10 @@ lvgl:
                     - label:
                         text_font: $icon_font
                         align: top_left
-                        text: $play_pause
+                        text: $cog_outline
                     - label:
                         align: bottom_left
-                        text: "Play / Pause"
+                        text: "Settings"
                   on_click:
                     - lvgl.page.show: settings_page 
 
@@ -780,11 +780,11 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: settings_page_icon                
-                        text: $ambient_light
+                        text: $exit_to_app
                     - label:
                         align: bottom_left
                         id: settings_page_label
-                        text: "SETTINGS PAGE"
+                        text: "Exit to App"
                   on_press:
                     - lvgl.page.show: main_page           
 
@@ -820,11 +820,11 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: now_playing_icon                
-                        text: $ambient_light
+                        text: $exit_to_app
                     - label:
                         align: bottom_left
                         id: now_playing_label
-                        text: "NOW PLAYING"
+                        text: "Exit to App"
                   on_press:
                     - lvgl.page.show: main_page      
 
