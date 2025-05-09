@@ -75,8 +75,9 @@ lvgl:
                         id: backlight_toggle_label
                         text: "Backlight"
                   on_press:
-                    - switch.toggle:
-                        id: backlight
+                      - lvgl.page.show: blank_page 
+                    # - switch.toggle:
+                    #     id: backlight
 
               # MAIN FLOOR (SYNC) ON/OFF
               - button: 
@@ -877,3 +878,8 @@ lvgl:
                         text: "Exit to App"
                   on_press:
                     - lvgl.page.show: main_page           
+
+    - id: blank_page
+      widgets:
+      on_press: 
+        - lvgl.page.show: main_page 
