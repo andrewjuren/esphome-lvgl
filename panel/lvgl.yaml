@@ -773,17 +773,17 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: true
-                  id: backlight_toggle_button
+                  id: settings_page_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
                         align: top_left
-                        id: backlight_toggle_icon                
+                        id: settings_page_icon                
                         text: $ambient_light
                     - label:
                         align: bottom_left
-                        id: backlight_toggle_label
+                        id: settings_page_label
                         text: "SETTINGS PAGE"
                   on_press:
                     - lvgl.page.show: main_page           
@@ -813,17 +813,17 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: true
-                  id: backlight_toggle_button
+                  id: now_playing_page_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
                         align: top_left
-                        id: backlight_toggle_icon                
+                        id: now_playing_icon                
                         text: $ambient_light
                     - label:
                         align: bottom_left
-                        id: backlight_toggle_label
+                        id: now_playing_label
                         text: "NOW PLAYING"
                   on_press:
                     - lvgl.page.show: main_page      
