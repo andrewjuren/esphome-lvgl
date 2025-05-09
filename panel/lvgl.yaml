@@ -61,7 +61,7 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  checkable: true
+                  checkable: false
                   id: backlight_toggle_button
                   styles: light
                   widgets:
@@ -880,6 +880,7 @@ lvgl:
                     - lvgl.page.show: main_page           
 
     - id: blank_page
+      bg_color: Black
       widgets:
       on_press: 
         - lvgl.page.show: main_page 
