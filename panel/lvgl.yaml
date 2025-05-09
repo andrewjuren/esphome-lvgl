@@ -803,12 +803,17 @@ lvgl:
                         text_font: $large_text_font
                         align: top_left
                         id: info_button_top                
-                        text: !lambda return id(media_player.spotify_larissajay).title;
+                        text: "Title"
                     - label:
                         text_font: $small_text_font
                         align: bottom_left
                         id: sinfo_button_buttom
-                        text: "Artist"                
+                        text: "Artist"
+                  on_press:
+                    - lvgl.lable.update:
+                        id: info_button_top
+                        text: !lambda return id(media_player.spotify_larissajay).title;
+
 
               - button: 
                   grid_cell_row_pos: 1
