@@ -38,6 +38,7 @@ sensor:
           id: deck_volume_slider
           value: !lambda return (x * 100);  
 
+text_sensor:
   - platform: homeassistant
     id: spotify_title
     entity_id: media_player.spotify_larissajay
