@@ -788,6 +788,56 @@ lvgl:
                   on_press:
                     - lvgl.page.show: main_page      
 
+              - button: 
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: play_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: now_playing_icon                
+                        text: $exit_to_app
+                    - label:
+                        align: bottom_left
+                        id: now_playing_label
+                        text: "Play"
+                  on_press:
+                    - homeassistant.action:
+                        action: media_player.play
+                        data:
+                          entity_id: media_player.spotify_larissajay                  
+      
+              - button: 
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: play_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: now_playing_icon                
+                        text: $exit_to_app
+                    - label:
+                        align: bottom_left
+                        id: now_playing_label
+                        text: "Pause"
+                  on_press:
+                    - homeassistant.action:
+                        action: media_player.pause
+                        data:
+                          entity_id: media_player.spotify_larissajay 
+
     - id: settings_page
       widgets:
         - obj: 

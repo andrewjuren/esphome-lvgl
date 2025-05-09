@@ -38,12 +38,12 @@ sensor:
           id: deck_volume_slider
           value: !lambda return (x * 100);  
 
-  - platform: homeassistant
-    id: spotify_media_player
-    entity_id: media_player.spotify_larissajay
-    attribute: state
-    on_value:
-      - logger.log: "State updated"
+  # - platform: homeassistant
+  #   id: spotify_media_player
+  #   entity_id: media_player.spotify_larissajay
+  #   attribute: state
+  #   on_value:
+  #     - logger.log: "State updated"
 
   # - platform: homeassistant
   #   id: spotify_media_player
