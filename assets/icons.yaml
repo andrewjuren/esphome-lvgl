@@ -37,6 +37,11 @@ font:
       "\U000F024A",  # mdi-flower
       "\U000F075F",  #mid-volume-mute
       "\U000F0206",  #mdi-exit-to-app
+      "\U000F0F1B",  #mdi:play-outline
+      "\U000F03E4",  #mdi:pause
+      "\U000F04DB",  #mdi:stop
+      "\U000F0F28",  #mdi:skip-previous-outline
+      "\U000F0F27",  #mdi:skip-next-outline
       "\U000F08BB"  #mdi-cog-outline
       ]
 
@@ -73,3 +78,8 @@ substitutions:
   volume_mute:    "\U000F075F"
   cog_outline:    "\U000F08BB"
   exit_to_app:    "\U000F0206"
+  play:           "\U000F0F1B"
+  pause:          "\U000F03E4"
+  stop:           "\U000F04DB"
+  skip_previous:  "\U000F0F28"
+  skip_next:      "\U000F0F27"

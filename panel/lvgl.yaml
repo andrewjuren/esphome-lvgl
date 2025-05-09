@@ -796,6 +796,31 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
+                  id: skip_previous_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: skip_previous_icon                
+                        text: $skip_previous
+                    - label:
+                        align: bottom_left
+                        id: skip_previous_label
+                        text: "Previous"
+                  on_press:
+                    - homeassistant.action:
+                        action: media_player.media_previous_track
+                        data:
+                          entity_id: media_player.spotify_larissajay                 
+      
+              - button: 
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
                   id: play_button
                   styles: light
                   widgets:
@@ -815,8 +840,8 @@ lvgl:
                           entity_id: media_player.spotify_larissajay                 
       
               - button: 
-                  grid_cell_row_pos: 2
-                  grid_cell_column_pos: 0
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 4
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -836,6 +861,55 @@ lvgl:
                   on_press:
                     - homeassistant.action:
                         action: media_player.media_pause
+                        data:
+                          entity_id: media_player.spotify_larissajay 
+              - button: 
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 6
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: stop_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: stop_button_icon                
+                        text: $stop
+                    - label:
+                        align: bottom_left
+                        id: stop_button_label
+                        text: "Stop"
+                  on_press:
+                    - homeassistant.action:
+                        action: media_player.media_stop
+                        data:
+                          entity_id: media_player.spotify_larissajay 
+
+              - button: 
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 8
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: skip_next_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: skip_next_icon                
+                        text: $skip_next
+                    - label:
+                        align: bottom_left
+                        id: skip_next_label
+                        text: "Next"
+                  on_press:
+                    - homeassistant.action:
+                        action: media_player.media_next_track
                         data:
                           entity_id: media_player.spotify_larissajay 
 
