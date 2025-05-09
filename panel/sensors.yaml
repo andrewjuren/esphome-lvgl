@@ -41,17 +41,23 @@ sensor:
   - platform: homeassistant
     id: spotify_media_player
     entity_id: media_player.spotify_larissajay
-    publish_initial_state: true
-    on_state:
+    attribute: state
+    on_value:
       - logger.log: !lambda return id(deck_media_player).state
-    on_play:
-      - logger.log: "Spotify is playing!"
-    on_pause:
-      - logger.log: "Spotify is paused!"
-    on_idle:
-      - logger.log: "Spotify is idle!"
-    on_announcement:
-      - logger.log: "Spotify is announcing!"          
+
+  # - platform: homeassistant
+  #   id: spotify_media_player
+  #   entity_id: media_player.spotify_larissajay
+  #   on_state:
+  #     - logger.log: !lambda return id(deck_media_player).state
+  #   on_play:
+  #     - logger.log: "Spotify is playing!"
+  #   on_pause:
+  #     - logger.log: "Spotify is paused!"
+  #   on_idle:
+  #     - logger.log: "Spotify is idle!"
+  #   on_announcement:
+  #     - logger.log: "Spotify is announcing!"          
 
 binary_sensor:
 
