@@ -810,7 +810,7 @@ lvgl:
                         id: sinfo_button_buttom
                         text: "Artist"
                   on_press:
-                    - lvgl.lable.update:
+                    - lvgl.label.update:
                         id: info_button_top
                         text: !lambda return id(media_player.spotify_larissajay).title;
 
