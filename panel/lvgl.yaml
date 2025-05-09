@@ -790,6 +790,27 @@ lvgl:
                     - lvgl.page.show: main_page      
 
               - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 6
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: info_button
+                  styles: dark
+                  widgets:
+                    - label:
+                        text_font: $text_font
+                        align: top_left
+                        id: info_button_top                
+                        text: "Title"
+                    - label:
+                        text_font: $small_text_font
+                        align: bottom_left
+                        id: sinfo_button_buttom
+                        text: "Artist"                
+
+              - button: 
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 2
