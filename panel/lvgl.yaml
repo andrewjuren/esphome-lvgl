@@ -809,9 +809,9 @@ lvgl:
                         text: "Play"
                   on_press:
                     - homeassistant.action:
-                        action: media_player.play
+                        action: media_player.media_play
                         data:
-                          entity_id: media_player.spotify_larissajay                  
+                          entity_id: media_player.spotify_larissajay                 
       
               - button: 
                   grid_cell_row_pos: 2
@@ -834,7 +834,7 @@ lvgl:
                         text: "Pause"
                   on_press:
                     - homeassistant.action:
-                        action: media_player.pause
+                        action: media_player.media_pause
                         data:
                           entity_id: media_player.spotify_larissajay 
 
