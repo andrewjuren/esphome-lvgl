@@ -136,7 +136,38 @@ binary_sensor:
                 id: system_power_button
                 state:
                   checked: false    
-                                
+
+  - platform: homeassistant
+    id: spotify_media_player
+    entity_id: media_player.spotify_larissajay
+    publish_initial_state: true
+    on_state:
+      - logger.log: !lambda return id(deck_media_player).state
+    on_play:
+      - logger.log: "Spotify is playing!"
+    on_pause:
+      - logger.log: "Spotify is paused!"
+    on_idle:
+      - logger.log: "Spotify is idle!"
+    on_announcement:
+      - logger.log: "Spotify is announcing!"
+      
+    # on_state:
+    #   - if:
+    #       condition:
+    #         lambda: return id(deck_media_player).state;
+    #       then:
+    #         - lvgl.button.update:
+    #             id: deck_power_button
+    #             state:
+    #               checked: true
+    #       else:
+    #         - lvgl.button.update:
+    #             id: deck_power_button
+    #             state:
+    #               checked: false
+
+
 #sensor:
 #
 #  # Header Outdoor Temperate
