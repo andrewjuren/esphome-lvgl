@@ -633,7 +633,7 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  checkable: true
+                  checkable: false
                   id: play_pause_button
                   styles: light
                   widgets:
@@ -772,7 +772,7 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  checkable: true
+                  checkable: false
                   id: settings_page_button
                   styles: light
                   widgets:
@@ -812,7 +812,7 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  checkable: true
+                  checkable: false
                   id: now_playing_page_button
                   styles: light
                   widgets:
