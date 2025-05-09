@@ -38,6 +38,21 @@ sensor:
           id: deck_volume_slider
           value: !lambda return (x * 100);  
 
+  - platform: homeassistant
+    id: spotify_media_player
+    entity_id: media_player.spotify_larissajay
+    publish_initial_state: true
+    on_state:
+      - logger.log: !lambda return id(deck_media_player).state
+    on_play:
+      - logger.log: "Spotify is playing!"
+    on_pause:
+      - logger.log: "Spotify is paused!"
+    on_idle:
+      - logger.log: "Spotify is idle!"
+    on_announcement:
+      - logger.log: "Spotify is announcing!"          
+
 binary_sensor:
 
     ## State (On/Off) sensors ##
@@ -137,21 +152,7 @@ binary_sensor:
                 state:
                   checked: false    
 
-  - platform: homeassistant
-    id: spotify_media_player
-    entity_id: media_player.spotify_larissajay
-    publish_initial_state: true
-    on_state:
-      - logger.log: !lambda return id(deck_media_player).state
-    on_play:
-      - logger.log: "Spotify is playing!"
-    on_pause:
-      - logger.log: "Spotify is paused!"
-    on_idle:
-      - logger.log: "Spotify is idle!"
-    on_announcement:
-      - logger.log: "Spotify is announcing!"
-      
+
     # on_state:
     #   - if:
     #       condition:
