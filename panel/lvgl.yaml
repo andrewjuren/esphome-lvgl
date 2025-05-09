@@ -809,10 +809,10 @@ lvgl:
                         align: bottom_left
                         id: sinfo_button_buttom
                         text: "Artist"
-                  # on_press:
-                  #   - lvgl.label.update:
-                  #       id: info_button_top
-                  #       text: !lambda return id(media_player.spotify_larissajay).title;
+                  on_press:
+                    - lvgl.label.update:
+                        id: info_button_top
+                        text: !lambda return id(spotify_title).value;
 
               - button: 
                   grid_cell_row_pos: 1

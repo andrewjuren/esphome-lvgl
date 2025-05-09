@@ -39,8 +39,9 @@ sensor:
           value: !lambda return (x * 100);  
 
   - platform: homeassistant
-    id: spotify_media_player
+    id: spotify_title
     entity_id: media_player.spotify_larissajay
+    publish_initial_state: true
     attribute: title
     on_value:
       - logger.log: "Title updated"
