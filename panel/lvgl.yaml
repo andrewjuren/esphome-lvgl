@@ -812,7 +812,7 @@ lvgl:
                   on_press:
                     - lvgl.label.update:
                         id: info_button_top
-                        text: !lambda return x; #id(spotify_title).title;
+                        text: !lambda return "TITLE"; #id(spotify_title).title;
 
               - button: 
                   grid_cell_row_pos: 1
