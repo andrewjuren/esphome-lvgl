@@ -46,7 +46,7 @@ text_sensor:
     on_value:
       - lvgl.label.update:
           id: info_button_top
-          value: !lambda return x;
+          text: !lambda return x;
 
   - platform: homeassistant
     id: spotify_artist
@@ -55,7 +55,7 @@ text_sensor:
     on_value:
       - lvgl.label.update:
           id: info_button_bottom
-          value: !lambda return x;   
+          text: !lambda return x;   
 
   # - platform: homeassistant
   #   id: spotify_media_player
