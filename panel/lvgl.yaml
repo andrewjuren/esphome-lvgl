@@ -807,7 +807,7 @@ lvgl:
                     - label:
                         text_font: $small_text_font
                         align: bottom_left
-                        id: sinfo_button_bottom
+                        id: info_button_bottom
                         text: "Artist"
                   on_press:
                     - lvgl.label.update:
