@@ -807,7 +807,7 @@ lvgl:
                     - label:
                         text_font: $small_text_font
                         align: bottom_left
-                        id: sinfo_button_buttom
+                        id: sinfo_button_bottom
                         text: "Artist"
                   on_press:
                     - lvgl.label.update:
@@ -961,7 +961,7 @@ lvgl:
             widgets: 
               - button: 
                   grid_cell_row_pos: 0
-                  grid_cell_column_pos: 0
+                  grid_cell_column_pos: 8
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
