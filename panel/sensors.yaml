@@ -42,10 +42,7 @@ text_sensor:
   - platform: homeassistant
     id: spotify_title
     entity_id: media_player.spotify_larissajay
-    attribute: title
-    publish_initial_state: true    
-    on_value:
-      - logger.log: x
+    attribute: title  
 
   # - platform: homeassistant
   #   id: spotify_media_player
