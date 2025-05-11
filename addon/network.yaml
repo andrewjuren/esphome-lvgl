@@ -13,6 +13,10 @@ sensor:
     id: uptime_sensor
     entity_category: diagnostic
     internal: true
+    on_value:
+     - lvgl.label.update:
+        id: uptime_text
+        text: !lambda return to_string(round(x));
 
 # Wifi Signal Strength
   - platform: wifi_signal
@@ -24,7 +28,7 @@ sensor:
     on_value:
       - lvgl.label.update:
           id: wifi_signal_db_text
-          text: !lambda return to_string(x);
+          text: !lambda return to_string(round(x));
 
 
 # Wifi Signal Strength

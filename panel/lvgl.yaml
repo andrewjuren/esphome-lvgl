@@ -1017,14 +1017,8 @@ lvgl:
                   grid_cell_column_span: 2
                   text_font: $large_text_font
                   text_color: White
-                  text: "IP Address"
-              - label:
-                  grid_cell_row_pos: 3
-                  grid_cell_column_pos: 2
-                  grid_cell_column_span: 2
-                  text_font: $large_text_font
-                  text_color: White
-                  text: "Wifi Strength"
+                  align: right
+                  text: "IP Address "
               - label:
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 4
@@ -1032,7 +1026,15 @@ lvgl:
                   id: ip_address_text
                   text_font: $large_text_font
                   text_color: White
-                  text: "IPAddress"                  
+                  text: "IPAddress"                     
+              - label:
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 2
+                  text_font: $large_text_font
+                  text_color: White
+                  align: right
+                  text: "Wifi Strength (dBm) "               
               - label:
                   grid_cell_row_pos: 3
                   grid_cell_column_pos: 4
@@ -1041,7 +1043,23 @@ lvgl:
                   text_font: $large_text_font
                   text_color: White
                   text: "WifiStrength"
-                  
+              - label:
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 2
+                  text_font: $large_text_font
+                  text_color: White
+                  align: right
+                  text: "Uptime (sec) "               
+              - label:
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 4
+                  grid_cell_column_span: 2
+                  id: uptime_text
+                  text_font: $large_text_font
+                  text_color: White
+                  text: "Uptime"
+
     - id: blank_page
       bg_color: Black
       widgets:
