@@ -820,7 +820,7 @@ lvgl:
                         text: !lambda return id(spotify_title).state;
                     - lvgl.label.update:
                         id: info_button_middle
-                        text: !lambda return id(spotify_artist).state;
+                        text: !lambda return id(spotify_album).state;
                     - lvgl.label.update:
                         id: info_button_bottom
                         text: !lambda return id(spotify_artist).state;
