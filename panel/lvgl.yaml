@@ -992,6 +992,30 @@ lvgl:
             widgets: 
               - button: 
                   grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: settings_backlight_toggle_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: settings_backlight_toggle_icon                
+                        text: $ambient_light
+                    - label:
+                        align: bottom_left
+                        id: settings_backlight_toggle_label
+                        text: "Screen Off"
+                  on_press:
+                    - lvgl.page.show: blank_page 
+                    - switch.toggle:
+                        id: backlight 
+
+              - button: 
+                  grid_cell_row_pos: 0
                   grid_cell_column_pos: 8
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
