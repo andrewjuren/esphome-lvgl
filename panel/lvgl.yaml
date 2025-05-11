@@ -73,7 +73,7 @@ lvgl:
                     - label:
                         align: bottom_left
                         id: backlight_toggle_label
-                        text: "Backlight"
+                        text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
                     - switch.toggle:

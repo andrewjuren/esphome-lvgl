@@ -51,11 +51,20 @@ text_sensor:
   - platform: homeassistant
     id: spotify_artist
     entity_id: media_player.spotify_larissajay
+    attribute: media_album
+    on_value:
+      - lvgl.label.update:
+          id: info_button_middle
+          text: !lambda return x; 
+
+  - platform: homeassistant
+    id: spotify_artist
+    entity_id: media_player.spotify_larissajay
     attribute: media_artist
     on_value:
       - lvgl.label.update:
           id: info_button_bottom
-          text: !lambda return x;   
+          text: !lambda return x; 
 
   # - platform: homeassistant
   #   id: spotify_media_player
