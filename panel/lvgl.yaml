@@ -992,8 +992,16 @@ lvgl:
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 2
                   grid_cell_column_span: 2
-                  text: "Some Info"
-
+                  grid_cell_row_span: 4
+                  text_font: $small_text_font
+                  text: "Some Info\nIP Address\nWifiStrength"
+              - label:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 6
+                  grid_cell_column_span: 2
+                  grid_cell_row_span: 4
+                  text_font: $small_text_font
+                  text: !lambda return "Some Info\n%s\n??", id(ip_address).value;                                   
     - id: blank_page
       bg_color: Black
       widgets:

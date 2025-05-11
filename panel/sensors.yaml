@@ -65,21 +65,7 @@ text_sensor:
       - lvgl.label.update:
           id: info_button_bottom
           text: !lambda return x; 
-
-  # - platform: homeassistant
-  #   id: spotify_media_player
-  #   entity_id: media_player.spotify_larissajay
-  #   on_state:
-  #     - logger.log: !lambda return id(deck_media_player).state
-  #   on_play:
-  #     - logger.log: "Spotify is playing!"
-  #   on_pause:
-  #     - logger.log: "Spotify is paused!"
-  #   on_idle:
-  #     - logger.log: "Spotify is idle!"
-  #   on_announcement:
-  #     - logger.log: "Spotify is announcing!"          
-
+      
 binary_sensor:
 
     ## State (On/Off) sensors ##
@@ -180,20 +166,6 @@ binary_sensor:
                   checked: false    
 
 
-    # on_state:
-    #   - if:
-    #       condition:
-    #         lambda: return id(deck_media_player).state;
-    #       then:
-    #         - lvgl.button.update:
-    #             id: deck_power_button
-    #             state:
-    #               checked: true
-    #       else:
-    #         - lvgl.button.update:
-    #             id: deck_power_button
-    #             state:
-    #               checked: false
 
 
 #sensor:
@@ -218,78 +190,3 @@ binary_sensor:
 #          text:
 #            format: "%d° / %d°"
 #            args: [ '(int)round(x)', '(int)round(id(office_temperature).state)' ]
-
-
-# binary_sensor:
-
-#   # Toggle Back Light Scene
-#   - platform: homeassistant
-#     id: backlight_toggle
-#     entity_id: binary_sensor.backlight_toggle
-#     publish_initial_state: true
-#     on_state:
-#       then:
-#         lvgl.widget.update:
-#           id: backlight_toggle_button
-#           state:
-#             checked: !lambda return x;
-
-#   # Office Evening Scene
-#   - platform: homeassistant
-#     id: office_scene_evening
-#     entity_id: binary_sensor.office_scene_evening
-#     publish_initial_state: true
-#     on_state:
-#       then:
-#         lvgl.widget.update:
-#           id: office_scene_evening_button
-#           state:
-#             checked: !lambda return x;
-
-#   # Office Dimmed Scene
-#   - platform: homeassistant
-#     id: office_scene_dimmed
-#     entity_id: binary_sensor.office_scene_dimmed
-#     publish_initial_state: true
-#     on_state:
-#       then:
-#         lvgl.widget.update:
-#           id: office_scene_dimmed_button
-#           state:
-#             checked: !lambda return x;
-
-#   # Office Calls Scene
-#   - platform: homeassistant
-#     id: office_scene_desk_call
-#     entity_id: binary_sensor.office_scene_desk_call
-#     publish_initial_state: true
-#     on_state:
-#       then:
-#         lvgl.widget.update:
-#           id: office_scene_calls_button
-#           state:
-#             checked: !lambda return x;
-
-#   # 3d Printer
-#   - platform: homeassistant
-#     id: office_3d_printer_power
-#     entity_id: switch.office_3d_printer_power
-#     publish_initial_state: true
-#     on_state:
-#       then:
-#         lvgl.widget.update:
-#           id: printer_power_button
-#           state:
-#             checked: !lambda return x;
-
-#   # Office Aircon
-#   - platform: homeassistant
-#     id: office_air_conditioner
-#     entity_id: switch.air_conditioner
-#     publish_initial_state: true
-#     on_state:
-#       then:
-#         lvgl.widget.update:
-#           id: office_aircon_button
-#           state:
-#             checked: !lambda return x;
