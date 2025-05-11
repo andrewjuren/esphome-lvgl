@@ -819,6 +819,9 @@ lvgl:
                         id: info_button_top
                         text: !lambda return id(spotify_title).state;
                     - lvgl.label.update:
+                        id: info_button_middle
+                        text: !lambda return id(spotify_artist).state;
+                    - lvgl.label.update:
                         id: info_button_bottom
                         text: !lambda return id(spotify_artist).state;
 
@@ -984,7 +987,12 @@ lvgl:
                         id: settings_page_label
                         text: "Exit to App"
                   on_press:
-                    - lvgl.page.show: main_page           
+                    - lvgl.page.show: main_page
+              - label:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 2
+                  text: "Some Info"
 
     - id: blank_page
       bg_color: Black
