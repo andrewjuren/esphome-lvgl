@@ -44,6 +44,7 @@ text_sensor:
 # Ip Address
   - platform: wifi_info
     ip_address:
+      id: ip_address_info
       name: IP Address
       icon: mdi:ip-network
 
