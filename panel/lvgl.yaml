@@ -1001,7 +1001,7 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_row_span: 4
                   text_font: $small_text_font
-                  text: !lambda return "Some Info\n%s\n??", id(ip_address).value;                                   
+                  text: !lambda return "Some Info\n%s\n??", id(wifi_info).ip_address;                                   
     - id: blank_page
       bg_color: Black
       widgets:
