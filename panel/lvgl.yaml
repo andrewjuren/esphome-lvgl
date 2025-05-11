@@ -769,6 +769,29 @@ lvgl:
             widgets: 
               - button: 
                   grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  id: now_playing_backlight_toggle_button
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        id: now_playing_backlight_toggle_icon                
+                        text: $ambient_light
+                    - label:
+                        align: bottom_left
+                        id: now_playing_backlight_toggle_label
+                        text: "Screen Off"
+                  on_press:
+                    - lvgl.page.show: blank_page 
+                    - switch.toggle:
+                        id: backlight            
+              - button: 
+                  grid_cell_row_pos: 0
                   grid_cell_column_pos: 8
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
@@ -993,15 +1016,17 @@ lvgl:
                   grid_cell_column_pos: 2
                   grid_cell_column_span: 2
                   grid_cell_row_span: 4
-                  text_font: $small_text_font
+                  text_font: $large_text_font
+                  text_color: White
                   text: "Some Info\nIP Address\nWifiStrength"
               - label:
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 6
                   grid_cell_column_span: 2
                   grid_cell_row_span: 4
-                  text_font: $small_text_font
-                  text: !lambda return "Some Info\n%s\n??", id(ip_address_info).state;
+                  text_font: $large_text_font
+                  text_color: White
+                  text: !lambda return "Some Answers\nIP Addr\nStrength", id(ip_address_info).state;
     - id: blank_page
       bg_color: Black
       widgets:
