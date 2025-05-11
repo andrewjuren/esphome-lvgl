@@ -1026,7 +1026,7 @@ lvgl:
                   grid_cell_row_span: 4
                   text_font: $large_text_font
                   text_color: White
-                  text: !lambda return {"Some Answers\n%s\nStrength", id(ip_address_info).state};
+                  text: !lambda return {"Some Answers\n%s\nStrength", id(ip_address_info).state;}
     - id: blank_page
       bg_color: Black
       widgets:
