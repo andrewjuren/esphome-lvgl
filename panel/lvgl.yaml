@@ -988,7 +988,7 @@ lvgl:
             layout:
               type: GRID
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
-              grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
+              grid_rows: [FR(15),FR(15),FR(5),FR(5),FR(5),FR(5),FR(5),FR(5)]
             widgets: 
               - button: 
                   grid_cell_row_pos: 0
@@ -1013,8 +1013,8 @@ lvgl:
                     - lvgl.page.show: main_page
               - label:
                   grid_cell_row_pos: 2
-                  grid_cell_column_pos: 2
-                  grid_cell_column_span: 2
+                  grid_cell_column_pos: 1
+                  grid_cell_column_span: 3
                   text_font: $large_text_font
                   text_color: White
                   text_align: right
@@ -1022,15 +1022,15 @@ lvgl:
               - label:
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 4
-                  grid_cell_column_span: 2
+                  grid_cell_column_span: 3
                   id: ip_address_text
                   text_font: $large_text_font
                   text_color: White
                   text: "IPAddress"                     
               - label:
                   grid_cell_row_pos: 3
-                  grid_cell_column_pos: 2
-                  grid_cell_column_span: 2
+                  grid_cell_column_pos: 1
+                  grid_cell_column_span: 3
                   text_font: $large_text_font
                   text_color: White
                   text_align: right
@@ -1038,15 +1038,15 @@ lvgl:
               - label:
                   grid_cell_row_pos: 3
                   grid_cell_column_pos: 4
-                  grid_cell_column_span: 2
+                  grid_cell_column_span: 3
                   id: wifi_signal_db_text
                   text_font: $large_text_font
                   text_color: White
                   text: "WifiStrength"
               - label:
                   grid_cell_row_pos: 4
-                  grid_cell_column_pos: 2
-                  grid_cell_column_span: 2
+                  grid_cell_column_pos: 1
+                  grid_cell_column_span: 3
                   text_font: $large_text_font
                   text_color: White
                   text_align: right
@@ -1054,7 +1054,7 @@ lvgl:
               - label:
                   grid_cell_row_pos: 4
                   grid_cell_column_pos: 4
-                  grid_cell_column_span: 2
+                  grid_cell_column_span: 3
                   id: uptime_text
                   text_font: $large_text_font
                   text_color: White
