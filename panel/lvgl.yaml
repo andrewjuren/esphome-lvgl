@@ -1044,7 +1044,7 @@ lvgl:
                   text_color: White
                   text: "WifiStrength"
               - label:
-                  grid_cell_row_pos: 3
+                  grid_cell_row_pos: 4
                   grid_cell_column_pos: 2
                   grid_cell_column_span: 2
                   text_font: $large_text_font
@@ -1052,7 +1052,7 @@ lvgl:
                   align: right
                   text: "Uptime (sec) "               
               - label:
-                  grid_cell_row_pos: 3
+                  grid_cell_row_pos: 4
                   grid_cell_column_pos: 4
                   grid_cell_column_span: 2
                   id: uptime_text
