@@ -24,7 +24,7 @@ sensor:
     on_value:
       - lvgl.label.update:
           id: wifi_signal_db_text
-          text: !lambda return x;
+          text: !lambda return to_string(x);
 
 
 # Wifi Signal Strength
