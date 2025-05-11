@@ -1017,7 +1017,7 @@ lvgl:
                   grid_cell_column_span: 2
                   text_font: $large_text_font
                   text_color: White
-                  align: right
+                  align: right_mid
                   text: "IP Address "
               - label:
                   grid_cell_row_pos: 2
@@ -1033,7 +1033,7 @@ lvgl:
                   grid_cell_column_span: 2
                   text_font: $large_text_font
                   text_color: White
-                  align: right
+                  align: right_mid
                   text: "Wifi Strength (dBm) "               
               - label:
                   grid_cell_row_pos: 3
@@ -1049,7 +1049,7 @@ lvgl:
                   grid_cell_column_span: 2
                   text_font: $large_text_font
                   text_color: White
-                  align: right
+                  align: right_mid
                   text: "Uptime (sec) "               
               - label:
                   grid_cell_row_pos: 4
