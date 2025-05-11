@@ -1028,7 +1028,7 @@ lvgl:
                   text_color: White
                   text:
                     format: "Your answers\n%s"
-                    args: [display_wifi_strength]
+                    args: [id(display_wifi_strength).state]
     - id: blank_page
       bg_color: Black
       widgets:
