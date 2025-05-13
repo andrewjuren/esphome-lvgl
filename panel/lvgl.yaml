@@ -781,7 +781,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: now_playing_backlight_toggle_icon                
-                        text: $ambient_light
+                        text: $monitor_off
                     - label:
                         align: bottom_left
                         id: now_playing_backlight_toggle_label
@@ -1004,7 +1004,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: settings_backlight_toggle_icon                
-                        text: $ambient_light
+                        text: $monitor_off
                     - label:
                         align: bottom_left
                         id: settings_backlight_toggle_label
