@@ -69,7 +69,7 @@ lvgl:
                         text_font: $icon_font
                         align: top_left
                         id: backlight_toggle_icon                
-                        text: $ambient_light
+                        text: $monitor_off
                     - label:
                         align: bottom_left
                         id: backlight_toggle_label
