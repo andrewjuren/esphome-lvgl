@@ -704,6 +704,27 @@ lvgl:
                           entity_id: media_player.zone_13_2
                           #is_volume_muted: true
 
+              # EXIT
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 8
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left             
+                        text: $exit_to_app
+                    - label:
+                        align: bottom_left
+                        text: "Exit to App"
+                  on_press:
+                    - lvgl.page.show: weather_page
+
+
     ## NOW PLAYING PAGE ##
     - id: now_playing_page
       widgets:
@@ -978,7 +999,7 @@ lvgl:
                         align: bottom_left
                         text: "Exit to App"
                   on_press:
-                    - lvgl.page.show: main_page
+                    - lvgl.page.show: weather_page
               
               #IP ADDRESS
               - label:
