@@ -35,6 +35,7 @@ lvgl:
       #     text_color: 0xFFFFFF
 
   pages:
+  ## AUDIO PAGE ##
     - id: main_page
       widgets:
         - obj: 
@@ -42,8 +43,6 @@ lvgl:
             width: 800
             height: 480
             pad_all: 5
-            #pad_row: 5
-            #pad_column: 5
             pad_top: 30
             radius: 0
             bg_color: Black
@@ -62,17 +61,14 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: backlight_toggle_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: backlight_toggle_icon                
+                        align: top_left              
                         text: $monitor_off
                     - label:
                         align: bottom_left
-                        id: backlight_toggle_label
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
@@ -87,17 +83,14 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: true
-                  id: main_floor_power_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: main_floor_power_icon                
+                        align: top_left              
                         text: $floor_plan
                     - label:
                         align: bottom_left
-                        id: main_floor_power_label
                         text: "Main Floor"
                   on_press:
                     - homeassistant.action:
@@ -114,13 +107,11 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: main_floor_volume_up_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: main_floor_volume_up_icon                
+                        align: top_left            
                         text: $volumeplus
                   on_press:
                     - repeat:
@@ -163,13 +154,11 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: main_floor_volume_down_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: main_floor_volume_down_icon                
+                        align: top_left             
                         text: $volumeminus
                   on_press:
                     - repeat:
@@ -217,8 +206,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: main_floor_mute_icon                
+                        align: top_left             
                         text: $volume_mute
                   on_press:                
                     - homeassistant.action:
@@ -250,11 +238,9 @@ lvgl:
                     - label:
                         text_font: $icon_font
                         align: top_left
-                        id: system_power_icon
                         text: $power_plug
                     - label:
                         align: bottom_left
-                        id: system_power_label
                         text: "System On/Off"
                   on_click:
                     - homeassistant.action:
@@ -313,7 +299,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: living_room_volume_up_button
                   styles: dark
                   widgets:
                     - label:
@@ -337,7 +322,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: office_blind_close_button
                   styles: dark
                   widgets:
                     - label:
@@ -384,7 +368,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: now_playing_button
                   styles: light
                   widgets:
                     - label:
@@ -441,7 +424,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: dining_room_volume_up_button
                   styles: dark
                   widgets:
                     - label:
@@ -462,7 +444,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: dining_room_volume_down_button
                   styles: dark
                   widgets:
                     - label:
@@ -506,7 +487,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: source_button
                   styles: light
                   widgets:
                     - label:
@@ -569,7 +549,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: kitchen_volume_up_button
                   styles: dark
                   widgets:
                     - label:
@@ -590,7 +569,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: kitchen_volume_down_button
                   styles: dark
                   widgets:
                     - label:
@@ -626,27 +604,6 @@ lvgl:
                         data:
                           entity_id: media_player.zone_11_2
                           #is_volume_muted: true
-
-              # SETTINGS
-              - button: 
-                  grid_cell_row_pos: 0
-                  grid_cell_column_pos: 8
-                  grid_cell_column_span: 2
-                  grid_cell_x_align: STRETCH
-                  grid_cell_y_align: STRETCH
-                  checkable: false
-                  id: play_pause_button
-                  styles: light
-                  widgets:
-                    - label:
-                        text_font: $icon_font
-                        align: top_left
-                        text: $cog_outline
-                    - label:
-                        align: bottom_left
-                        text: "Settings"
-                  on_click:
-                    - lvgl.page.show: settings_page 
 
               # DECK ON/OFF
               - button: 
@@ -692,7 +649,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: deck_volume_plus_button
                   styles: dark
                   widgets:
                     - label:
@@ -713,7 +669,6 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: deck_volume_minus_button
                   styles: dark
                   widgets:
                     - label:
@@ -749,6 +704,7 @@ lvgl:
                           entity_id: media_player.zone_13_2
                           #is_volume_muted: true
 
+    ## NOW PLAYING PAGE ##
     - id: now_playing_page
       widgets:
         - obj: 
@@ -767,6 +723,7 @@ lvgl:
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
               grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]
             widgets: 
+              # BACKLIGHT
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 0
@@ -774,22 +731,20 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: now_playing_backlight_toggle_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: now_playing_backlight_toggle_icon                
+                        align: top_left              
                         text: $monitor_off
                     - label:
                         align: bottom_left
-                        id: now_playing_backlight_toggle_label
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
                     - switch.toggle:
-                        id: backlight            
+                        id: backlight   
+              # EXIT                    
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 8
@@ -797,21 +752,19 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: now_playing_page_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: now_playing_icon                
+                        align: top_left              
                         text: $exit_to_app
                     - label:
                         align: bottom_left
-                        id: now_playing_label
                         text: "Exit to App"
                   on_press:
-                    - lvgl.page.show: main_page      
+                    - lvgl.page.show: main_page   
 
+              # INFO
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 2
@@ -848,6 +801,7 @@ lvgl:
                         id: info_button_bottom
                         text: !lambda return id(spotify_artist).state;
 
+              # PREVIOUS
               - button: 
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 2
@@ -855,17 +809,14 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: skip_previous_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: skip_previous_icon                
+                        align: top_left             
                         text: $skip_previous
                     - label:
                         align: bottom_left
-                        id: skip_previous_label
                         text: "Previous"
                   on_press:
                     - homeassistant.action:
@@ -873,6 +824,7 @@ lvgl:
                         data:
                           entity_id: media_player.spotify_larissajay                 
       
+              # PLAY/PAUSE
               - button: 
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 4
@@ -880,17 +832,15 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: play_button
+                  id: play_pause_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: play_button_icon                
+                        align: top_left              
                         text: $play_pause
                     - label:
                         align: bottom_left
-                        id: play_button_label
                         text: "Play/Pause"
                   on_press:
                     - homeassistant.action:
@@ -947,6 +897,7 @@ lvgl:
               #           data:
               #             entity_id: media_player.spotify_larissajay 
 
+              # NEXT
               - button: 
                   grid_cell_row_pos: 1
                   grid_cell_column_pos: 6
@@ -954,24 +905,21 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: skip_next_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: skip_next_icon                
+                        align: top_left               
                         text: $skip_next
                     - label:
                         align: bottom_left
-                        id: skip_next_label
                         text: "Next"
                   on_press:
                     - homeassistant.action:
                         action: media_player.media_next_track
                         data:
                           entity_id: media_player.spotify_larissajay 
-
+    ## SETTINGS PAGE ##
     - id: settings_page
       widgets:
         - obj: 
@@ -990,6 +938,7 @@ lvgl:
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
               grid_rows: [FR(15),FR(15),FR(5),FR(5),FR(5),FR(5),FR(5),FR(5)]
             widgets: 
+              # BACKLIGGHT
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 0
@@ -997,23 +946,21 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: settings_backlight_toggle_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: settings_backlight_toggle_icon                
+                        align: top_left               
                         text: $monitor_off
                     - label:
                         align: bottom_left
-                        id: settings_backlight_toggle_label
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
                     - switch.toggle:
                         id: backlight 
 
+              # EXIT
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 8
@@ -1021,20 +968,19 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  id: settings_page_button
                   styles: light
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
-                        id: settings_page_icon                
+                        align: top_left             
                         text: $exit_to_app
                     - label:
                         align: bottom_left
-                        id: settings_page_label
                         text: "Exit to App"
                   on_press:
                     - lvgl.page.show: main_page
+              
+              #IP ADDRESS
               - label:
                   grid_cell_row_pos: 2
                   grid_cell_column_pos: 1
@@ -1051,6 +997,8 @@ lvgl:
                   text_font: $large_text_font
                   text_color: White
                   text: "IPAddress"                     
+              
+              # WIFI INFO
               - label:
                   grid_cell_row_pos: 3
                   grid_cell_column_pos: 1
@@ -1067,6 +1015,8 @@ lvgl:
                   text_font: $large_text_font
                   text_color: White
                   text: "WifiStrength"
+              
+              # UPTIME
               - label:
                   grid_cell_row_pos: 4
                   grid_cell_column_pos: 1
@@ -1084,10 +1034,140 @@ lvgl:
                   text_color: White
                   text: "Uptime"
 
+  ## BLANK PAGE ##
     - id: blank_page
       bg_color: Black
       widgets:
       on_press: 
         - switch.toggle:
             id: backlight
-        - lvgl.page.show: main_page 
+        - lvgl.page.show: weather_page 
+
+  ## WEATHER PAGE ##
+    - id: weather_page
+      widgets:
+        - obj: 
+            align: CENTER
+            width: 800
+            height: 480
+            pad_all: 5
+            #pad_top: 30
+            radius: 0
+            bg_color: Black
+            border_opa: TRANSP
+            layout:
+              type: GRID
+              grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
+              grid_rows: [FR(15),FR(45),FR(10),FR(10),FR(10),FR(10]  
+            widgets: 
+
+              # BACKLIGHT
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left             
+                        text: $monitor_off
+                    - label:
+                        align: bottom_left
+                        text: "Screen Off"
+                  on_press:
+                    - lvgl.page.show: blank_page 
+                    - switch.toggle:
+                        id: backlight 
+
+              # AUDIO
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 8
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        text: $cog_outline
+                    - label:
+                        align: bottom_left
+                        text: "Audio"
+                  on_click:
+                    - lvgl.page.show: main_page 
+
+              # SETTINGS
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 8
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  styles: light
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_left
+                        text: $cog_outline
+                    - label:
+                        align: bottom_left
+                        text: "Settings"
+                  on_click:
+                    - lvgl.page.show: settings_page 
+
+              # - label:
+              #     grid_cell_row_pos: 2
+              #     grid_cell_column_pos: 1
+              #     grid_cell_column_span: 3
+              #     text_font: $large_text_font
+              #     text_color: White
+              #     text_align: right
+              #     text: "IP Address "
+              # - label:
+              #     grid_cell_row_pos: 2
+              #     grid_cell_column_pos: 4
+              #     grid_cell_column_span: 3
+              #     id: ip_address_text
+              #     text_font: $large_text_font
+              #     text_color: White
+              #     text: "IPAddress"                     
+              # - label:
+              #     grid_cell_row_pos: 3
+              #     grid_cell_column_pos: 1
+              #     grid_cell_column_span: 3
+              #     text_font: $large_text_font
+              #     text_color: White
+              #     text_align: right
+              #     text: "Wifi Strength (dBm) "               
+              # - label:
+              #     grid_cell_row_pos: 3
+              #     grid_cell_column_pos: 4
+              #     grid_cell_column_span: 3
+              #     id: wifi_signal_db_text
+              #     text_font: $large_text_font
+              #     text_color: White
+              #     text: "WifiStrength"
+              # - label:
+              #     grid_cell_row_pos: 4
+              #     grid_cell_column_pos: 1
+              #     grid_cell_column_span: 3
+              #     text_font: $large_text_font
+              #     text_color: White
+              #     text_align: right
+              #     text: "Uptime (sec) "               
+              # - label:
+              #     grid_cell_row_pos: 4
+              #     grid_cell_column_pos: 4
+              #     grid_cell_column_span: 3
+              #     id: uptime_text
+              #     text_font: $large_text_font
+              #     text_color: White
+              #     text: "Uptime"
