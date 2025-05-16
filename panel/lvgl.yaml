@@ -1086,7 +1086,7 @@ lvgl:
               # AUDIO
               - button: 
                   grid_cell_row_pos: 0
-                  grid_cell_column_pos: 8
+                  grid_cell_column_pos: 2
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
@@ -1096,7 +1096,7 @@ lvgl:
                     - label:
                         text_font: $icon_font
                         align: top_left
-                        text: $cog_outline
+                        text: $multimedia
                     - label:
                         align: bottom_left
                         text: "Audio"

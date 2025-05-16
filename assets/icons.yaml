@@ -43,6 +43,7 @@ font:
       "\U000F0F28",  #mdi:skip-previous-outline
       "\U000F0F27",  #mdi:skip-next-outline
       "\U000F0D90",  #mdi:monitor-off
+      "\U000F1B97",  #mdi:multimedia
       "\U000F08BB"  #mdi-cog-outline
       ]
 
@@ -85,3 +86,4 @@ substitutions:
   skip_previous:  "\U000F0F28"
   skip_next:      "\U000F0F27"
   monitor_off:    "\U000F0D90"
+  multimedia:      "\U000F1B97"
