@@ -1058,7 +1058,7 @@ lvgl:
             layout:
               type: GRID
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
-              grid_rows: [FR(15),FR(45),FR(10),FR(10),FR(10),FR(10)]  
+              grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]  
             widgets: 
 
               # BACKLIGHT
