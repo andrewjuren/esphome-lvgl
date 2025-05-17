@@ -43,4 +43,4 @@ script:
       - lvgl.label.update:
           id: weather_page_date
           text: !lambda |-
-            return "Tuesday\nMay 1, 2025"
+            return "Tuesday\nMay 1, 2025";
