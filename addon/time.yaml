@@ -40,7 +40,7 @@ script:
             return time_buf;            
   - id: date_update
     then: 
-      - lvgl.labe.update:
+      - lvgl.label.update:
           id: weather_page_date
           text: !lambda |-
             return "Tuesday\nMay 1, 2025"
