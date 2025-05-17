@@ -9,11 +9,16 @@ time:
      - ca.pool.ntp.org
     on_time_sync:
       - script.execute: time_update
+      - script.exectue: date_update
     on_time:
       - minutes: '*'
         seconds: 0
         then:
           - script.execute: time_update
+      - hours: '*'
+        minutes: 0
+        then:
+          - script.execute: date_update    
 
 # Clock
 script:
@@ -33,4 +38,9 @@ script:
             auto now = id(sntp_time).now();
             snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
             return time_buf;            
-            
+  - id: date_update
+    then: 
+      - lvgl.labe.update:
+          id: weather_page_date
+          text: !labdma |-
+            return "Tuesday\nMay 1, 2025"
