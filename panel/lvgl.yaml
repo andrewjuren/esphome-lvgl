@@ -720,7 +720,7 @@ lvgl:
                         text: $exit_to_app
                     - label:
                         align: bottom_left
-                        text: "Exit to App"
+                        text: "Exit"
                   on_press:
                     - lvgl.page.show: weather_page
 
@@ -781,7 +781,7 @@ lvgl:
                         text: $exit_to_app
                     - label:
                         align: bottom_left
-                        text: "Exit to App"
+                        text: "Exit"
                   on_press:
                     - lvgl.page.show: main_page   
 
