@@ -1,5 +1,6 @@
 substitutions:
   icon_font: icon_font
+  weather_icon_font: weather_icon_font
   text_font: roboto17_font
   large_text_font: roboto19_font
   small_text_font: roboto15_font
