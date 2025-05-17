@@ -1,12 +1,12 @@
 font:
   - file: "gfonts://Roboto"
-    id: roboto27_font
-    size: 27
+    id: roboto31_font
+    size: 31
     bpp: 4
 
   - file: "gfonts://Roboto"
-    id: roboto23_font
-    size: 23
+    id: roboto25_font
+    size: 25
     bpp: 4
 
   - file: "gfonts://Roboto"

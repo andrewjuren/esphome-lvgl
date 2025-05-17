@@ -44,8 +44,15 @@ font:
       "\U000F0F27",  #mdi:skip-next-outline
       "\U000F0D90",  #mdi:monitor-off
       "\U000F1B97",  #mdi:multimedia
-      "\U000F0F33",  #mdi:weather-partly-snowy-rainy
       "\U000F08BB"  #mdi-cog-outline
+      ]
+
+  - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
+    id: weather_icon
+    size: 64
+    bpp: 4
+    glyphs: [
+      "\U000F0F33"  #mdi:weather-partly-cloudy
       ]
 
 # Map icons to names
