@@ -47,7 +47,6 @@ font:
       "\U000F08BB"  #mdi-cog-outline
       ]
 
-font:
   - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
     id: weather_icon_font
     size: 64

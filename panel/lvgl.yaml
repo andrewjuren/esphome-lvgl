@@ -1174,7 +1174,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 4
                   id: weather_page_weather_icon
-                  text_font: $weather_icon_font
+                  #text_font: $weather_icon_font
                   text_color: White
                   text_align: right
                   text: $weather
