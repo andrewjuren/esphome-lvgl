@@ -1229,9 +1229,9 @@ lvgl:
               
               # MOON
               - label:
-                  grid_cell_row_pos: 2
-                  grid_cell_column_pos: 6
-                  grid_cell_column_span: 4
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 4
+                  grid_cell_column_span: 2
                   id: weather_page_moon
                   text_font: $small_text_font
                   text_color: White
@@ -1239,9 +1239,9 @@ lvgl:
               
               # TOMORRW FORECAST
               - label:
-                  grid_cell_row_pos: 3
-                  grid_cell_column_pos: 0
-                  grid_cell_column_span: 10
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 6
+                  grid_cell_column_span: 4
                   id: weather_page_tomorrow
                   text_font: $small_text_font
                   text_color: White
