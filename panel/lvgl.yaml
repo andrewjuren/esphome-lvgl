@@ -1153,6 +1153,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 4
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_time
                   text_font: $super_large_text_font
                   text_color: White
@@ -1165,6 +1166,7 @@ lvgl:
                   grid_cell_column_pos: 4
                   grid_cell_column_span: 6
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_date
                   text_font: $extra_large_text_font
                   text_color: White
@@ -1176,6 +1178,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 2
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_weather_icon
                   text_font: $weather_icon_font
                   text_color: White
@@ -1188,8 +1191,9 @@ lvgl:
                   grid_cell_column_pos: 2
                   grid_cell_column_span: 2
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_current_temp
-                  text_font: $extra_large_text_font
+                  text_font: $super_large_text_font
                   text_color: White
                   text: "20°C"
               
@@ -1199,6 +1203,7 @@ lvgl:
                   grid_cell_column_pos: 4
                   grid_cell_column_span: 6
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_current_conditions
                   text_font: $large_text_font
                   text_color: White
@@ -1210,7 +1215,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 10
                   grid_cell_x_align: center
-                  #text_align: center
+                  grid_cell_y_align: center
                   id: weather_page_hourly_forcast
                   text_font: $large_text_font
                   text_color: White
@@ -1222,6 +1227,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 2
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_wind_info
                   text_font: $small_text_font
                   text_color: White
@@ -1233,6 +1239,7 @@ lvgl:
                   grid_cell_column_pos: 2
                   grid_cell_column_span: 2
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_sun
                   text_font: $small_text_font
                   text_color: White
@@ -1244,6 +1251,7 @@ lvgl:
                   grid_cell_column_pos: 4
                   grid_cell_column_span: 2
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_moon
                   text_font: $small_text_font
                   text_color: White
@@ -1255,6 +1263,7 @@ lvgl:
                   grid_cell_column_pos: 6
                   grid_cell_column_span: 4
                   grid_cell_x_align: center
+                  grid_cell_y_align: center
                   id: weather_page_tomorrow
                   text_font: $small_text_font
                   text_color: White
