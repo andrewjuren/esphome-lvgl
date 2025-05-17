@@ -1233,7 +1233,7 @@ lvgl:
                   grid_cell_column_pos: 6
                   grid_cell_column_span: 4
                   id: weather_page_moon
-                  text_font: $moon_text_font
+                  text_font: $small_text_font
                   text_color: White
                   text: "Moon\nPhase"               
               
