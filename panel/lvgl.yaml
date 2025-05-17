@@ -1204,8 +1204,8 @@ lvgl:
                   grid_cell_row_pos: 3
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 10
-                  #grid_cell_x_align: center
-                  text_align: center
+                  grid_cell_x_align: center
+                  #text_align: center
                   id: weather_page_hourly_forcast
                   text_font: $large_text_font
                   text_color: White
