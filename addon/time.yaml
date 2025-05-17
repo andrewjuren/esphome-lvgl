@@ -26,3 +26,11 @@ script:
             auto now = id(sntp_time).now();
             snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
             return time_buf;
+      - lvgl.label.update:
+          id: weather_page_time
+          text: !lambda |-
+            static char time_buf[17];
+            auto now = id(sntp_time).now();
+            snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
+            return time_buf;            
+            
