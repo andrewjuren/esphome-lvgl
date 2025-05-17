@@ -43,4 +43,7 @@ script:
       - lvgl.label.update:
           id: weather_page_date
           text: !lambda |-
-            return "Tuesday\nMay 1, 2025";
+            static char date_buf[32];
+            auto now = id(sntp_time).now();
+            snprintf(date_buf, sizeof(date_buf), "%s\n%s", now.wday, now.mday)
+            return date_buf;
