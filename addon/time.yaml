@@ -9,7 +9,7 @@ time:
      - ca.pool.ntp.org
     on_time_sync:
       - script.execute: time_update
-      - script.exectue: date_update
+      - script.execute: date_update
     on_time:
       - minutes: '*'
         seconds: 0
