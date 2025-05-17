@@ -1072,7 +1072,7 @@ lvgl:
             width: 800
             height: 480
             pad_all: 5
-            #pad_top: 30
+            pad_top: 30
             radius: 0
             bg_color: Black
             border_opa: TRANSP
@@ -1144,51 +1144,106 @@ lvgl:
                   on_click:
                     - lvgl.page.show: settings_page 
 
-              # - label:
-              #     grid_cell_row_pos: 2
-              #     grid_cell_column_pos: 1
-              #     grid_cell_column_span: 3
-              #     text_font: $large_text_font
-              #     text_color: White
-              #     text_align: right
-              #     text: "IP Address "
-              # - label:
-              #     grid_cell_row_pos: 2
-              #     grid_cell_column_pos: 4
-              #     grid_cell_column_span: 3
-              #     id: ip_address_text
-              #     text_font: $large_text_font
-              #     text_color: White
-              #     text: "IPAddress"                     
-              # - label:
-              #     grid_cell_row_pos: 3
-              #     grid_cell_column_pos: 1
-              #     grid_cell_column_span: 3
-              #     text_font: $large_text_font
-              #     text_color: White
-              #     text_align: right
-              #     text: "Wifi Strength (dBm) "               
-              # - label:
-              #     grid_cell_row_pos: 3
-              #     grid_cell_column_pos: 4
-              #     grid_cell_column_span: 3
-              #     id: wifi_signal_db_text
-              #     text_font: $large_text_font
-              #     text_color: White
-              #     text: "WifiStrength"
-              # - label:
-              #     grid_cell_row_pos: 4
-              #     grid_cell_column_pos: 1
-              #     grid_cell_column_span: 3
-              #     text_font: $large_text_font
-              #     text_color: White
-              #     text_align: right
-              #     text: "Uptime (sec) "               
-              # - label:
-              #     grid_cell_row_pos: 4
-              #     grid_cell_column_pos: 4
-              #     grid_cell_column_span: 3
-              #     id: uptime_text
-              #     text_font: $large_text_font
-              #     text_color: White
-              #     text: "Uptime"
+              # TIME
+              - label:
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 4
+                  id: weather_page_time
+                  text_font: $large_text_font
+                  text_color: White
+                  text_align: right
+                  text: "12:00 AM"
+
+              # DATE
+              - label:
+                  grid_cell_row_pos: 1
+                  grid_cell_column_pos: 4
+                  grid_cell_column_span: 6
+                  id: weather_page_date
+                  text_font: $large_text_font
+                  text_color: White
+                  text: "Sunday\nJan 1, 2020"    
+
+              # WEATHER ICON
+              - label:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 4
+                  id: weather_page_weather_icon
+                  text_font: $large_text_font
+                  text_color: White
+                  text_align: right
+                  text: $weather
+
+              # CURRENT TEMP                  
+              - label:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 4
+                  grid_cell_column_span: 2
+                  id: weather_page_current_temp
+                  text_font: $large_text_font
+                  text_color: White
+                  text: "20°C"
+              
+              # CURRENT CONDITIONS (descriptive)
+              - label:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 6
+                  grid_cell_column_span: 4
+                  id: weather_page_current_conditions
+                  text_font: $large_text_font
+                  text_color: White
+                  text: "Uptime (sec) "               
+              
+              # HOURLY FORECAST
+              - label:
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 10
+                  align: center
+                  id: weather_page_hourly_forcast
+                  text_font: $large_text_font
+                  text_color: White
+                  text: "<---Hourly Forcast-->"
+
+             # WIND INFO
+              - label:
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 2
+                  id: weather_page_wind_info
+                  text_font: $small_text_font
+                  text_color: White
+                  text: "Wind Direction\nand Speed"
+
+              # SUN                  
+              - label:
+                  grid_cell_row_pos: 4
+                  grid_cell_column_pos: 2
+                  grid_cell_column_span: 2
+                  id: weather_page_sun
+                  text_font: $small_text_font
+                  text_color: White
+                  text: "Sun\nRise\nSet"
+              
+              # MOON
+              - label:
+                  grid_cell_row_pos: 2
+                  grid_cell_column_pos: 6
+                  grid_cell_column_span: 4
+                  id: weather_page_moon
+                  text_font: $moon_text_font
+                  text_color: White
+                  text: "Moon\nPhase"               
+              
+              # TOMORRW FORECAST
+              - label:
+                  grid_cell_row_pos: 3
+                  grid_cell_column_pos: 0
+                  grid_cell_column_span: 10
+                  id: weather_page_tomorrow
+                  text_font: $small_text_font
+                  text_color: White
+                  text: "Tomorrow\nForcast"
+
