@@ -722,6 +722,7 @@ lvgl:
                         align: bottom_left
                         text: "Exit"
                   on_press:
+                    - lvgl.widget.hide: display_time
                     - lvgl.page.show: weather_page
 
 
@@ -1122,6 +1123,7 @@ lvgl:
                         align: bottom_left
                         text: "Audio"
                   on_click:
+                    - lvgl.widget.show: display_time                  
                     - lvgl.page.show: main_page 
 
               # SETTINGS
@@ -1142,6 +1144,7 @@ lvgl:
                         align: bottom_left
                         text: "Settings"
                   on_click:
+                    - lvgl.widget.show: display_time 
                     - lvgl.page.show: settings_page 
 
               # TIME
@@ -1150,7 +1153,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 4
                   id: weather_page_time
-                  text_font: $large_text_font
+                  text_font: $super_large_text_font
                   text_color: White
                   text_align: right
                   text: "12:00 AM"
@@ -1161,7 +1164,7 @@ lvgl:
                   grid_cell_column_pos: 4
                   grid_cell_column_span: 6
                   id: weather_page_date
-                  text_font: $large_text_font
+                  text_font: $extra_large_text_font
                   text_color: White
                   text: "Sunday\nJan 1, 2020"    
 
@@ -1171,7 +1174,7 @@ lvgl:
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 4
                   id: weather_page_weather_icon
-                  text_font: $large_text_font
+                  text_font: $super_large_text_font
                   text_color: White
                   text_align: right
                   text: $weather
@@ -1182,7 +1185,7 @@ lvgl:
                   grid_cell_column_pos: 4
                   grid_cell_column_span: 2
                   id: weather_page_current_temp
-                  text_font: $large_text_font
+                  text_font: $extra_large_text_font
                   text_color: White
                   text: "20°C"
               
@@ -1194,14 +1197,15 @@ lvgl:
                   id: weather_page_current_conditions
                   text_font: $large_text_font
                   text_color: White
-                  text: "Uptime (sec) "               
+                  text: "Current Conditions\nDescription"               
               
               # HOURLY FORECAST
               - label:
                   grid_cell_row_pos: 3
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 10
-                  align: center
+                  #grid_cell_x_align: center
+                  text_align: center
                   id: weather_page_hourly_forcast
                   text_font: $large_text_font
                   text_color: White

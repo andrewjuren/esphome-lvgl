@@ -89,3 +89,4 @@ substitutions:
   monitor_off:    "\U000F0D90"
   multimedia:     "\U000F1B97"
   weather:        "\U000F0F35"    
+  
