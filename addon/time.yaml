@@ -45,5 +45,5 @@ script:
           text: !lambda |-
             static char date_buf[32];
             // auto now = id(sntp_time).now();
-            strftime(date_buf, sizeof(date_buf), "%A\n%d %B, %Y", id(sntp_time).now());
+            strftime(date_buf, sizeof(date_buf), "%A\n%d %B, %Y", id(time).now());
             return date_buf;
