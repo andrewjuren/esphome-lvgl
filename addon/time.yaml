@@ -43,6 +43,9 @@ script:
       - lvgl.label.update:
           id: weather_page_date
           text: !lambda |-
+            return id(sntp_time).now().strftime("%A %d %B %Y").c_str());
+            /*
             static char date_buf[32];
             strftime(date_buf, sizeof(date_buf), "%A\n%d %B, %Y", id(sntp_time).now());
             return date_buf;
+            */
