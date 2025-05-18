@@ -27,11 +27,11 @@ script:
       - lvgl.label.update:
           id: display_time
           text: !lambda |-
-            return id(sntp_time).now().strftime("%-I:%M %p"); 
+            return id(sntp_time).now().strftime("%I:%M %p"); 
       - lvgl.label.update:
           id: weather_page_time
           text: !lambda |-
-            return id(sntp_time).now().strftime("%-I:%M %p");          
+            return id(sntp_time).now().strftime("%I:%M %p");          
   - id: date_update
     then: 
       - lvgl.label.update:
