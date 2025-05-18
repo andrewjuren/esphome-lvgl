@@ -27,14 +27,14 @@ script:
       - lvgl.label.update:
           id: display_time
           text: !lambda |-
-            return id(sntp_time).now().strftime("%#I:%M %p"); 
+            return id(sntp_time).now().strftime("%I:%M %p").lstrip("0"); 
       - lvgl.label.update:
           id: weather_page_time
           text: !lambda |-
-            return id(sntp_time).now().strftime("%#I:%M %p");          
+            return id(sntp_time).now().strftime("%I:%M %p").lstrip("0");          
   - id: date_update
     then: 
       - lvgl.label.update:
           id: weather_page_date
           text: !lambda |-
-            return id(sntp_time).now().strftime("%A\n%#d %B, %Y");
+            return id(sntp_time).now().strftime("%A\n%d %B, %Y");
