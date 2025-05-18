@@ -2,12 +2,12 @@ sensor:
   - platform: homeassistant
     entity_id: sensor.nanaimo_temperature
     id: local_temperature
-#    on_value:
-#      - lvgl.label.update:
-#          id: weather_page_current_temp
-#          text: 
-#            format: "%d °C"
-#            args: [ '(int)round(x)' ]
+    on_value:
+     - lvgl.label.update:
+         id: weather_page_current_temp
+         text: 
+           format: "%d °C"
+           args: [ '(int)round(x)' ]
 
 
     ## Volume Level sensors ##
