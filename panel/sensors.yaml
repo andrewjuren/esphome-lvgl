@@ -167,7 +167,7 @@ binary_sensor:
 
 sensor:
 
- # Header Outdoor Temperate
+ # Current local temperature
  - platform: homeassistant
    entity_id: sensor.nanaimo_temperature
    id: nanaimo_temperature
