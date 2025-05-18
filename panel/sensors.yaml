@@ -1,4 +1,5 @@
 sensor:
+    ## WEATHER SENSORS ##
   - platform: homeassistant
     entity_id: sensor.nanaimo_temperature
     id: local_temperature
@@ -10,8 +11,7 @@ sensor:
            args: [ '(int)round(x)' ]
 
 
-    ## Volume Level sensors ##
-
+    ## VOLUME LEVEL SENSORS ##
   - platform: homeassistant
     id: living_room_volume
     entity_id: media_player.living_room
@@ -49,6 +49,7 @@ sensor:
           value: !lambda return (x * 100);  
 
 text_sensor:
+    ## SPOTIFY TEXT SENSORES ##
   - platform: homeassistant
     id: spotify_title
     entity_id: media_player.spotify_larissajay
@@ -77,9 +78,7 @@ text_sensor:
           text: !lambda return x; 
       
 binary_sensor:
-
-    ## State (On/Off) sensors ##
-
+    ## STATE (ON/OFF) SENSORS ##
   - platform: homeassistant
     id: living_room_media_player
     entity_id: media_player.living_room
