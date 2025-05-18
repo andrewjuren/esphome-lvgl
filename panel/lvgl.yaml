@@ -1204,6 +1204,8 @@ lvgl:
                   grid_cell_column_span: 6
                   grid_cell_x_align: center
                   grid_cell_y_align: center
+                  width: 480px
+                  long_mode: scroll_circular
                   id: weather_page_current_conditions
                   text_font: $large_text_font
                   text_color: White
