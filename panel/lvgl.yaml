@@ -1138,10 +1138,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid
                         text: $cog_outline
                     - label:
-                        align: bottom_left
+                        align: bottom_mid
                         text: "Settings"
                   on_click:
                     - lvgl.widget.show: display_time 
