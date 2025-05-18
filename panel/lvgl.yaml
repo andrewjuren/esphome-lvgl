@@ -1080,7 +1080,7 @@ lvgl:
             layout:
               type: GRID
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
-              grid_rows: [FR(15),FR(15),FR(10),FR(10),FR(10)]  
+              grid_rows: [FR(15),FR(10),FR(10),FR(10),FR(15)]  
             widgets: 
 
               # BACKLIGHT
@@ -1170,7 +1170,7 @@ lvgl:
                   id: weather_page_date
                   text_font: $extra_large_text_font
                   text_color: White
-                  text: "Sunday\nJan 1, 2020"    
+                  text: "Sunday Jan 1, 2020"    
 
               # WEATHER ICON
               - label:
