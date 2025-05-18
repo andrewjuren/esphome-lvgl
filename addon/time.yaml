@@ -34,18 +34,10 @@ script:
       - lvgl.label.update:
           id: weather_page_time
           text: !lambda |-
-            static char time_buf[17];
-            auto now = id(sntp_time).now();
-            snprintf(time_buf, sizeof(time_buf), "%02d:%02d", now.hour, now.minute);
-            return time_buf;            
+            return id(sntp_time).now().strftime("%I:%M %p");          
   - id: date_update
     then: 
       - lvgl.label.update:
           id: weather_page_date
           text: !lambda |-
-            return id(sntp_time).now().strftime("%A %d %B %Y");
-            /*
-            static char date_buf[32];
-            strftime(date_buf, sizeof(date_buf), "%A\n%d %B, %Y", id(sntp_time).now());
-            return date_buf;
-            */
+            return id(sntp_time).now().strftime("%A\n%d %B, %Y");
