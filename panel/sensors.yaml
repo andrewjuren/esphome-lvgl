@@ -1,6 +1,7 @@
 sensor:
   - platform: homeassistant
     entity_id: sensor.nanaimo_temperature
+    id: local_temperature
 #    on_value:
 #      - lvgl.label.update:
 #          id: weather_page_current_temp
