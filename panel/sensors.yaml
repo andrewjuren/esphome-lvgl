@@ -1,4 +1,13 @@
 sensor:
+  - platform: homeassistant
+    entity_id: sensor.nanaimo_temperature
+#    on_value:
+#      - lvgl.label.update:
+#          id: weather_page_current_temp
+#          text: 
+#            format: "%d °C"
+#            args: [ '(int)round(x)' ]
+
 
     ## Volume Level sensors ##
 
@@ -165,13 +174,5 @@ binary_sensor:
                 state:
                   checked: false    
 
-text_sensor:
- # Current local temperature
- - platform: homeassistant
-   entity_id: sensor.nanaimo_temperature
-#    on_value:
-#      - lvgl.label.update:
-#          id: weather_page_current_temp
-#          text: 
-#            format: "%d °C"
-#            args: [ '(int)round(x)' ]
+
+
