@@ -7,7 +7,7 @@ sensor:
      - lvgl.label.update:
          id: weather_page_current_temp
          text: 
-           format: "%d°C"
+           format: "%.1f°C"
            args: [ 'x' ]
 
   - platform: homeassistant
