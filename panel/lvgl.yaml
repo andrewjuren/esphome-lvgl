@@ -1158,7 +1158,7 @@ lvgl:
                   text_font: $super_large_text_font
                   text_color: White
                   text_align: right
-                  text: "12:00 AM"
+                  text: "--:-- AM"
 
               # DATE
               - label:
@@ -1195,7 +1195,7 @@ lvgl:
                   id: weather_page_current_temp
                   text_font: $super_large_text_font
                   text_color: White
-                  text: "20°C"
+                  text: "--°C"
               
               # CURRENT CONDITIONS (descriptive)
               - label:

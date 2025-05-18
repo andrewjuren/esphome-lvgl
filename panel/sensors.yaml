@@ -6,7 +6,7 @@ sensor:
      - lvgl.label.update:
          id: weather_page_current_temp
          text: 
-           format: "%d °C"
+           format: "%d°C"
            args: [ '(int)round(x)' ]
 
 
