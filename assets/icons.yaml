@@ -2,7 +2,7 @@
 
 # Define icons used
 font:
-  - file: '/assets/materialdesignicons-webfont.ttf'
+  - file: 'assets/materialdesignicons-webfont.ttf'
     id: icon_font
     size: 48
     bpp: 4
@@ -47,7 +47,7 @@ font:
       "\U000F08BB"  #mdi-cog-outline
       ]
 
-  - file: '/assets/materialdesignicons-webfont.ttf'
+  - file: 'assets/materialdesignicons-webfont.ttf'
     id: weather_icon_font
     size: 64
     bpp: 4
