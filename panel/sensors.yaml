@@ -20,13 +20,7 @@ sensor:
     #        format: "%d°C"
     #        args: [ '(int)round(x)' ]
 
-  - platform: homeassistant
-    entity_id: sensor.nanaimo_summary
-    id: summary_sensor
-    on_value:
-     - lvgl.label.update:
-         id: weather_page_current_conditions
-         text: !lambda return x;
+
 
     ## VOLUME LEVEL SENSORS ##
   - platform: homeassistant
@@ -66,6 +60,15 @@ sensor:
           value: !lambda return (x * 100);  
 
 text_sensor:
+    ## WEATHER SENSORS ##
+  - platform: homeassistant
+    entity_id: sensor.nanaimo_summary
+    id: summary_sensor
+    on_value:
+     - lvgl.label.update:
+         id: weather_page_current_conditions
+         text: !lambda return x;
+
     ## SPOTIFY TEXT SENSORES ##
   - platform: homeassistant
     id: spotify_title
