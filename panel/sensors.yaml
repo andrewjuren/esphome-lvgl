@@ -166,11 +166,10 @@ binary_sensor:
                   checked: false    
 
 sensor:
-
  # Current local temperature
  - platform: homeassistant
    entity_id: sensor.nanaimo_temperature
-   id: nanaimo_temperature
+#   id: nanaimo_temperature
    on_value:
      - lvgl.label.update:
          id: weather_page_current_temp
