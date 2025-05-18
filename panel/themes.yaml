@@ -26,6 +26,9 @@ lvgl:
     - id: dark
       bg_color: $button_dark_color
       
+    - id: invisible
+      bg_opa: TRANSP
+
   theme:
     button:
       text_font: $text_font

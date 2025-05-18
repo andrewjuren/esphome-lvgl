@@ -1134,7 +1134,7 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  styles: light
+                  styles: invisible
                   widgets:
                     - label:
                         text_font: $icon_font
