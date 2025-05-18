@@ -165,28 +165,15 @@ binary_sensor:
                 state:
                   checked: false    
 
+sensor:
 
-
-
-#sensor:
-#
-#  # Header Outdoor Temperate
-#  - platform: homeassistant
-#    entity_id: sensor.office_temperature
-#    id: office_temperature
-#    on_value:
-#      - lvgl.label.update:
-#          id: temperatures
-#          text:
-#            format: "%d° / %d°"
-#            args: [ '(int)round(id(sensor.nanaimo_temperature).state)', '(int)round(x)' ]
-#
-#  - platform: homeassistant
-#    entity_id: sensor.outdoor_temperature
-#    id: outdoor_temperature
-#    on_value:
-#      - lvgl.label.update:
-#          id: temperatures
-#          text:
-#            format: "%d° / %d°"
-#            args: [ '(int)round(x)', '(int)round(id(office_temperature).state)' ]
+ # Header Outdoor Temperate
+ - platform: homeassistant
+   entity_id: sensor.nanaimo_temperature
+   id: nanaimo_temperature
+   on_value:
+     - lvgl.label.update:
+         id: weather_page_current_temp
+         text: 
+           format: "%d °C"
+           args: [ '(int)round(x)' ]
