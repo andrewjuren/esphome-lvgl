@@ -165,7 +165,7 @@ binary_sensor:
                 state:
                   checked: false    
 
-sensor:
+text_sensor:
  # Current local temperature
  - platform: homeassistant
    entity_id: sensor.nanaimo_temperature
