@@ -11,6 +11,14 @@ sensor:
            args: [ '(int)round(x)' ]
 
   - platform: homeassistant
+    entity_id: sensor.nanaimo_low_temperature
+    id: low_temp_sensor
+
+  - platform: homeassistant
+    entity_id: sensor.nanaimo_high_temperature
+    id: high_temp_sensor
+
+  - platform: homeassistant
     entity_id: sensor.nanaimo_icon_code
     id: icon_code_sensor
     # on_value:
