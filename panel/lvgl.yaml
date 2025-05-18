@@ -998,7 +998,7 @@ lvgl:
                         text: $exit_to_app
                     - label:
                         align: bottom_left
-                        text: "Exit to App"
+                        text: "Exit"
                   on_press:
                     - lvgl.page.show: weather_page
               
@@ -1091,14 +1091,14 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  styles: light
+                  styles: invisible
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left             
+                        align: top_mid            
                         text: $monitor_off
                     - label:
-                        align: bottom_left
+                        align: bottom_mid
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
@@ -1113,14 +1113,14 @@ lvgl:
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
                   checkable: false
-                  styles: light
+                  styles: invisible
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid
                         text: $multimedia
                     - label:
-                        align: bottom_left
+                        align: bottom_mid
                         text: "Audio"
                   on_click:
                     - lvgl.widget.show: display_time                  
