@@ -76,6 +76,15 @@ text_sensor:
          id: weather_page_current_conditions
          text: !lambda return x;
 
+  - platform: homeassistant
+    id: nanaimo_forecast_sensor
+    entity_id: weather.nanaimo_forecast
+    attribute: hourly
+    on_value:
+     - lvgl.label.update:
+         id: weather_page_hourly_forcast
+         text: !lambda return x;
+
     ## SPOTIFY TEXT SENSORES ##
   - platform: homeassistant
     id: spotify_title
