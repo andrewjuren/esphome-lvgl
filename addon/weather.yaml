@@ -13,7 +13,7 @@
   sensor:
     - name: Weather Forecast Daily
       unique_id: weather_forecast_daily
-      state: "{{ states('weather.nan_forcasts') }}"
+      state: "{{ states('weather.nanaimo_forcast') }}"
       attributes:
         daily: "{{ forecasts['weather.nanaimo_forecast']['daily_forecast'] }}"
         hourly: "{{ forecasts['weather.nanaimo_forecast']['hourly_forecast'] }}"
