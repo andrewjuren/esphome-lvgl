@@ -29,7 +29,10 @@ script:
           id: display_time
           text: !lambda |-
             std::string time_now;
-            return id(sntp_time).now().strftime("%I:%M %p"); 
+            time_now = id(sntp_time).now().strftime("%I:%M %p");
+            if (time_now[0]="0")
+              time_now[0]=" ";
+            return time_now; 
       - lvgl.label.update:
           id: weather_page_time
           text: !lambda |-
