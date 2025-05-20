@@ -69,8 +69,8 @@ sensor:
 text_sensor:
     ## WEATHER SENSORS ##
   - platform: homeassistant
+    id: summary_sensor  
     entity_id: sensor.nanaimo_summary
-    id: summary_sensor
     on_value:
      - lvgl.label.update:
          id: weather_page_current_conditions
@@ -83,7 +83,7 @@ text_sensor:
     on_value:
      - lvgl.label.update:
          id: weather_page_hourly_forecast
-         text: !lambda return x;
+         text: "Weather forecast received!" # !lambda return x;
 
     ## SPOTIFY TEXT SENSORES ##
   - platform: homeassistant
