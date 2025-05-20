@@ -1220,7 +1220,7 @@ lvgl:
                   grid_cell_y_align: center
                   id: weather_page_hourly_forecast
                   text_font: $large_text_font
-                  text_color: White
+                  text_color: Black
                   text: "--- Hourly Forecast --\n(Under Development)"
 
              # WIND INFO
@@ -1256,7 +1256,7 @@ lvgl:
                   grid_cell_y_align: center
                   id: weather_page_moon
                   text_font: $small_text_font
-                  text_color: White
+                  text_color: Black
                   text: "Moon\nPhase"               
               
               # TOMORRW FORECAST
@@ -1268,6 +1268,6 @@ lvgl:
                   grid_cell_y_align: center
                   id: weather_page_tomorrow
                   text_font: $small_text_font
-                  text_color: White
+                  text_color: Black
                   text: "Tomorrow\nForcast"
 
