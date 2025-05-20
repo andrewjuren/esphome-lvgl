@@ -7,7 +7,7 @@ lvgl:
       #    text: "-° / -°"
       #    id: temperatures
       #    styles: roboto15_style
-      #    align: top_left
+      #    align: top_mid 
       #    x: 8
       #    y: 4
       #    text_color: 0xFFFFFF
@@ -65,10 +65,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left              
+                        align: top_mid              
                         text: $monitor_off
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
@@ -87,10 +87,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left              
+                        align: top_mid              
                         text: $floor_plan
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Main Floor"
                   on_press:
                     - homeassistant.action:
@@ -111,7 +111,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left            
+                        align: top_mid            
                         text: $volumeplus
                   on_press:
                     - repeat:
@@ -158,7 +158,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left             
+                        align: top_mid             
                         text: $volumeminus
                   on_press:
                     - repeat:
@@ -206,7 +206,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left             
+                        align: top_mid             
                         text: $volume_mute
                   on_press:                
                     - homeassistant.action:
@@ -237,10 +237,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $power_plug
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "System On/Off"
                   on_click:
                     - homeassistant.action:
@@ -261,10 +261,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $sofa_outline
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Living Room"
                   on_click:
                     - homeassistant.action:
@@ -303,7 +303,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeplus
                   on_click:
                     - repeat:
@@ -326,7 +326,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeminus
                   on_click:
                     - repeat:
@@ -350,7 +350,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         id: living_room_mute_icon                
                         text: $volume_mute
                   on_press:                
@@ -372,10 +372,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $play_box
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Now Playing"
                   on_click:
                     - lvgl.page.show: now_playing_page
@@ -393,10 +393,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $table_furniture
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Dining Room"
                   on_click:
                     - homeassistant.action:
@@ -428,7 +428,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeplus
                   on_click:
                     - homeassistant.action:
@@ -448,7 +448,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeminus
                   on_click:
                     - homeassistant.action:
@@ -469,7 +469,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         id: dining_room_mute_icon                
                         text: $volume_mute
                   on_press:                
@@ -491,10 +491,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $source_branch
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Source"
                   on_click:
                     - logger.log: "on_click"
@@ -518,10 +518,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $faucet_variant
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Kitchen"
                   on_click:
                     - homeassistant.action:
@@ -553,7 +553,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeplus
                   on_click:
                     - homeassistant.action:
@@ -573,7 +573,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeminus
 
                   on_click:
@@ -595,7 +595,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         id: kitchen_mute_icon                
                         text: $volume_mute
                   on_press:                
@@ -618,10 +618,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $flower
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Deck"
                   on_click:
                     - homeassistant.action:
@@ -653,7 +653,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeplus
                   on_click:
                     - homeassistant.action:
@@ -673,7 +673,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         text: $volumeminus
                   on_click:
                     - homeassistant.action:
@@ -694,7 +694,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left
+                        align: top_mid 
                         id: deck_mute_icon                
                         text: $volume_mute
                   on_press:                
@@ -716,10 +716,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left             
+                        align: top_mid             
                         text: $exit_to_app
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Exit"
                   on_press:
                     - lvgl.widget.hide: display_time
@@ -757,10 +757,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left              
+                        align: top_mid              
                         text: $monitor_off
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
@@ -778,10 +778,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left              
+                        align: top_mid              
                         text: $exit_to_app
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Exit"
                   on_press:
                     - lvgl.page.show: main_page   
@@ -799,7 +799,7 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $large_text_font
-                        align: top_left
+                        align: top_mid 
                         id: info_button_top                
                         text: "Title"
                     - label:
@@ -809,7 +809,7 @@ lvgl:
                         text: "Album"
                     - label:
                         text_font: $small_text_font
-                        align: bottom_left
+                        align: bottom_mid 
                         id: info_button_bottom
                         text: "Artist"
                   on_press:
@@ -835,10 +835,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left             
+                        align: top_mid             
                         text: $skip_previous
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Previous"
                   on_press:
                     - homeassistant.action:
@@ -859,10 +859,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left              
+                        align: top_mid              
                         text: $play_pause
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Play/Pause"
                   on_press:
                     - homeassistant.action:
@@ -882,11 +882,11 @@ lvgl:
               #     widgets:
               #       - label:
               #           text_font: $icon_font
-              #           align: top_left
+              #           align: top_mid 
               #           id: pause_button_icon                
               #           text: $pause
               #       - label:
-              #           align: bottom_left
+              #           align: bottom_mid 
               #           id: pause_button_label
               #           text: "Pause"
               #     on_press:
@@ -906,11 +906,11 @@ lvgl:
               #     widgets:
               #       - label:
               #           text_font: $icon_font
-              #           align: top_left
+              #           align: top_mid 
               #           id: stop_button_icon                
               #           text: $stop
               #       - label:
-              #           align: bottom_left
+              #           align: bottom_mid 
               #           id: stop_button_label
               #           text: "Stop"
               #     on_press:
@@ -931,10 +931,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left               
+                        align: top_mid               
                         text: $skip_next
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Next"
                   on_press:
                     - homeassistant.action:
@@ -972,10 +972,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left               
+                        align: top_mid               
                         text: $monitor_off
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Screen Off"
                   on_press:
                     - lvgl.page.show: blank_page 
@@ -994,10 +994,10 @@ lvgl:
                   widgets:
                     - label:
                         text_font: $icon_font
-                        align: top_left             
+                        align: top_mid             
                         text: $exit_to_app
                     - label:
-                        align: bottom_left
+                        align: bottom_mid 
                         text: "Exit"
                   on_press:
                     - lvgl.page.show: weather_page
