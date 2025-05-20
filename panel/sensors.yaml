@@ -25,7 +25,15 @@ sensor:
      - lvgl.label.update:
          id: weather_page_weather_icon
          text: !lambda |-
-          return to_string((int)x); 
+          int glyph_code;
+          switch(int(x)){
+            case 1:
+              glyph_code = $wx_9;
+              break;
+            default: 
+              glyph_code = $wx_0
+            }
+          return glyph_code; 
 
     ## VOLUME LEVEL SENSORS ##
   - platform: homeassistant

@@ -52,7 +52,8 @@ font:
     size: 64
     bpp: 4
     glyphs: [
-      "\U000F0F33"  #mdi:weather-partly-cloudy
+      "\U000F1BF9", #0 mdi:cloud-question-outline
+      "\U000F0F33"  #9 mdi:weather-partly-cloudy
       ]
 
 # Map icons to names
@@ -95,4 +96,5 @@ substitutions:
   skip_next:      "\U000F0F27"
   monitor_off:    "\U000F0D90"
   multimedia:     "\U000F1B97"
-  weather:        "\U000F0F33"    
+  wx_0:           "\U000F1BF9"
+  wx_9:           "\U000F0F33"    
