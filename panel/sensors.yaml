@@ -79,7 +79,7 @@ text_sensor:
   - platform: homeassistant
     id: nanaimo_forecast_sensor
     entity_id: weather.nanaimo_forecast
-    attribute: forecast_daily
+    attribute: forecast
     on_value:
      - lvgl.label.update:
          id: weather_page_hourly_forecast
