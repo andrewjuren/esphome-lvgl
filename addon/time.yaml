@@ -28,6 +28,7 @@ script:
       - lvgl.label.update:
           id: display_time
           text: !lambda |-
+            std::string time_now;
             return id(sntp_time).now().strftime("%I:%M %p"); 
       - lvgl.label.update:
           id: weather_page_time
