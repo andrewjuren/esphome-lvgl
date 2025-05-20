@@ -21,13 +21,11 @@ sensor:
   - platform: homeassistant
     id: icon_code_sensor
     entity_id: sensor.nanaimo_icon_code
-    # on_value:
-    #  - lvgl.label.update:
-    #      id: weather_page_current_temp
-    #      text: 
-    #        format: "%d°C"
-    #        args: [ '(int)round(x)' ]
-  
+    on_value:
+     - lvgl.label.update:
+         id: weather_page_weather_icon
+         text: !lambda |-
+          return (int)x; 
 
     ## VOLUME LEVEL SENSORS ##
   - platform: homeassistant
