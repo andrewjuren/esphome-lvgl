@@ -100,7 +100,7 @@ text_sensor:
         id: weather_page_sun
         text: !lambda |-
           tm* sun_rise;
-          //strptime(id(sun_rise_sensor).state.c_str(), "%YT%T%z", sun_rise);
+          strptime(x.c_str(), "%YT%T%z", sun_rise);
           return x; //sun_rise.strftime("%I:%M %p");
           // return "Sun\nRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
         
