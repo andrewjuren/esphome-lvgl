@@ -79,6 +79,10 @@ text_sensor:
   - platform: homeassistant
     id: wind_direction_sensor  
     entity_id: sensor.nanaimo_wind_direction
+    on_value:
+    - lvgl.label.update:
+         id: weather_page_wind_info
+         text: !lambda return "Wind:\nSpeed:" + id(wind_speed_sensor).state + " km/h\nDirection:" + x;  
 
   - platform: homeassistant
     id: wind_speed_sensor  
@@ -86,7 +90,9 @@ text_sensor:
     on_value:
      - lvgl.label.update:
          id: weather_page_wind_info
-         text: !lambda return "Wind:\nSpeed:" + x + "\nDirection:" + id(wind_direction_sensor).state;  
+         text: !lambda return "Wind:\nSpeed:" + x + " km/h\nDirection:" + id(wind_direction_sensor).state;  
+
+
 
   ## NOT FUNCTIONING (but also no errors)
   - platform: homeassistant
