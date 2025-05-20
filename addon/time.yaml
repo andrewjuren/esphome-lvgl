@@ -10,7 +10,7 @@ time:
     on_time_sync:
       - script.execute: time_update
       - script.execute: date_update
-      - script.execute: hourly_forecast_update
+      # - script.execute: hourly_forecast_update
     on_time:
       - minutes: '*'
         seconds: 0
@@ -40,16 +40,16 @@ script:
           text: !lambda |-
             return id(sntp_time).now().strftime("%A %d %B, %Y");
 
-  - id: hourly_forecast_update
-    then:
-      - platform: homeassistant
-        action: weather.get_forecasts
-        data:
-          type: hourly
-        target:
-          entity_id: weather.nanaimo_forecast
-        on_value:
-          lvgl.label.update:
-            id: weather_page_hourly_forecast
-            text: "Weather forecast received!" # !lambda return x;
+  # - id: hourly_forecast_update
+  #   then:
+  #     - platform: homeassistant
+  #       action: weather.get_forecasts
+  #       data:
+  #         type: hourly
+  #       target:
+  #         entity_id: weather.nanaimo_forecast
+  #       on_value:
+  #         lvgl.label.update:
+  #           id: weather_page_hourly_forecast
+  #           text: "Weather forecast received!" # !lambda return x;
   
