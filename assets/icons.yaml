@@ -60,10 +60,9 @@ font:
       "\U000F067F", #snr mdi:weather-snowy-rainy
       "\U000F0F36", #snw mdi:weather-snowy-heavy
       "\U000F0F33", #shr mdi:weather-partly-rainy
-      "\U000F067F", #flr mdi:weather-partly-snowy
+      "\U000F0F34", #flr mdi:weather-partly-snowy
       "\U000F0593", #thd mdi:weather-lightning
-      "\U000F0591", #fog mdi:weather-fog
-      
+      "\U000F0591" #fog mdi:weather-fog
       ]
 
 # Map icons to names
