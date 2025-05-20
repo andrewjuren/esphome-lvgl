@@ -110,7 +110,6 @@ text_sensor:
           strcat(reply, "\nSet:");
           strcat(reply, sun_set);
           return reply;
-          //return "Sun\nRise:" + sun_rise + "\nSet:" + sun_set;  
         
   - platform: homeassistant
     id: sun_set_sensor  
