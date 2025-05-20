@@ -1221,7 +1221,7 @@ lvgl:
                   id: weather_page_hourly_forecast
                   text_font: $large_text_font
                   text_color: White
-                  text: "--- Hourly Forecast --"
+                  text: "--- Hourly Forecast --\n(Under Development)"
 
              # WIND INFO
               - label:

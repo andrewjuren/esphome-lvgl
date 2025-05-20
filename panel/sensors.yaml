@@ -75,7 +75,20 @@ text_sensor:
      - lvgl.label.update:
          id: weather_page_current_conditions
          text: !lambda return x;
+ 
+  - platform: homeassistant
+    id: summary_sensor  
+    entity_id: sensor.nanaimo_wind_direction
 
+  - platform: homeassistant
+    id: summary_sensor  
+    entity_id: sensor.nanaimo_wind_speed
+    on_value:
+     - lvgl.label.update:
+         id: weather_page_wind_info
+         text: !lambda return x + "\n" + "East";  
+
+  ## NOT FUNCTIONING (but also no errors)
   - platform: homeassistant
     id: nanaimo_forecast_sensor
     entity_id: weather.nanaimo_forecast
