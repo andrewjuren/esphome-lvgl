@@ -25,34 +25,48 @@ sensor:
      - lvgl.label.update:
          id: weather_page_weather_icon
          text: !lambda |-
-          char glyph_code[20];
+          char glyph_code[10];
           switch(int(x)){
+            // Sunny
+            case 0:
             case 1:
-              strncpy(glyph_code, "$wx_01", 6);
+              strncpy(glyph_code, "$wx_sun", 7);
               break;
+
+            // Partly cloudy
             case 2:
-              strncpy(glyph_code, "$wx_02", 6);
-              break;
             case 3:
-              strncpy(glyph_code, "$wx_03", 6);
+              strncpy(glyph_code, "$wx_prt", 7);
               break;
-            case 4:
-              strncpy(glyph_code, "$wx_04", 6);
-              break;              
-            case 5:
-              strncpy(glyph_code, "$wx_05", 6);
-              break; 
+
+            // Showers  
             case 6:
-              strncpy(glyph_code, "$wx_06", 6);
-              break; 
+              strncpy(glyph_code, "$wx_shr", 7);
+              break;
+
+           // Showers and flurries                 
             case 7:
-              strncpy(glyph_code, "$wx_07", 6);
+              strncpy(glyph_code, "$wx_shf", 7);
               break; 
+
+            // Flurries  
             case 8:
-              strncpy(glyph_code, "$wx_08", 6);
+              strncpy(glyph_code, "$wx_flr", 7);
               break; 
+
+            // Cloudy
+            case 10:
+              strncpy(glyph_code, "$wx_cld", 7);
+              break; 
+            
+            // Rain
+            case 10:
+              strncpy(glyph_code, "$wx_rnn", 7);
+              break; 
+
+            //Unknown or other  
             default: 
-              strncpy(glyph_code, "$wx_00", 6);
+              strncpy(glyph_code, "$wx_unk", 7);
             }
           return glyph_code; 
 

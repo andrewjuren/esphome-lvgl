@@ -52,14 +52,14 @@ font:
     size: 64
     bpp: 4
     glyphs: [
-      "\U000F1BF9", #00 mdi:cloud-question-outline
-      "\U000F0599", #01 mdi:weather-sunny
-      "\U000F0595", #03 mdi:weather-partly-cloudy
-      "\U000F0590", #04 mdi:weather-cloudy
-      "\U000F0596", #05 mdi:weather-pouring
-      "\U000F067F", #06 mdi:weather-snowy-rainy
-      "\U000F0F36", #07 mdi:weather-snowy-heavy
-      "\U000F0F33" #08 mdi:weather-partly-rainy
+      "\U000F1BF9", #unk mdi:cloud-question-outline
+      "\U000F0599", #sun mdi:weather-sunny
+      "\U000F0595", #prt mdi:weather-partly-cloudy
+      "\U000F0590", #cld mdi:weather-cloudy
+      "\U000F0596", #rnn mdi:weather-pouring
+      "\U000F067F", #snr mdi:weather-snowy-rainy
+      "\U000F0F36", #snw mdi:weather-snowy-heavy
+      "\U000F0F33" #shr mdi:weather-partly-rainy
       ]
 
 # Map icons to names
@@ -102,12 +102,11 @@ substitutions:
   skip_next:      "\U000F0F27"
   monitor_off:    "\U000F0D90"
   multimedia:     "\U000F1B97"
-  wx_00:  "\U000F1BF9"
-  wx_01:  "\U000F0599"
-  wx_02:  "\U000F0595"
-  wx_03:  "\U000F0595"
-  wx_04:  "\U000F0590"
-  wx_05:  "\U000F0596"
-  wx_06:  "\U000F067F"
-  wx_07:  "\U000F0F36"
-  wx_08:  "\U000F0F33"
+  wx_unk:  "\U000F1BF9"
+  wx_sun:  "\U000F0599"
+  wx_cld:  "\U000F0595"
+  wx_rcld:  "\U000F0590"
+  wx_rnn:  "\U000F0596"
+  wx_snr:  "\U000F067F"
+  wx_snw:  "\U000F0F36"
+  wx_shr:  "\U000F0F33"
