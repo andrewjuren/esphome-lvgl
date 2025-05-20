@@ -98,15 +98,19 @@ text_sensor:
     on_value:
      - lvgl.label.update:
         id: weather_page_sun
-        text: !lambda return "Sun\nnRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
+        text: !lambda |-
+          tm sun_rise;
+          sun_rise = x.strptime("%YT%T%z");
+          return sun_rise;
+          // return "Sun\nRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
         
   - platform: homeassistant
     id: sun_set_sensor  
     entity_id: sensor.sun_next_setting
-    on_value:
-     - lvgl.label.update:
-        id: weather_page_sun
-        text: !lambda return "Sun\nnRise:" + id(sun_rise_sensor).state + "\nSet:" + x;  
+    # on_value:
+    #  - lvgl.label.update:
+    #     id: weather_page_sun
+    #     text: !lambda return "Sun\nRise:" + id(sun_rise_sensor).state + "\nSet:" + x;  
 
 
   ## NOT FUNCTIONING (but also no errors)
