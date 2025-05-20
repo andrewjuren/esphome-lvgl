@@ -82,7 +82,7 @@ text_sensor:
     attribute: forecast_daily
     on_value:
      - lvgl.label.update:
-         id: weather_page_hourly_forcast
+         id: weather_page_hourly_forecast
          text: !lambda return x;
 
     ## SPOTIFY TEXT SENSORES ##
