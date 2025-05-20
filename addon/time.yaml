@@ -42,7 +42,8 @@ script:
 
   - id: hourly_forecast_update
     then:
-      - weather.get_forecasts:
+      - platform: homeassistant
+        action: weather.get_forecasts:
         data:
           type: hourly
         target:
