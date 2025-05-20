@@ -1183,7 +1183,7 @@ lvgl:
                   text_font: $weather_icon_font
                   text_color: White
                   text_align: right
-                  text: $wx_0
+                  text: $wx_00
 
               # CURRENT TEMP                  
               - label:

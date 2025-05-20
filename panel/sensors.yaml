@@ -25,22 +25,22 @@ sensor:
      - lvgl.label.update:
          id: weather_page_weather_icon
          text: !lambda |-
-          char glyph_code[6];
+          char glyph_code[5];
           switch(int(x)){
             case 1:
-              glyph_code = "\$wx_01";
+              glyph_code = "$wx_01";
               break;
             case 2:
-              glyph_code = "\$wx_02";
+              glyph_code = "$wx_02";
               break;
             case 3:
-              glyph_code = "\$wx_03";
+              glyph_code = "$wx_03";
               break;
             case 4:
-              glyph_code = "\$wx_04";
+              glyph_code = "$wx_04";
               break;              
             default: 
-              glyph_code = "\$wx_00";
+              glyph_code = "$wx_00";
             }
           return glyph_code; 
 
