@@ -29,7 +29,7 @@ script:
           id: display_time
           text: !lambda |-
             std::string time_now;
-            time_now = id(sntp_time).now().strftime("%I:%M %p")c_str();
+            time_now = id(sntp_time).now().strftime("%I:%M %p");
             if (time_now.c_str()[0]='0')
               return time_now;
             return time_now; 
