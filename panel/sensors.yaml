@@ -39,6 +39,18 @@ sensor:
             case 4:
               strncpy(glyph_code, "$wx_04", 6);
               break;              
+            case 5:
+              strncpy(glyph_code, "$wx_05", 6);
+              break; 
+            case 6:
+              strncpy(glyph_code, "$wx_06", 6);
+              break; 
+            case 7:
+              strncpy(glyph_code, "$wx_07", 6);
+              break; 
+            case 8:
+              strncpy(glyph_code, "$wx_08", 6);
+              break; 
             default: 
               strncpy(glyph_code, "$wx_00", 6);
             }
