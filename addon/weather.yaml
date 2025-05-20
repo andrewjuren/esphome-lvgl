@@ -1,13 +1,1 @@
-script:
-  - id: hourly_forecast_update
-    then:
-      action: weather.get_forecasts
-      data:
-        type: hourly
-      target:
-        entity_id: weather.nanaimo_forecast
-      on_value:
-        lvgl.label.update:
-          id: weather_page_hourly_forecast
-          text: "Weather forecast received!" # !lambda return x;
-      
+    
