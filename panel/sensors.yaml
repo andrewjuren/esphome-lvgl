@@ -25,7 +25,7 @@ sensor:
      - lvgl.label.update:
          id: weather_page_weather_icon
          text: !lambda |-
-          return int(round(x)); 
+          return to_string((int)x); 
 
     ## VOLUME LEVEL SENSORS ##
   - platform: homeassistant
