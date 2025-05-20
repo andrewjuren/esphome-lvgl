@@ -101,12 +101,16 @@ text_sensor:
         text: !lambda |-
           char sun_rise[9];
           char sun_set[9];
+          char reply[50] = "Sun\nRise:";
           strncpy(sun_rise, x.c_str() + 11, 8);
           strncpy(sun_set, id(sun_set_sensor).state.c_str() + 11, 8);
           sun_rise[8]='\0';
           sun_set[8]='\0';
-          // return sun_rise; 
-          return "Sun\nRise:" + sun_rise + "\nSet:" + sun_set;  
+          strcat(reply, sun_rise);
+          strcat(reply, "\nSet:");
+          strcat(reply, sun_set);
+          return reply;
+          //return "Sun\nRise:" + sun_rise + "\nSet:" + sun_set;  
         
   - platform: homeassistant
     id: sun_set_sensor  
