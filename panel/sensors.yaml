@@ -43,7 +43,7 @@ sensor:
             case 6:
               strncpy(glyph_code, "$wx_shr", 7);
               break;
-
+          /***
            // Showers and flurries                 
             case 7:
               strncpy(glyph_code, "$wx_shf", 7);
@@ -53,14 +53,15 @@ sensor:
             case 8:
               strncpy(glyph_code, "$wx_flr", 7);
               break; 
-
+            */
             // Cloudy
             case 10:
               strncpy(glyph_code, "$wx_cld", 7);
               break; 
             
             // Rain
-            case 10:
+            case 11:
+            case 12:
               strncpy(glyph_code, "$wx_rnn", 7);
               break; 
 
