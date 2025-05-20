@@ -52,8 +52,10 @@ font:
     size: 64
     bpp: 4
     glyphs: [
-      "\U000F1BF9", #0 mdi:cloud-question-outline
-      "\U000F0F33"  #9 mdi:weather-partly-cloudy
+      "\U000F1BF9", #00 mdi:cloud-question-outline
+      "\U000F05A8", #01 mdi:white-balance-sunny
+      "\U000F0F33", #03 mdi:weather-partly-cloudy
+      "\U000F0590" #04 mdi:weather-cloudy
       ]
 
 # Map icons to names
@@ -96,5 +98,8 @@ substitutions:
   skip_next:      "\U000F0F27"
   monitor_off:    "\U000F0D90"
   multimedia:     "\U000F1B97"
-  wx_0:           "\U000F1BF9"
-  wx_9:           "\U000F0F33"    
+  wx_00:          "\U000F1BF9"
+  wx_01:          "\U000F05A8"
+  wx_02:          "\U000F0F33"
+  wx_03:          "\U000F0F33"
+  wx_04:          "\U000F0590"
