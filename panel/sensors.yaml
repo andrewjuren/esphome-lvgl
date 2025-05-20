@@ -109,7 +109,7 @@ text_sensor:
           sun_set[0] += 5;
           sun_set[8]='\0';
           strcat(reply, sun_rise);
-          strcat(reply, " AM\nSet:  ");
+          strcat(reply, " AM\nSet:   ");
           strcat(reply, sun_set);
           strcat(reply, " PM");
           return reply;
