@@ -99,7 +99,11 @@ text_sensor:
      - lvgl.label.update:
         id: weather_page_sun
         text: !lambda |-
-          return "Sun\nRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
+          char sun_rise[20];
+          strncopy(sun_rise, x.c_str() +12, 8);
+          sun_rise[8]= '\0';
+          return sun_rise; 
+          // return "Sun\nRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
         
   - platform: homeassistant
     id: sun_set_sensor  
