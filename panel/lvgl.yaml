@@ -804,7 +804,7 @@ lvgl:
                         text: "Title"
                     - label:
                         text_font: $small_text_font
-                        align: left_mid
+                        align: center
                         id: info_button_middle
                         text: "Album"
                     - label:
