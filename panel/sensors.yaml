@@ -90,6 +90,7 @@ sensor:
             default: 
               strncpy(glyph_code, "$wx_unk", 7);
             }
+          glyph_code[7]='\0';  
           return glyph_code; 
 
     ## VOLUME LEVEL SENSORS ##
