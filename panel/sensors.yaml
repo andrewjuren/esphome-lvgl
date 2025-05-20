@@ -73,25 +73,40 @@ text_sensor:
     entity_id: sensor.nanaimo_summary
     on_value:
      - lvgl.label.update:
-         id: weather_page_current_conditions
-         text: !lambda return x;
+        id: weather_page_current_conditions
+        text: !lambda return x;
  
   - platform: homeassistant
     id: wind_direction_sensor  
     entity_id: sensor.nanaimo_wind_direction
     on_value:
     - lvgl.label.update:
-         id: weather_page_wind_info
-         text: !lambda return "Wind:\nSpeed:" + id(wind_speed_sensor).state + " km/h\nDirection:" + x;  
+        id: weather_page_wind_info
+        text: !lambda return "Wind\nSpeed:" + id(wind_speed_sensor).state + " km/h\nDirection:" + x;  
 
   - platform: homeassistant
     id: wind_speed_sensor  
     entity_id: sensor.nanaimo_wind_speed
     on_value:
      - lvgl.label.update:
-         id: weather_page_wind_info
-         text: !lambda return "Wind:\nSpeed:" + x + " km/h\nDirection:" + id(wind_direction_sensor).state;  
+        id: weather_page_wind_info
+        text: !lambda return "Wind\nSpeed:" + x + " km/h\nDirection:" + id(wind_direction_sensor).state;  
 
+  - platform: homeassistant
+    id: sun_rise_sensor  
+    entity_id: sensor.sun_next_rising
+    on_value:
+     - lvgl.label.update:
+        id: weather_page_sun
+        text: !lambda return "Sun\nnRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
+        
+  - platform: homeassistant
+    id: sun_set_sensor  
+    entity_id: sensor.sun_next_setting
+    on_value:
+     - lvgl.label.update:
+        id: weather_page_sun
+        text: !lambda return "Sun\nnRise:" + id(sun_rise_sensor).state + "\nSet:" + x;  
 
 
   ## NOT FUNCTIONING (but also no errors)
