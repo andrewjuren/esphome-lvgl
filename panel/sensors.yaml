@@ -100,10 +100,13 @@ text_sensor:
         id: weather_page_sun
         text: !lambda |-
           char sun_rise[20];
-          strncpy(sun_rise, x.c_str() +12, 8);
+          char sun_set[20];
+          strncpy(sun_rise, x.c_str() + 11, 8);
+          strncpy(sun_set, id(sun_set_sensor).state.c_str() + 11, 8);
           sun_rise[8]= '\0';
+          sun_set[8]= '\0';
           return sun_rise; 
-          // return "Sun\nRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
+          return "Sun\nRise:" + sun_rise + "\nSet:" + sun_set;  
         
   - platform: homeassistant
     id: sun_set_sensor  
