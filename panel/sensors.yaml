@@ -103,10 +103,10 @@ text_sensor:
           char sun_set[20];
           strncpy(sun_rise, x.c_str() + 11, 8);
           strncpy(sun_set, id(sun_set_sensor).state.c_str() + 11, 8);
-          sun_rise[8]= '\0';
-          sun_set[8]= '\0';
-          return sun_rise; 
-          return "Sun\nRise:" + sun_rise + "\nSet:" + sun_set;  
+          string s_rise(sun_rise);
+          string s_set(sun_set);
+          // return sun_rise; 
+          return "Sun\nRise:" + s_rise + "\nSet:" + s_set;  
         
   - platform: homeassistant
     id: sun_set_sensor  
