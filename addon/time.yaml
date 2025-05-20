@@ -42,7 +42,7 @@ script:
 
   - id: hourly_forecast_update
     then:
-      - weather.nanaimo_forecast.get_forecasts:
+      - environment_canada.get_forecasts:
         data:
           type: hourly
         target:
