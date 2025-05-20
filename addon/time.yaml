@@ -28,8 +28,8 @@ script:
       - lvgl.label.update:
           id: display_time
           text: !lambda |-
-            std::string time_now;
-            time_now = id(sntp_time).now().strftime("%I:%M %p");
+            //std::string time_now;
+            char time_now[] = id(sntp_time).now().strftime("%I:%M %p")c_str();
             if (time_now[0]="0")
               time_now[0]=" ";
             return time_now; 
