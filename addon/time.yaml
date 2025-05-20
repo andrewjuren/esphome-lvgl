@@ -10,7 +10,7 @@ time:
     on_time_sync:
       - script.execute: time_update
       - script.execute: date_update
-      - script.execute: 
+      - script.execute: hourly_forecast_update
     on_time:
       - minutes: '*'
         seconds: 0
