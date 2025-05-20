@@ -108,10 +108,10 @@ text_sensor:
   - platform: homeassistant
     id: sun_set_sensor  
     entity_id: sensor.sun_next_setting
-    on_value:
-     - lvgl.label.update:
-        id: weather_page_sun
-        text: !lambda return "Sun\nRise:" + id(sun_rise_sensor).state + "\nSet:" + x;  
+    # on_value:
+    #  - lvgl.label.update:
+    #     id: weather_page_sun
+    #     text: !lambda return "Sun\nRise:" + id(sun_rise_sensor).state + "\nSet:" + x;  
 
 
   ## NOT FUNCTIONING (but also no errors)
