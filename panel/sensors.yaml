@@ -77,11 +77,11 @@ text_sensor:
          text: !lambda return x;
  
   - platform: homeassistant
-    id: summary_sensor  
+    id: wind_direction_sensor  
     entity_id: sensor.nanaimo_wind_direction
 
   - platform: homeassistant
-    id: summary_sensor  
+    id: wind_speed_sensor  
     entity_id: sensor.nanaimo_wind_speed
     on_value:
      - lvgl.label.update:
