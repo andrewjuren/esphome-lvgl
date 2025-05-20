@@ -10,6 +10,7 @@ time:
     on_time_sync:
       - script.execute: time_update
       - script.execute: date_update
+      - script.execute: 
     on_time:
       - minutes: '*'
         seconds: 0
