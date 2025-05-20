@@ -1228,8 +1228,9 @@ lvgl:
                   grid_cell_row_pos: 4
                   grid_cell_column_pos: 0
                   grid_cell_column_span: 2
-                  grid_cell_x_align: center
+                  grid_cell_x_align: left
                   grid_cell_y_align: center
+                  pad_left: 10px
                   id: weather_page_wind_info
                   text_font: $small_text_font
                   text_color: White
