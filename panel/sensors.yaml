@@ -86,7 +86,7 @@ text_sensor:
     on_value:
      - lvgl.label.update:
          id: weather_page_wind_info
-         text: !lambda return "Wind:\nSpeed: " + x + "\nDirection: " + id(wind_direction_sensor).value();  
+         text: !lambda return "Wind:\nSpeed:" + x + "\nDirection:" + id(wind_direction_sensor).value();  
 
   ## NOT FUNCTIONING (but also no errors)
   - platform: homeassistant
