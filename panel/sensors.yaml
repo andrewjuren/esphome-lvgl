@@ -106,7 +106,7 @@ text_sensor:
           strncpy(sun_set, id(sun_set_sensor).state.c_str() + 12, 7);
           sun_rise[0] += 3;
           sun_rise[8]='\0';
-          sun_set[0]= += 3;
+          sun_set[0] += 3;
           sun_set[8]='\0';
           strcat(reply, sun_rise);
           strcat(reply, "\nAM Set:");
