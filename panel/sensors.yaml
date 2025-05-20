@@ -101,7 +101,7 @@ text_sensor:
         text: !lambda |-
           char sun_rise[9];
           char sun_set[9];
-          char reply[50] = "Sun\nRise:";
+          char reply[50] = "Sun\nRise: ";
           strncpy(sun_rise, x.c_str() + 12, 7);
           strncpy(sun_set, id(sun_set_sensor).state.c_str() + 12, 7);
           sun_rise[0] += 3;
@@ -109,9 +109,9 @@ text_sensor:
           sun_set[0] += 3;
           sun_set[8]='\0';
           strcat(reply, sun_rise);
-          strcat(reply, "\nAM Set:");
+          strcat(reply, " AM\nSet: ");
           strcat(reply, sun_set);
-          strcat(reply, "PM");
+          strcat(reply, " PM");
           return reply;
         
   - platform: homeassistant
