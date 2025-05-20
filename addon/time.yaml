@@ -39,16 +39,16 @@ script:
           id: weather_page_date
           text: !lambda |-
             return id(sntp_time).now().strftime("%A %d %B, %Y");
-            
+
   - id: hourly_forecast_update
     then:
-      action: weather.get_forecasts
-      data:
-        type: hourly
-      target:
-        entity_id: weather.nanaimo_forecast
-      on_value:
-        lvgl.label.update:
-          id: weather_page_hourly_forecast
-          text: "Weather forecast received!" # !lambda return x;
+      - weather.nanaimo_forecast.get_forecasts:
+        data:
+          type: hourly
+        target:
+          entity_id: weather.nanaimo_forecast
+        on_value:
+          lvgl.label.update:
+            id: weather_page_hourly_forecast
+            text: "Weather forecast received!" # !lambda return x;
   
