@@ -40,7 +40,7 @@ sensor:
               strncpy(glyph_code, "$wx_04", 6);
               break;              
             default: 
-              strncpy(glyph_code, "$wx_05", 6);
+              strncpy(glyph_code, "$wx_00", 6);
             }
           return glyph_code; 
 
