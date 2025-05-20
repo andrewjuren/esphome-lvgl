@@ -100,7 +100,7 @@ text_sensor:
         id: weather_page_sun
         text: !lambda |-
           char sun_rise[20];
-          strncopy(sun_rise, x.c_str() +12, 8);
+          strncpy(sun_rise, x.c_str() +12, 8);
           sun_rise[8]= '\0';
           return sun_rise; 
           // return "Sun\nRise:" + x + "\nSet:" + id(sun_set_sensor).state;  
