@@ -31,7 +31,7 @@ script:
             std::string time_now;
             time_now = id(sntp_time).now().strftime("%I:%M %p");
             if (time_now.c_str()[0]=='0')
-              return time_now;
+              return time_now.erase(0,1);
             return time_now; 
       - lvgl.label.update:
           id: weather_page_time
