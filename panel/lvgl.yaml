@@ -1070,7 +1070,7 @@ lvgl:
       widgets:
         - obj: 
             align: CENTER
-            width: 790
+            width: 800
             height: 480
             pad_all: 5
             pad_top: 30
