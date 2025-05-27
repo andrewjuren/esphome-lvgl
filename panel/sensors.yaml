@@ -48,11 +48,13 @@ sensor:
             case 7:
             case 14:
             case 15:
+            case 37:
               strncpy(glyph_code, "$wx_snr", 7);
               break; 
 
             // Flurries  
             case 8:
+            case 38:
               strncpy(glyph_code, "$wx_flr", 7);
               break; 
             
@@ -85,7 +87,24 @@ sensor:
             case 24:
               strncpy(glyph_code, "$wx_fog", 7);
               break; 
-                            
+            
+            // Night - clear
+            case 30:
+            case 31: 
+              strncpy(glyph_code, "$wx_ncl", 7);
+              break;             
+
+            // Night - partly cloudy
+            case 32:
+            case 33: 
+              strncpy(glyph_code, "$wx_npc", 7);
+              break;  
+
+            // Windy
+            case 43:
+              strncpy(glyph_code, "$wx_wdy", 7);
+              break;  
+              
             //Unknown or other  
             default: 
               strncpy(glyph_code, "$wx_unk", 7);

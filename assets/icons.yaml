@@ -63,8 +63,9 @@ font:
       "\U000F0F34", #flr mdi:weather-partly-snowy
       "\U000F0593", #thd mdi:weather-lightning
       "\U000F0591", #fog mdi:weather-fog
-      "\U000F0594", #cln mdi:weather-night
+      "\U000F0594", #ncl mdi:weather-night
       "\U000F0F31", #npc mdi:weather-night-partly-cloudy
+      "\U000F059D", #wdy mdi:weather-windy
       ]
 
 # Map icons to names
@@ -118,5 +119,6 @@ substitutions:
   wx_flr:  "\U000F067F"
   wx_thd:  "\U000F0593"
   wx_fog:  "\U000F0591"
-  wx_cln:  "\U000F0594"
+  wx_ncl:  "\U000F0594"
   wx_npc:  "\U000F0F31"
+  wx_wdy:  "\U000F059D"
