@@ -1126,6 +1126,27 @@ lvgl:
                     - lvgl.widget.show: display_time                  
                     - lvgl.page.show: main_page 
 
+              # LANGUAGE
+              - button: 
+                  grid_cell_row_pos: 0
+                  grid_cell_column_pos: 6
+                  grid_cell_column_span: 2
+                  grid_cell_x_align: STRETCH
+                  grid_cell_y_align: STRETCH
+                  checkable: false
+                  styles: invisible
+                  widgets:
+                    - label:
+                        text_font: $icon_font
+                        align: top_mid
+                        text: $multimedia
+                    - label:
+                        align: bottom_mid
+                        text: "EN/FR"
+                  on_click:
+                    - lvgl.widget.show: display_time                  
+                    - lvgl.page.show: main_page 
+
               # SETTINGS
               - button: 
                   grid_cell_row_pos: 0
