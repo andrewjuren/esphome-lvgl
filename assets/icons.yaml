@@ -44,7 +44,8 @@ font:
       "\U000F0F27",  #mdi:skip-next-outline
       "\U000F0D90",  #mdi:monitor-off
       "\U000F1B97",  #mdi:multimedia
-      "\U000F08BB"  #mdi-cog-outline
+      "\U000F08BB",  #mdi-cog-outline
+      "\U000F05CA"  #mdi-translate
       ]
 
   - file: 'materialdesignicons-webfont.ttf'
@@ -108,6 +109,7 @@ substitutions:
   skip_next:      "\U000F0F27"
   monitor_off:    "\U000F0D90"
   multimedia:     "\U000F1B97"
+  translate:      "\U000F05CA"
   wx_unk:  "\U000F1BF9"
   wx_sun:  "\U000F0599"
   wx_prt:  "\U000F0595"
