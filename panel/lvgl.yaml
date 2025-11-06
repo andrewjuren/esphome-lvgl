@@ -1142,10 +1142,9 @@ lvgl:
                         text: $translate
                     - label:
                         align: bottom_mid
-                        text: "EN/FR"
+                        text: "FR"
                   on_click:
-                    - lvgl.widget.show: display_time                  
-                    - lvgl.page.show: main_page 
+                    - weather_page_date.label: "French"
 
               # SETTINGS
               - button: 
