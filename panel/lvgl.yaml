@@ -1144,7 +1144,9 @@ lvgl:
                         align: bottom_mid
                         text: "FR"
                   on_click:
-                    - weather_page_date.label: "French"
+                  - lvgl.label.update:
+                      id: weather_page_date
+                      text: "French"
 
               # SETTINGS
               - button: 
