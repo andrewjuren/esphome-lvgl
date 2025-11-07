@@ -1146,8 +1146,8 @@ lvgl:
                   on_click:
                   - lvgl.label.update:
                       id: weather_page_date
-                      substitute:
-                        -"November" -> "Novembre"
+                      #substitute:
+                      #  -"November" -> "Novembre"
                       #text: !lambda |-
                       #  setlocale(LC_TIME, "fr_FR.UTF-8");
                       #  return id(sntp_time).now().strftime("%A %d %B, %Y");
