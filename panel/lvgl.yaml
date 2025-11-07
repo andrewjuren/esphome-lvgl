@@ -1146,7 +1146,11 @@ lvgl:
                   on_click:
                   - lvgl.label.update:
                       id: weather_page_date
-                      text: "French"
+                      text: !lambda |-
+                        if (setlocale(LC_TIME, "fr_FR") == nullptr) {
+                          return "Warning: Could not set French locale. Output might not be localized.";
+                        }
+                        return id(sntp_time).now().strftime("%A %d %B, %Y");
 
               # SETTINGS
               - button: 
