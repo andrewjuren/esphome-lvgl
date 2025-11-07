@@ -1147,7 +1147,7 @@ lvgl:
                   - lvgl.label.update:
                       id: weather_page_date
                       text: !lambda |-
-                        if (setlocale(LC_TIME, "fr_FR") == nullptr) {
+                        if (setlocale(LC_TIME, "fr_FR.UTF-8") == nullptr) {
                           return "Warning: Could not set French locale. Output might not be localized.";
                         }
                         return id(sntp_time).now().strftime("%A %d %B, %Y");
