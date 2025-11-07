@@ -1147,8 +1147,8 @@ lvgl:
                   - lvgl.label.update:
                       id: weather_page_date
                       text: !lambda |-
-                        return setlocale(LC_TIME, "fr_FR.UTF-8") == nullptr);
-                        //return id(sntp_time).now().strftime("%A %d %B, %Y");
+                        setlocale(LC_TIME, "fr_FR.UTF-8") == nullptr);
+                        return id(sntp_time).now().strftime("%A %d %B, %Y");
 
               # SETTINGS
               - button: 
