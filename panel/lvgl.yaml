@@ -960,7 +960,7 @@ lvgl:
               grid_columns: [FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10),FR(10)]
               grid_rows: [FR(15),FR(15),FR(5),FR(5),FR(5),FR(5),FR(5),FR(5)]
             widgets: 
-              # BACKLIGGHT
+              # BACKLIGHT
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 0
