@@ -1135,6 +1135,7 @@ lvgl:
                   grid_cell_y_align: STRETCH
                   checkable: true
                   styles: invisible
+                  id: tree_power_button
                   widgets:
                     - label:
                         text_font: $icon_font
