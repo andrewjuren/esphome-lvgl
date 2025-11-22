@@ -1146,7 +1146,7 @@ lvgl:
                         text: "Tree"
                   on_click:
                     - homeassistant.action:
-                        action: swtich.toggle
+                        action: switch.toggle
                         data:
                           entity_id: switch.green_geeni_plug_socket_1
 
