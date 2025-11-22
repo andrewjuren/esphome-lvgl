@@ -348,7 +348,7 @@ binary_sensor:
     on_state:
       - if:
           condition:
-            lambda: return id(system_power).state;
+            lambda: return id(tree_power).state;
           then:
             - lvgl.button.update:
                 id: tree_power_button
