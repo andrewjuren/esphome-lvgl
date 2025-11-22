@@ -1126,7 +1126,7 @@ lvgl:
                     - lvgl.widget.show: display_time                  
                     - lvgl.page.show: main_page 
 
-              # LANGUAGE
+              # TREE
               - button: 
                   grid_cell_row_pos: 0
                   grid_cell_column_pos: 6
@@ -1139,19 +1139,16 @@ lvgl:
                     - label:
                         text_font: $icon_font
                         align: top_mid
-                        text: $translate
+                        text: $pine_tree
                     - label:
                         align: bottom_mid
-                        text: "FR"
+                        text: "Tree"
                   on_click:
-                  - lvgl.label.update:
-                      id: weather_page_date
-                      #substitute:
-                      #  -"November" -> "Novembre"
-                      #text: !lambda |-
-                      #  setlocale(LC_TIME, "fr_FR.UTF-8");
-                      #  return id(sntp_time).now().strftime("%A %d %B, %Y");
-
+                    - homeassistant.action:
+                        action: swtich.toggle
+                        data:
+                          entity_id: switch.green_geeni_plug_socket_1
+                          
               # SETTINGS
               - button: 
                   grid_cell_row_pos: 0
