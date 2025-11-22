@@ -1133,7 +1133,7 @@ lvgl:
                   grid_cell_column_span: 2
                   grid_cell_x_align: STRETCH
                   grid_cell_y_align: STRETCH
-                  checkable: false
+                  checkable: true
                   styles: invisible
                   widgets:
                     - label:
@@ -1148,7 +1148,7 @@ lvgl:
                         action: swtich.toggle
                         data:
                           entity_id: switch.green_geeni_plug_socket_1
-                          
+
               # SETTINGS
               - button: 
                   grid_cell_row_pos: 0
