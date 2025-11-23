@@ -114,7 +114,7 @@ substitutions:
   translate:      "\U000F05CA"
   pine_tree:      "\U000F0405"
   string_lights:  "\U000F12BA"  
-  recent_wx:      "unknown"     
+  recent_wx:      "$wx_unk"     
   wx_unk:  "\U000F1BF9"
   wx_sun:  "\U000F0599"
   wx_prt:  "\U000F0595"

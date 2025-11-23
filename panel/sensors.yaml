@@ -26,9 +26,6 @@ sensor:
          id: weather_page_weather_icon
          text: !lambda |-
           char glyph_code[10];
-          if (x==float("unknown")){
-            x=99;
-            }
           switch(int(x)){
             // Sunny
             case 0:
@@ -108,14 +105,10 @@ sensor:
               strncpy(glyph_code, "$wx_wdy", 7);
               break;  
               
-            //"Unknown" -- to do: use last known value, if avail
-            case 99:
-              strncpy(glyph_code, "$wx_thd", 7);
-              break;
-            
-            //Default/other  
+            //"Unknown" / other / error  
             default: 
-              strncpy(glyph_code, "$wx_unk", 7);
+              strncpy(glyph_code, recent_wx, 7)
+              break;
             }
           glyph_code[7]='\0';  
           return glyph_code; 
