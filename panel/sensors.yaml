@@ -26,6 +26,9 @@ sensor:
          id: weather_page_weather_icon
          text: !lambda |-
           char glyph_code[10];
+          if (x=="unknown"){
+            x=99;
+            }
           switch(int(x)){
             // Sunny
             case 0:
@@ -106,7 +109,7 @@ sensor:
               break;  
               
             //"Unknown" -- to do: use last known value, if avail
-            case "unknown":
+            case 99:
               strncpy(glyph_code, "$wx_thd", 7);
               break;
             
