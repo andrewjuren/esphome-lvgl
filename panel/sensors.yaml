@@ -251,24 +251,24 @@ text_sensor:
       
 binary_sensor:
     ## STATE (ON/OFF) SENSORS ##
-  - platform: homeassistant
-    id: living_room_media_player
-    entity_id: media_player.living_room
-    publish_initial_state: true
-    on_state:
-      - if:
-          condition:
-            lambda: return id(living_room_media_player).state;
-          then:
-            - lvgl.button.update:
-                id: living_room_power_button
-                state:
-                  checked: true
-          else:
-            - lvgl.button.update:
-                id: living_room_power_button
-                state:
-                  checked: false
+  # - platform: homeassistant
+  #   id: living_room_media_player
+  #   entity_id: media_player.living_room
+  #   publish_initial_state: true
+  #   on_state:
+  #     - if:
+  #         condition:
+  #           lambda: return id(living_room_media_player).state;
+  #         then:
+  #           - lvgl.button.update:
+  #               id: living_room_power_button
+  #               state:
+  #                 checked: true
+  #         else:
+  #           - lvgl.button.update:
+  #               id: living_room_power_button
+  #               state:
+  #                 checked: false
 
   - platform: homeassistant
     id: dining_room_media_player
