@@ -1,5 +1,7 @@
-substitutions:
-  recent_wx: "$wx_unk"     
+globals:
+  - id: recent_wx
+    type: string
+    initial_value: "$wx_unk"     
 
 sensor:
     ## WEATHER SENSORS ##
