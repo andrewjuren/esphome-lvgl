@@ -1,3 +1,5 @@
+recent_wx:      "$wx_unk"     
+
 sensor:
     ## WEATHER SENSORS ##
   - platform: homeassistant
