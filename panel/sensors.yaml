@@ -106,7 +106,7 @@ sensor:
               break;  
               
             //"Unknown" -- to do: use last known value, if avail
-            case unknown:
+            case "unknown":
               strncpy(glyph_code, "$wx_thd", 7);
               break;
             
