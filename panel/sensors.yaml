@@ -1,4 +1,5 @@
-recent_wx:      "$wx_unk"     
+substitutions:
+  recent_wx: "$wx_unk"     
 
 sensor:
     ## WEATHER SENSORS ##
