@@ -107,7 +107,7 @@ sensor:
               
             //"Unknown" / other / error  
             default: 
-              strncpy(glyph_code, recent_wx, 7)
+              strncpy(glyph_code, id(recent_wx), 7)
               break;
             }
           glyph_code[7]='\0';  
