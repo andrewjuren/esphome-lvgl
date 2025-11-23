@@ -26,7 +26,7 @@ sensor:
          id: weather_page_weather_icon
          text: !lambda |-
           char glyph_code[10];
-          if (x=="unknown"){
+          if (x==float("unknown")){
             x=99;
             }
           switch(int(x)){
