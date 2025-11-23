@@ -111,7 +111,7 @@ sensor:
               break;  
               
             //"Unknown" / other / error  
-            default: 
+            //default: 
               //strncpy(glyph_code, id(recent_wx).c_str(), 7);
             }
           glyph_code[7]='\0';  
