@@ -1,5 +1,6 @@
 globals:
   - id: recent_wx
+    type: std::string
     initial_value: "$wx_unk"     
 
 sensor:
