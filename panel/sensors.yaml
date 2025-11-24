@@ -108,7 +108,6 @@ sensor:
             //"Unknown" / other / error  
             default: 
               strncpy(glyph_code, "$wx_wdy", 7);
-              //
             }
           glyph_code[7]='\0';  
           return glyph_code; 
