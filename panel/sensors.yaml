@@ -1,7 +1,7 @@
 globals:
   - id: recent_wx
     type: std::string
-    initial_value: "\U000F1BF9"     
+    initial_value: "wx_unk"     
 
 sensor:
     ## WEATHER SENSORS ##
@@ -111,8 +111,8 @@ sensor:
               break;  
               
             //"Unknown" / other / error  
-            //default: 
-              //strncpy(glyph_code, id(recent_wx).c_str(), 7);
+            default: 
+              strncpy(glyph_code, id(recent_wx).c_str(), 7);
             }
           glyph_code[7]='\0';  
           return glyph_code; 
@@ -251,32 +251,24 @@ text_sensor:
       
 binary_sensor:
     ## STATE (ON/OFF) SENSORS ##
-  # - platform: homeassistant
-  #   id: living_room_media_player
-  #   entity_id: media_player.living_room
-  #   publish_initial_state: true
-  #   on_state:
-  ######
-  ######
-  ####
-  ####
-  ####
-  ###
-  ###
-  ###
-  #     - if:
-  #         condition:
-  #           lambda: return true;
-  #         then:
-  #           - lvgl.button.update:
-  #               id: living_room_power_button
-  #               state:
-  #                 checked: true
-  #         else:
-  #           - lvgl.button.update:
-  #               id: living_room_power_button
-  #               state:
-  #                 checked: false
+  - platform: homeassistant
+    id: living_room_media_player
+    entity_id: media_player.living_room
+    publish_initial_state: true
+    on_state:
+      - if:
+          condition:
+            lambda: return true;
+          then:
+            - lvgl.button.update:
+                id: living_room_power_button
+                state:
+                  checked: true
+          else:
+            - lvgl.button.update:
+                id: living_room_power_button
+                state:
+                  checked: false
 
   - platform: homeassistant
     id: dining_room_media_player
