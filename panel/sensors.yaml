@@ -1,7 +1,7 @@
 globals:
   - id: recent_wx
     type: std::string
-    initial_value: "$wx_unk"     
+    initial_value: "\U000F1BF9"     
 
 sensor:
     ## WEATHER SENSORS ##
