@@ -258,7 +258,7 @@ binary_sensor:
   #   on_state:
   #     - if:
   #         condition:
-  #           lambda: return null; //id(living_room_media_player).state;
+  #           lambda: return id(living_room_media_player).state();
   #         then:
   #           - lvgl.button.update:
   #               id: living_room_power_button
