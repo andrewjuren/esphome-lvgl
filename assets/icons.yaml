@@ -69,6 +69,7 @@ font:
       "\U000F0594", #ncl mdi:weather-night
       "\U000F0F31", #npc mdi:weather-night-partly-cloudy
       "\U000F059D", #wdy mdi:weather-windy
+      "\U000F0F2F", #cur mdi:weather-cloudy-alert
       ]
 
 # Map icons to names
@@ -128,3 +129,4 @@ substitutions:
   wx_ncl:  "\U000F0594"
   wx_npc:  "\U000F0F31"
   wx_wdy:  "\U000F059D"
+  wx_cur:  "\U000F0F2F" # The "current" weather
