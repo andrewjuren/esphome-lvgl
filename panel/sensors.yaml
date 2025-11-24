@@ -256,11 +256,14 @@ binary_sensor:
   #   entity_id: media_player.living_room
   #   publish_initial_state: true
   #   on_state:
-  #
-  #
-  #
-  #
-  #
+  ######
+  ######
+  ####
+  ####
+  ####
+  ###
+  ###
+  ###
   #     - if:
   #         condition:
   #           lambda: return true;
