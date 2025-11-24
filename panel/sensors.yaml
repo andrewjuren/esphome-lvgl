@@ -258,6 +258,9 @@ binary_sensor:
   #   on_state:
   #
   #
+  #
+  #
+  #
   #     - if:
   #         condition:
   #           lambda: return true;
