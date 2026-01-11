@@ -1126,29 +1126,29 @@ lvgl:
                     - lvgl.widget.show: display_time                  
                     - lvgl.page.show: main_page 
 
-              # TREE
-              - button: 
-                  grid_cell_row_pos: 0
-                  grid_cell_column_pos: 6
-                  grid_cell_column_span: 2
-                  grid_cell_x_align: STRETCH
-                  grid_cell_y_align: STRETCH
-                  checkable: true
-                  styles: invisible
-                  id: tree_power_button
-                  widgets:
-                    - label:
-                        text_font: $icon_font
-                        align: top_mid
-                        text: $pine_tree
-                    - label:
-                        align: bottom_mid
-                        text: "Tree"
-                  on_click:
-                    - homeassistant.action:
-                        action: switch.toggle
-                        data:
-                          entity_id: switch.green_geeni_plug_socket_1
+              # # TREE
+              # - button: 
+              #     grid_cell_row_pos: 0
+              #     grid_cell_column_pos: 6
+              #     grid_cell_column_span: 2
+              #     grid_cell_x_align: STRETCH
+              #     grid_cell_y_align: STRETCH
+              #     checkable: true
+              #     styles: invisible
+              #     id: tree_power_button
+              #     widgets:
+              #       - label:
+              #           text_font: $icon_font
+              #           align: top_mid
+              #           text: $pine_tree
+              #       - label:
+              #           align: bottom_mid
+              #           text: "Tree"
+              #     on_click:
+              #       - homeassistant.action:
+              #           action: switch.toggle
+              #           data:
+              #             entity_id: switch.green_geeni_plug_socket_1
 
               # SETTINGS
               - button: 
