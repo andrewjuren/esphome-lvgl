@@ -341,22 +341,22 @@ binary_sensor:
                 state:
                   checked: false    
 
-  - platform: homeassistant
-    id: tree_power
-    entity_id: switch.green_geeni_plug_socket_1
-    publish_initial_state: true
-    on_state:
-      - if:
-          condition:
-            lambda: return id(tree_power).state;
-          then:
-            - lvgl.button.update:
-                id: tree_power_button
-                state:
-                  checked: true
-          else:
-            - lvgl.button.update:
-                id: tree_power_button
-                state:
-                  checked: false
+  # - platform: homeassistant
+  #   id: tree_power
+  #   entity_id: switch.green_geeni_plug_socket_1
+  #   publish_initial_state: true
+  #   on_state:
+  #     - if:
+  #         condition:
+  #           lambda: return id(tree_power).state;
+  #         then:
+  #           - lvgl.button.update:
+  #               id: tree_power_button
+  #               state:
+  #                 checked: true
+  #         else:
+  #           - lvgl.button.update:
+  #               id: tree_power_button
+  #               state:
+  #                 checked: false
 
