@@ -185,8 +185,8 @@ text_sensor:
           char sun_rise[9];
           char sun_set[9];
           char reply[50] = "Sun\nRise: ";
-          strncpy(sun_rise, x.c_str() + 13, 7);
-          strncpy(sun_set, id(sun_set_sensor).state.c_str() + 13, 7);
+          strncpy(sun_rise, x.c_str() + 12, 7);
+          strncpy(sun_set, id(sun_set_sensor).state.c_str() + 12, 7);
           sun_rise[0] += 2;
           sun_rise[8]='\0';
           sun_set[0] += 4;
