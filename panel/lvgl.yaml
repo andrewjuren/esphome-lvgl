@@ -1059,7 +1059,7 @@ lvgl:
   ## BLANK PAGE ##
     - id: blank_page
       bg_color: Black
-      widgets:
+      # widgets:
       on_press: 
         - switch.toggle:
             id: backlight
