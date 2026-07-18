@@ -1,16 +1,6 @@
 lvgl:
   top_layer:
     widgets:
-    
-      # Temperature
-      #- label:
-      #    text: "-° / -°"
-      #    id: temperatures
-      #    styles: roboto15_style
-      #    align: top_mid 
-      #    x: 8
-      #    y: 4
-      #    text_color: 0xFFFFFF
 
       # Clock
       - label:
